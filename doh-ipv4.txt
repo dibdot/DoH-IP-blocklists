@@ -1,121 +1,168 @@
-1.0.0.1
-1.0.0.2
-1.0.0.3
-1.1.1.1
-1.1.1.2
-1.1.1.3
-8.8.4.4
-8.8.8.8
-9.9.9.0/24
-223.5.5.5
-5.79.79.0/24
-103.2.57.5
-113.1.0.96
-45.90.28.0
-45.90.30.0
-108.59.12.0/24
-176.9.1.117
-193.17.47.1
-3.7.156.128
-74.82.42.42
-104.16.111.0/24
-104.16.112.0/24
-104.16.248.0/24
-104.19.198.0/24
-104.28.0.106
-104.28.0.249
-104.28.1.249
-104.28.28.34
-146.112.41.2
-162.14.21.56
-176.9.93.198
-185.235.81.1
-185.43.135.1
-193.70.85.11
-195.30.94.28
-45.63.30.163
-45.76.113.31
-45.77.180.10
-59.80.39.110
-59.83.204.12
-66.42.33.135
-103.224.182.0/24
-103.224.212.0/24
-104.27.166.44
-104.27.167.44
-116.178.66.65
-116.95.25.196
-13.89.120.251
-139.99.222.72
-14.204.74.140
-146.255.56.98
-149.112.112.0/24
-149.56.228.45
-162.14.21.178
-185.228.168.9
-185.228.169.9
-185.233.107.4
-185.95.218.42
-185.95.218.43
-211.97.73.224
-217.169.20.23
-36.248.26.205
-40.76.112.230
-43.242.166.33
-45.153.187.96
-45.67.219.208
-46.101.66.244
-46.227.200.54
-51.15.124.208
-51.158.147.50
-59.83.218.235
-88.198.91.187
-94.237.80.211
-113.200.16.234
-116.202.176.26
-139.180.141.57
-149.112.121.10
-149.112.121.20
-149.112.121.30
-149.112.122.10
-149.112.122.20
-149.112.122.30
-153.37.238.246
-159.69.198.101
-168.235.81.167
-172.67.212.252
-174.138.29.175
-182.118.11.119
-185.134.196.54
-185.213.26.187
-185.228.168.10
-185.228.169.11
-185.253.154.66
-208.67.220.123
-208.67.220.220
-208.67.222.123
-208.67.222.222
-209.250.241.25
-211.91.160.228
-68.183.253.200
-80.156.145.201
-95.216.181.228
-95.216.212.177
-115.159.131.230
-116.203.179.248
-118.212.234.144
-136.144.215.158
-139.162.131.245
-149.154.153.153
-167.114.220.125
-176.103.130.130
-176.103.130.131
-176.103.130.132
-176.103.130.134
-176.103.130.136
-176.103.130.137
-185.184.222.222
-185.222.222.222
-185.228.168.168
-185.228.169.168
-185.233.106.232
+1.0.0.1             # 1dot1dot1dot1.cloudflare-dns.com
+1.1.1.1             # 1dot1dot1dot1.cloudflare-dns.com
+101.198.191.4       # doh.360.cn
+103.2.57.5          # public.dns.iij.jp
+103.2.57.6          # public.dns.iij.jp
+104.16.132.229      # dns.cloudflare.com
+104.16.133.229      # dns.cloudflare.com
+104.16.248.249      # cloudflare-dns.com
+104.16.249.249      # cloudflare-dns.com
+104.18.209.237      # family.cloudflare-dns.com
+104.18.210.237      # family.cloudflare-dns.com
+104.18.212.220      # security.cloudflare-dns.com
+104.18.213.220      # security.cloudflare-dns.com
+104.236.178.232     # dns.dnsoverhttps.net
+104.24.118.210      # dns.dns-over-https.com
+104.24.119.210      # dns.dns-over-https.com
+104.26.6.92         # free.bravedns.com
+104.26.7.92         # free.bravedns.com
+104.27.162.107      # doh.pi-dns.com
+104.27.163.107      # doh.pi-dns.com
+104.27.166.44       # i.233py.com
+104.27.167.44       # i.233py.com
+104.28.0.106        # doh.crypto.sx
+104.28.1.106        # doh.crypto.sx
+104.31.78.161       # doh.tiarap.org
+104.31.78.59        # doh.dns.sb
+104.31.79.161       # doh.tiarap.org
+104.31.79.59        # doh.dns.sb
+113.200.16.234      # doh.233py.com
+115.159.131.230     # dns.rubyfish.cn
+116.178.66.65       # doh.233py.com
+116.202.176.26      # doh.libredns.gr
+116.203.179.248     # rumpelsepp.org
+116.95.25.196       # doh.233py.com
+118.212.234.144     # doh.233py.com
+13.89.120.251       # dohtrial.att.net
+130.59.31.248       # dns.switch.ch
+130.59.31.251       # dns.switch.ch
+136.144.215.158     # doh.powerdns.org
+139.162.131.245     # commons.host
+139.180.141.57      # doh-sg.blahdns.com
+139.59.48.222       # doh.captnemo.in
+139.99.222.72       # doh-2.seby.io
+14.204.74.140       # doh.233py.com
+146.112.41.2        # doh.opendns.com
+146.112.41.3        # doh.familyshield.opendns.com
+146.255.56.98       # doh.applied-privacy.net
+149.112.112.10      # dns10.quad9.net
+149.112.112.11      # dns11.quad9.net
+149.112.112.112     # dns.quad9.net
+149.112.112.9       # dns9.quad9.net
+149.112.121.10      # private.canadianshield.cira.ca
+149.112.121.20      # protected.canadianshield.cira.ca
+149.112.121.30      # family.canadianshield.cira.ca
+149.112.122.10      # private.canadianshield.cira.ca
+149.112.122.20      # protected.canadianshield.cira.ca
+149.112.122.30      # family.canadianshield.cira.ca
+149.154.153.153     # adfree.usableprivacy.net
+149.56.228.45       # dns2.dnscrypt.ca
+153.37.238.246      # doh.233py.com
+158.64.1.29         # kaitain.restena.lu
+159.69.198.101      # doh-de.blahdns.com
+162.14.21.178       # dns.pub
+162.14.21.56        # dns.pub
+167.114.220.125     # dns1.dnscrypt.ca
+168.138.243.216     # ibuki.cgnat.net
+168.235.81.167      # dns-nyc.aaflalo.me
+172.104.93.80       # jp.tiar.app
+172.65.3.223        # adblock.mydns.network
+172.67.134.157      # doh.crypto.sx
+172.67.149.169      # doh.tiarap.org
+172.67.170.150      # dns.dns-over-https.com
+172.67.199.230      # doh.pi-dns.com
+172.67.210.36       # doh.dns.sb
+172.67.212.252      # i.233py.com
+172.67.70.173       # free.bravedns.com
+174.138.29.175      # doh.tiar.app
+174.68.248.77       # dohdot.coxlab.net
+176.9.1.117         # dnsforge.de
+176.9.199.158       # dns.decloudus.com
+176.9.93.198        # dnsforge.de
+178.62.214.105      # jcdns.fun
+182.118.11.119      # doh.233py.com
+185.134.196.54      # rdns.faelix.net
+185.134.196.55      # rdns.faelix.net
+185.213.26.187      # doh.eastus.pi-dns.com
+185.216.27.142      # doh.42l.fr
+185.228.168.10      # doh.cleanbrowsing.org
+185.228.168.168     # doh.cleanbrowsing.org
+185.233.106.232     # dns.dnshome.de
+185.233.107.4       # dns.dnshome.de
+185.235.81.1        # doh.dnslify.com
+185.253.154.66      # dnses.alekberg.net
+185.26.126.14       # dns.hostux.net
+185.26.126.37       # dns.hostux.net
+185.43.135.1        # odvr.nic.cz
+185.95.218.42       # dns.digitale-gesellschaft.ch
+185.95.218.43       # dns.digitale-gesellschaft.ch
+193.17.47.1         # odvr.nic.cz
+193.70.85.11        # doh.bortzmeyer.fr
+195.30.94.28        # doh.ffmuc.net
+198.185.159.144     # jp.tiar.org
+198.185.159.145     # jp.tiar.org
+198.49.23.144       # jp.tiar.org
+198.49.23.145       # jp.tiar.org
+209.250.241.25      # jarjar.meganerd.nl
+210.17.9.228        # dns.twnic.tw
+211.91.160.228      # doh.233py.com
+211.97.73.224       # doh.233py.com
+217.169.20.22       # dns.aa.net.uk
+217.169.20.23       # dns.aa.net.uk
+221.228.217.29      # dns.cfiec.net
+223.5.5.5           # dns.alidns.com
+223.6.6.6           # dns.alidns.com
+3.7.156.128         # dns.arapurayil.com
+35.230.160.38       # example.doh.blockerdns.com
+35.231.247.227      # example.doh.blockerdns.com
+35.237.220.84       # example.doh.blockerdns.com
+35.245.234.132      # example.doh.blockerdns.com
+36.248.26.205       # doh.233py.com
+40.76.112.230       # dohtrial.att.net
+42.56.76.93         # doh.233py.com
+43.242.166.33       # doh.233py.com
+45.153.187.96       # dnsse.alekberg.net
+45.32.55.94         # doh-jp.blahdns.com
+45.63.30.163        # doh.eastau.pi-dns.com
+45.67.219.208       # doh.westus.pi-dns.com
+45.76.113.31        # doh.seby.io
+45.77.180.10        # dns.containerpi.com
+45.90.28.0          # dns.nextdns.io
+45.90.30.0          # dns.nextdns.io
+46.101.66.244       # doh.li
+46.227.200.54       # rdns.faelix.net
+46.227.200.55       # rdns.faelix.net
+46.239.223.80       # dns.flatuslifir.is
+51.15.124.208       # dnsnl.alekberg.net
+51.158.147.50       # resolver-eu.lelux.fi
+51.38.83.141        # dns.oszx.co
+59.80.39.110        # doh.233py.com
+59.83.204.12        # doh.233py.com
+59.83.218.235       # doh.233py.com
+66.42.33.135        # doh.eastas.pi-dns.com
+68.183.253.200      # dns1.ryan-palmer.com
+74.82.42.42         # ordns.he.net
+8.8.4.4             # dns.google
+8.8.8.8             # dns.google
+80.156.145.201      # dns.t53.de
+85.5.93.230         # ibksturm.synology.me
+88.198.91.187       # doh.centraleu.pi-dns.com
+9.9.9.10            # dns10.quad9.net
+9.9.9.11            # dns11.quad9.net
+9.9.9.9             # dns9.quad9.net
+91.230.211.67       # dns.east.comss.one
+92.223.109.31       # dns.east.comss.one
+92.223.65.32        # dns.comss.one
+92.38.152.163       # dns.comss.one
+93.115.24.204       # dns.comss.one
+93.115.24.205       # dns.comss.one
+94.140.14.14        # dns.adguard.com
+94.140.14.140       # dns-unfiltered.adguard.com
+94.140.14.141       # dns-unfiltered.adguard.com
+94.140.14.15        # dns-family.adguard.com
+94.140.15.15        # dns.adguard.com
+94.140.15.16        # dns-family.adguard.com
+94.237.80.211       # dns.brahma.world
+95.216.181.228      # doh.northeu.pi-dns.com
+95.216.212.177      # doh-fi.blahdns.com
+95.216.229.153      # fi.doh.dns.snopyta.org

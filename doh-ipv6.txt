@@ -1,86 +1,121 @@
-2001:148f:fffe::1
-2001:148f:ffff::1
-2001:19f0:4400:6bed:5400:2ff:feb1:f9fa
-2001:19f0:5801:b7c::1
-2001:19f0:7001:225d::1
-2001:41d0:302:2200::180
-2001:470:20::2
-2001:4860:4860::64
-2001:4860:4860::6464
-2001:4860:4860::8844
-2001:4860:4860::8888
-2001:608:a01::3
-2003:4:e0b0:102:0:4:0:53
-2400:6180:0:d0::5f73:4001
-2400:8902::f03c:91ff:feda:c514
-2400:cb00:2048:1::6810:6f19
-2400:cb00:2048:1::6810:7019
-2606:4700:3030::681b:a72c
-2606:4700:3034::ac43:b66a
-2606:4700:3036::ac43:d4fc
-2606:4700:3037::681b:a62c
-2606:4700:30::681c:1f9
-2606:4700:30::681c:6a
-2606:4700:30::681c:f9
-2606:4700:4700::1001
-2606:4700:4700::1002
-2606:4700:4700::1003
-2606:4700:4700::1111
-2606:4700:4700::1112
-2606:4700:4700::1113
-2606:4700:4700::64
-2606:4700:4700::6400
-2606:4700::6810:f8f9
-2606:4700::6810:f9f9
-2607:5300:60:652f::200
-2607:5300:61:95f:7283:11d9:0f86:e689
-2620:0:ccc::2
-2620:0:ccd::2
-2620:10a:80bb::10
-2620:10a:80bb::20
-2620:10a:80bb::30
-2620:10a:80bc::10
-2620:10a:80bc::20
-2620:10a:80bc::30
-2620:119:35::123
-2620:119:35::35
-2620:119:53::123
-2620:119:53::53
-2620:119:fc::2
-2620:fe::/48
-2a00:5a60::01:ff
-2a00:5a60::02:ff
-2a00:5a60::ad1:0ff
-2a00:5a60::ad2:0ff
-2a00:5a60::bad1:0ff
-2a00:5a60::bad2:0ff
-2a01:4f8:141:316d::117
-2a01:4f8:151:34aa::198
-2a01:4f8:1c0c:8233::1
-2a01:4f8:1c1c:6b4b::1
-2a01:4f9:c010:43ce::1
-2a01:4f9:c01f:4::abcd
-2a01:7c8:d002:1ef:5054:ff:fe40:3703
-2a01:9e00::54
-2a01:9e01::54
-2a02:1b8:10:234::2
-2a03:4000:24:361::6e73:32
-2a03:4000:24:688::6e73:31
-2a04:3542:1000:910:305c:74ff:fe29:7c26
-2a04:bdc7:100:70::abcd
-2a05:f480:1400:436:5400:02ff:feb8:8d1c
-2a05:fc84::42
-2a07:a8c0::
-2a07:a8c0::1
-2a07:a8c1::
-2a07:a8c1::1
-2a09::
-2a09::1
-2a0d:2a00:1::
-2a0d:2a00:1::1
-2a0d:2a00:1::2
-2a0d:2a00:2::
-2a0d:2a00:2::1
-2a0d:2a00:2::2
-2a0d:4d00:81::1
-2a0d:5600:33:3::abcd
+2001:148f:fffe::1                       # odvr.nic.cz
+2001:148f:ffff::1                       # odvr.nic.cz
+2001:19f0:4400:6bed:5400:2ff:feb1:f9fa  # doh-sg.blahdns.com
+2001:19f0:5801:b7c::1                   # doh.eastau.pi-dns.com
+2001:19f0:7001:225d::1                  # doh.eastas.pi-dns.com
+2001:19f0:7001:3259:5400:2ff:fe71:bc9   # doh-jp.blahdns.com
+2001:19f0:7001:5554:5400:2ff:fe57:3077  # dns.containerpi.com
+2001:300::5                             # public.dns.iij.jp
+2001:300::6                             # public.dns.iij.jp
+2001:41d0:302:2200::180                 # doh.bortzmeyer.fr
+2001:41d0:801:2000::d64                 # dns.oszx.co
+2001:470:20::2                          # ordns.he.net
+2001:4860:4860::64                      # dns64.dns.google
+2001:4860:4860::6464                    # dns64.dns.google
+2001:4860:4860::8844                    # dns.google
+2001:4860:4860::8888                    # dns.google
+2001:4b98:dc2:43:216:3eff:fe75:cd60     # dns.hostux.net
+2001:4b98:dc2:43:216:3eff:fe86:1d28     # dns.hostux.net
+2001:608:a01::3                         # doh.ffmuc.net
+2001:620:0:ff::2                        # dns.switch.ch
+2001:620:0:ff::3                        # dns.switch.ch
+2001:678:888:69:c45d:2738:c3f2:1878     # dns.flatuslifir.is
+2001:8b0::2022                          # dns.aa.net.uk
+2001:8b0::2023                          # dns.aa.net.uk
+2001:a18:1::29                          # kaitain.restena.lu
+2001:bc8:1830:1a21::1                   # dnsnl.alekberg.net
+2001:bc8:2db9:100::853                  # resolver-eu.lelux.fi
+2001:c50:ffff:1:101:101:101:101         # dns.twnic.tw
+2003:4:e0b0:102:0:4:0:53                # dns.t53.de
+2400:3200::1                            # dns.alidns.com
+2400:3200:baba::1                       # dns.alidns.com
+2400:6180:0:d0::5f73:4001               # doh.tiar.app
+2400:8902::f03c:91ff:feda:c514          # jp.tiar.app
+240e:e9:900b::6                         # dns.cfiec.net
+2604:180:f3::42                         # dns-nyc.aaflalo.me
+2604:a880:1:20::51:f001                 # dns.dnsoverhttps.net
+2606:4700:20::681a:65c                  # free.bravedns.com
+2606:4700:20::681a:75c                  # free.bravedns.com
+2606:4700:20::ac43:46ad                 # free.bravedns.com
+2606:4700:3030::681b:a72c               # i.233py.com
+2606:4700:3030::ac43:c7e6               # doh.pi-dns.com
+2606:4700:3032::ac43:95a9               # doh.tiarap.org
+2606:4700:3033::6818:77d2               # dns.dns-over-https.com
+2606:4700:3033::681f:4e3b               # doh.dns.sb
+2606:4700:3033::681f:4f3b               # doh.dns.sb
+2606:4700:3033::681f:4fa1               # doh.tiarap.org
+2606:4700:3034::681b:a36b               # doh.pi-dns.com
+2606:4700:3034::681c:16a                # doh.crypto.sx
+2606:4700:3034::ac43:d224               # doh.dns.sb
+2606:4700:3035::ac43:aa96               # dns.dns-over-https.com
+2606:4700:3036::681c:6a                 # doh.crypto.sx
+2606:4700:3036::681f:4ea1               # doh.tiarap.org
+2606:4700:3036::ac43:869d               # doh.crypto.sx
+2606:4700:3036::ac43:d4fc               # i.233py.com
+2606:4700:3037::6818:76d2               # dns.dns-over-https.com
+2606:4700:3037::681b:a26b               # doh.pi-dns.com
+2606:4700:3037::681b:a62c               # i.233py.com
+2606:4700:4700::1001                    # 1dot1dot1dot1.cloudflare-dns.com
+2606:4700:4700::1111                    # 1dot1dot1dot1.cloudflare-dns.com
+2606:4700:4700::64                      # dns64.cloudflare-dns.com
+2606:4700:4700::6400                    # dns64.cloudflare-dns.com
+2606:4700:60:0:a71e:6467:cef8:2a56      # adblock.mydns.network
+2606:4700::6810:84e5                    # dns.cloudflare.com
+2606:4700::6810:85e5                    # dns.cloudflare.com
+2606:4700::6810:f8f9                    # cloudflare-dns.com
+2606:4700::6810:f9f9                    # cloudflare-dns.com
+2606:4700::6812:d1ed                    # family.cloudflare-dns.com
+2606:4700::6812:d2ed                    # family.cloudflare-dns.com
+2606:4700::6812:d4dc                    # security.cloudflare-dns.com
+2606:4700::6812:d5dc                    # security.cloudflare-dns.com
+2607:5300:60:652f::200                  # dns2.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e689     # dns1.dnscrypt.ca
+2620:10a:80bb::10                       # private.canadianshield.cira.ca
+2620:10a:80bb::20                       # protected.canadianshield.cira.ca
+2620:10a:80bb::30                       # family.canadianshield.cira.ca
+2620:10a:80bc::10                       # private.canadianshield.cira.ca
+2620:10a:80bc::20                       # protected.canadianshield.cira.ca
+2620:10a:80bc::30                       # family.canadianshield.cira.ca
+2620:119:fc::2                          # doh.opendns.com
+2620:119:fc::3                          # doh.familyshield.opendns.com
+2620:fe::10                             # dns10.quad9.net
+2620:fe::11                             # dns11.quad9.net
+2620:fe::9                              # dns9.quad9.net
+2620:fe::fe                             # dns.quad9.net
+2620:fe::fe:10                          # dns10.quad9.net
+2620:fe::fe:11                          # dns11.quad9.net
+2620:fe::fe:9                           # dns9.quad9.net
+2a01:4f8:141:316d::117                  # dnsforge.de
+2a01:4f8:151:11b0::3                    # dns.decloudus.com
+2a01:4f8:151:34aa::198                  # dnsforge.de
+2a01:4f8:1c0c:8233::1                   # doh.centraleu.pi-dns.com
+2a01:4f8:1c1c:6b4b::1                   # doh-de.blahdns.com
+2a01:4f8:c2c:87b5::1                    # rumpelsepp.org
+2a01:4f9:2a:1919::21                    # fi.doh.dns.snopyta.org
+2a01:4f9:c010:43ce::1                   # doh-fi.blahdns.com
+2a01:4f9:c01f:4::abcd                   # doh.northeu.pi-dns.com
+2a01:7c8:d002:1ef:5054:ff:fe40:3703     # doh.powerdns.org
+2a01:9e00::54                           # rdns.faelix.net
+2a01:9e00::55                           # rdns.faelix.net
+2a01:9e01::54                           # rdns.faelix.net
+2a01:9e01::55                           # rdns.faelix.net
+2a02:1205:5055:de60:b26e:bfff:fe1d:e19b # ibksturm.synology.me
+2a02:1b8:10:234::2                      # doh.applied-privacy.net
+2a03:4000:24:361::6e73:32               # dns.dnshome.de
+2a03:4000:24:688::6e73:31               # dns.dnshome.de
+2a04:3542:1000:910:305c:74ff:fe29:7c26  # dns.brahma.world
+2a04:bdc7:100:70::abcd                  # doh.westus.pi-dns.com
+2a05:f480:1400:436:5400:2ff:feb8:8d1c   # jarjar.meganerd.nl
+2a05:fc84::42                           # dns.digitale-gesellschaft.ch
+2a05:fc84::43                           # dns.digitale-gesellschaft.ch
+2a07:a8c0::                             # dns.nextdns.io
+2a07:a8c1::                             # dns.nextdns.io
+2a09:cd42:f:425b::1                     # dnsse.alekberg.net
+2a0d:4d00:81::1                         # doh.dnslify.com
+2a0d:5600:33:3::abcd                    # doh.eastus.pi-dns.com
+2a10:50c0::1:ff                         # dns-unfiltered.adguard.com
+2a10:50c0::2:ff                         # dns-unfiltered.adguard.com
+2a10:50c0::ad1:ff                       # dns.adguard.com
+2a10:50c0::ad2:ff                       # dns.adguard.com
+2a10:50c0::bad1:ff                      # dns-family.adguard.com
+2a10:50c0::bad2:ff                      # dns-family.adguard.com
