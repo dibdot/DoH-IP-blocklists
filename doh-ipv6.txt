@@ -36,8 +36,8 @@
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:6180:0:d0::5f73:4001               # doh.tiar.app
+2400:6180:0:d0::d7:4001                 # dns.edgy.network
 2400:8901::f03c:92ff:fe27:870a          # doh-sg.blahdns.com
-2400:8901::f03c:92ff:fe76:fd45          # dns.edgy.network
 2400:8902::f03c:91ff:feda:c514          # jp.tiar.app
 2400:8902::f03c:92ff:fe09:48cc          # asia.dnscepat.id
 2400:8904:e001:43::43                   # doh.in.ahadns.net
@@ -45,14 +45,14 @@
 2406:da1a:c59:ae00:2d3a:5b0a:1206:d979  # dns.arapurayil.com
 2406:ef80:100:11::11                    # doh.au.ahadns.net
 2408:8001:a001:1:30::                   # doh.233py.com
+2408:8706:0:5700:19::                   # doh.233py.com
+2408:8719:3000:6:18::                   # doh.233py.com
 2408:872b:e02:5:17::                    # doh.233py.com
-2408:8730:500:a:1a::                    # doh.233py.com
-2408:8738:b000:8:27::                   # doh.233py.com
+2408:873d:2010:6:2c::                   # doh.233py.com
+2408:8740:71ff:6:22::                   # doh.233py.com
+2408:874e:1000:3:1a::                   # doh.233py.com
 2408:8766:1:2:23::                      # doh.233py.com
 2408:876c:40:110:1b::                   # doh.233py.com
-2408:8774:1:13:2d::                     # doh.233py.com
-2408:8776:1:12:1d::                     # doh.233py.com
-2408:8778:109:0:32::                    # doh.233py.com
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
 2604:180:f3::42                         # dns-nyc.aaflalo.me
@@ -126,7 +126,6 @@
 2a04:52c0:101:75::75                    # doh.nl.ahadns.net
 2a04:bdc7:100:70::70                    # doh.la.ahadns.net
 2a04:bdc7:100:70::abcd                  # doh.westus.pi-dns.com
-2a05:9406::175                          # doh-ch.blahdns.com
 2a05:fc84::42                           # dns.digitale-gesellschaft.ch
 2a05:fc84::43                           # dns.digitale-gesellschaft.ch
 2a07:e340::2                            # doh.mullvad.net
@@ -143,6 +142,7 @@
 2a0d:5600:33:3::3                       # doh.ny.ahadns.net
 2a0d:5600:33:3::abcd                    # doh.eastus.pi-dns.com
 2a0d:5642:131:105:5054:ff:fe99:7089     # dns.nextdns.io
+2a0e:dc0:6:23::2                        # doh-ch.blahdns.com
 2a0e:dc0:7:d::d                         # doh.pl.ahadns.net
 2a0e:dc0:8:12::12                       # doh.it.ahadns.net
 2a0e:dc0:9:17::17                       # doh.es.ahadns.net
