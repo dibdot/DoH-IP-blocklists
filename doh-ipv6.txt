@@ -18,7 +18,7 @@
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2406:da1a:c59:ae00:2d3a:5b0a:1206:d979  # dns.arapurayil.com
-2a04:3542:1000:910:305c:74ff:fe29:7c26  # dns.brahma.world
+2a05:d016:af8:4000:7710:6fc:bde3:fe0e   # dns.brahma.world
 2606:4700::6810:84e5                    # dns.cloudflare.com
 2606:4700::6810:85e5                    # dns.cloudflare.com
 2001:470:1c:76d::53                     # dns.cmrg.net
@@ -38,8 +38,8 @@
 2001:4b98:dc2:41:216:3eff:fe16:1080     # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fece:3e55     # dns.hostux.net
 2001:678:d08:ff::53                     # dns.moulticast.net
-2001:19f0:5001:1faf:5400:2ff:fec8:7d49  # dns.nextdns.io
-2a00:11c0:63:350::3                     # dns.nextdns.io
+2a00:11c0:e:ffff:1::d                   # dns.nextdns.io
+2a05:f480:1800:8ed:5400:2ff:fec8:7e46   # dns.nextdns.io
 2606:4700:3030::ac43:b6f2               # dns.onp.cloud
 2606:4700:3037::6815:3bc5               # dns.onp.cloud
 2001:41d0:801:2000::d64                 # dns.oszx.co
@@ -82,8 +82,7 @@
 2606:4700:3036::ac43:869d               # doh.crypto.sx
 2606:4700:3037::6815:64e                # doh.crypto.sx
 2a03:4000:6:12af::1                     # doh.defaultroutes.de
-2a09:0:7:4::2                           # doh.dns.sb
-2a0c:59c0:19::3                         # doh.dns.sb
+2a09::                                  # doh.dns.sb
 2a0d:4d00:81::1                         # doh.dnslify.com
 2001:19f0:7001:225d::1                  # doh.eastas.pi-dns.com
 2001:19f0:5801:b7c::1                   # doh.eastau.pi-dns.com
@@ -125,6 +124,8 @@
 2606:4700:3037::ac43:d79e               # i.233py.com
 2001:470:b441:2d:12d8:9492:be02:2a83    # ibksturm.synology.me
 2603:c021:c001:31fa::a1c:401            # ibuki.cgnat.net
+2606:4700:3031::6815:5088               # id.terra.my.id
+2606:4700:3033::ac43:b77f               # id.terra.my.id
 2400:8902::f03c:91ff:feda:c514          # jp.tiar.app
 2001:a18:1::29                          # kaitain.restena.lu
 2001:19f0:5001:3a2f:5400:2ff:febd:3b1e  # meganerd.nl
