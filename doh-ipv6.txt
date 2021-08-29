@@ -4,6 +4,8 @@
 2606:4700:3033::6815:16f3               # adblock.mydns.network
 2606:4700:3037::ac43:cfde               # adblock.mydns.network
 2400:8902::f03c:92ff:fe09:48cc          # asia.dnscepat.id
+2606:4700::6812:1ad3                    # chrome.cloudflare-dns.com
+2606:4700::6812:1bd3                    # chrome.cloudflare-dns.com
 2606:4700::6810:f8f9                    # cloudflare-dns.com
 2606:4700::6810:f9f9                    # cloudflare-dns.com
 2a10:50c0::bad1:ff                      # dns-family.adguard.com
@@ -38,8 +40,8 @@
 2001:4b98:dc2:41:216:3eff:fe16:1080     # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fece:3e55     # dns.hostux.net
 2001:678:d08:ff::53                     # dns.moulticast.net
-2a00:11c0:e:ffff:1::d                   # dns.nextdns.io
-2a05:f480:1800:8ed:5400:2ff:fec8:7e46   # dns.nextdns.io
+2a00:11c0:67:350::b                     # dns.nextdns.io
+2a0b:4342:1a91:e:216:3cff:fe9b:4913     # dns.nextdns.io
 2606:4700:3030::ac43:b6f2               # dns.onp.cloud
 2606:4700:3037::6815:3bc5               # dns.onp.cloud
 2001:41d0:801:2000::d64                 # dns.oszx.co
@@ -49,6 +51,8 @@
 2001:620:0:ff::3                        # dns.switch.ch
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:180:2:4000:0:4:0:53                # dns.telekom.de
+2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2402:f000:1:416:101:6:6:6               # dns.tuna.tsinghua.edu.cn
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
@@ -82,7 +86,8 @@
 2606:4700:3036::ac43:869d               # doh.crypto.sx
 2606:4700:3037::6815:64e                # doh.crypto.sx
 2a03:4000:6:12af::1                     # doh.defaultroutes.de
-2a09::                                  # doh.dns.sb
+2606:4700:3031::6815:5999               # doh.dns.sb
+2606:4700:3032::ac43:bd93               # doh.dns.sb
 2a0d:4d00:81::1                         # doh.dnslify.com
 2001:19f0:7001:225d::1                  # doh.eastas.pi-dns.com
 2001:19f0:5801:b7c::1                   # doh.eastau.pi-dns.com
@@ -95,6 +100,7 @@
 2400:8904:e001:43::43                   # doh.in.ahadns.net
 2a0e:dc0:8:12::12                       # doh.it.ahadns.net
 2a04:bdc7:100:70::70                    # doh.la.ahadns.net
+2a01:4f8:1c0c:8274::1                   # doh.libredns.gr
 2a07:e340::2                            # doh.mullvad.net
 2a04:52c0:101:75::75                    # doh.nl.ahadns.net
 2a0d:5600:30:28::28                     # doh.no.ahadns.net
@@ -120,12 +126,11 @@
 2a01:4f9:2a:1919::21                    # fi.doh.dns.snopyta.org
 2606:4700:3031::6815:31ea               # free.bravedns.com
 2606:4700:3032::ac43:c394               # free.bravedns.com
+2606:1a40::11                           # freedns.controld.com
 2606:4700:3032::6815:5b69               # i.233py.com
 2606:4700:3037::ac43:d79e               # i.233py.com
 2001:470:b441:2d:12d8:9492:be02:2a83    # ibksturm.synology.me
 2603:c021:c001:31fa::a1c:401            # ibuki.cgnat.net
-2606:4700:3031::6815:5088               # id.terra.my.id
-2606:4700:3033::ac43:b77f               # id.terra.my.id
 2400:8902::f03c:91ff:feda:c514          # jp.tiar.app
 2001:a18:1::29                          # kaitain.restena.lu
 2001:19f0:5001:3a2f:5400:2ff:febd:3b1e  # meganerd.nl
