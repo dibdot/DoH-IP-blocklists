@@ -6,6 +6,10 @@
 172.67.207.222      # adblock.mydns.network
 149.154.153.153     # adfree.usableprivacy.net
 172.105.216.54      # asia.dnscepat.id
+104.21.13.53        # basic.rethinkdns.com
+172.67.154.200      # basic.rethinkdns.com
+104.18.26.211       # chrome.cloudflare-dns.com
+104.18.27.211       # chrome.cloudflare-dns.com
 104.16.248.249      # cloudflare-dns.com
 104.16.249.249      # cloudflare-dns.com
 70.122.22.216       # commons.host
@@ -45,7 +49,6 @@
 51.144.156.129      # dns.comss.one
 81.90.180.173       # dns.comss.one
 92.223.65.71        # dns.comss.one
-93.115.24.204       # dns.comss.one
 176.9.199.158       # dns.decloudus.com
 185.95.218.42       # dns.digitale-gesellschaft.ch
 185.95.218.43       # dns.digitale-gesellschaft.ch
@@ -57,7 +60,7 @@
 91.230.211.67       # dns.east.comss.one
 92.223.109.31       # dns.east.comss.one
 27.112.79.80        # dns.edgy.network
-130.61.2.165        # dns.eu-frankfurt-1.oraclecloud.com
+130.61.0.178        # dns.eu-frankfurt-1.oraclecloud.com
 46.239.223.80       # dns.flatuslifir.is
 8.8.4.4             # dns.google
 8.8.8.8             # dns.google
@@ -85,7 +88,7 @@
 101.102.103.104     # dns.twnic.tw
 132.145.0.172       # dns.uk-london-1.oraclecloud.com
 129.213.0.178       # dns.us-ashburn-1.oraclecloud.com
-129.146.13.150      # dns.us-phoenix-1.oraclecloud.com
+129.146.14.174      # dns.us-phoenix-1.oraclecloud.com
 212.78.94.40        # dns.wevpn.com
 167.114.220.125     # dns1.dnscrypt.ca
 68.183.253.200      # dns1.ryan-palmer.com
@@ -153,7 +156,6 @@
 136.144.215.158     # doh.powerdns.org
 12.159.2.159        # doh.qis.io
 45.76.113.31        # doh.seby.io
-116.0.2.86          # doh.this.web.id
 174.138.29.175      # doh.tiar.app
 104.21.30.162       # doh.tiarap.org
 172.67.173.59       # doh.tiarap.org
@@ -162,6 +164,7 @@
 13.89.120.251       # dohtrial.att.net
 40.76.112.230       # dohtrial.att.net
 45.63.110.187       # draco.plan9-ns2.com
+5.2.75.231          # eropa.dnscepat.id
 95.217.25.217       # eu1.dns.lavate.ch
 35.230.160.38       # example.doh.blockerdns.com
 35.231.247.227      # example.doh.blockerdns.com
@@ -178,8 +181,7 @@
 173.199.126.35      # hydra.plan9-ns1.com
 213.196.191.96      # ibksturm.synology.me
 168.138.243.216     # ibuki.cgnat.net
-104.21.80.136       # id.terra.my.id
-172.67.183.127      # id.terra.my.id
+91.215.155.234      # jcdns.fun
 152.67.165.26       # jit.ddns.net
 172.104.93.80       # jp.tiar.app
 158.64.1.29         # kaitain.restena.lu
@@ -198,8 +200,6 @@
 46.227.200.54       # rdns.faelix.net
 46.227.200.55       # rdns.faelix.net
 51.158.147.50       # resolver-eu.lelux.fi
-104.21.13.53        # rethinkdns.com
-172.67.154.200      # rethinkdns.com
 195.201.220.199     # rumpelsepp.org
 1.0.0.2             # security.cloudflare-dns.com
 1.1.1.2             # security.cloudflare-dns.com
