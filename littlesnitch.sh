@@ -4,7 +4,7 @@
 # This is free software, licensed under the GNU General Public License v3.
 
 input="./doh-ipv4.txt"
-output="./doh-ipv4-littlesnitch.json"
+output="./doh-ipv4-blocklist.lsrules"
 
 header="DoH-IP-blocklists
 =======================================
