@@ -35,8 +35,8 @@
 2001:bc8:2db9:100::853                  # resolver-eu.lelux.fi
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
+2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
@@ -116,7 +116,7 @@
 2a01:9e01::54                           # rdns.faelix.net
 2a01:9e01::55                           # rdns.faelix.net
 2a02:1b8:10:234::2                      # doh.applied-privacy.net
-2a03:4000:24:361::6e73:32               # dns.dnshome.de
+2a03:4000:24:688::6e73:31               # dns.dnshome.de
 2a03:4000:6:12af::1                     # doh.defaultroutes.de
 2a04:52c0:101:75::75                    # doh.nl.ahadns.net
 2a04:92c7:37:91::2                      # uk.adhole.org
