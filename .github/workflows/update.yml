@@ -13,4 +13,4 @@ jobs:
     steps:
       # Runs the update script
       - name: Run the update script from repo
-        run: sh ./.github/workflows/auto-update.sh
+        run: sh ./workflows/auto-update.sh
