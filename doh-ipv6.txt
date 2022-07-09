@@ -4,7 +4,6 @@
 2001:19f0:5001:2621:5400:3ff:feff:1fb1  # meganerd.nl
 2001:19f0:5801:b7c::1                   # doh.eastau.pi-dns.com
 2001:19f0:7001:225d::1                  # doh.eastas.pi-dns.com
-2001:19f0:9002:1d74:5400::1             # draco.plan9-ns2.com
 2001:300::5                             # public.dns.iij.jp
 2001:300::6                             # public.dns.iij.jp
 2001:41d0:302:2200::180                 # doh.bortzmeyer.fr
@@ -31,12 +30,11 @@
 2001:8b0::2022                          # dns.aa.net.uk
 2001:8b0::2023                          # dns.aa.net.uk
 2001:a18:1::29                          # kaitain.restena.lu
-2001:bc8:1830:2018::1                   # dnsnl.alekberg.net
 2001:bc8:2db9:100::853                  # resolver-eu.lelux.fi
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
-2003:180:2::4:0:53                      # dns.telekom.de
+2003:180:2:1000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
@@ -49,7 +47,6 @@
 2400:8904:e001:43::43                   # doh.in.ahadns.net
 2402:f000:1:416:101:6:6:6               # dns.tuna.tsinghua.edu.cn
 2403:5680::1:9582                       # sg.adhole.org
-2406:ef80:100:11::11                    # doh.au.ahadns.net
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
 2602:ffc5:181:1a::d623                  # us-central.adhole.org
@@ -57,12 +54,13 @@
 2604:180:f3::42                         # dns-nyc.aaflalo.me
 2605:4840:3:c4::c4                      # doh.chi.ahadns.net
 2606:1a40::11                           # freedns.controld.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
+2606:4700:20::681a:389                  # blitz-setup.ahadns.com
+2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:3030::ac43:ad3b               # doh.tiarap.org
 2606:4700:3035::6815:1ea2               # doh.tiarap.org
 2606:4700:3036::ac43:869d               # doh.crypto.sx
 2606:4700:3037::6815:64e                # doh.crypto.sx
-2606:4700:3108::ac42:286b               # blitz-setup.ahadns.com
-2606:4700:3108::ac42:2b95               # blitz-setup.ahadns.com
 2606:4700:4400::6812:2aab               # chrome.cloudflare-dns.com
 2606:4700:4400::ac40:9155               # chrome.cloudflare-dns.com
 2606:4700:4700::1001                    # 1dot1dot1dot1.cloudflare-dns.com
@@ -99,6 +97,7 @@
 2620:fe::fe:9                           # dns9.quad9.net
 2a00:11c0:e:ffff:1::d                   # dns.nextdns.io
 2a01:4f8:13a:250b::187                  # dns.decloudus.com
+2a01:4f8:13b:3407::face                 # dns.digitalsize.net
 2a01:4f8:141:316d::117                  # dnsforge.de
 2a01:4f8:151:34aa::198                  # dnsforge.de
 2a01:4f8:1c0c:8233::1                   # doh.centraleu.pi-dns.com
@@ -116,7 +115,7 @@
 2a01:9e01::54                           # rdns.faelix.net
 2a01:9e01::55                           # rdns.faelix.net
 2a02:1b8:10:234::2                      # doh.applied-privacy.net
-2a03:4000:24:688::6e73:31               # dns.dnshome.de
+2a03:4000:24:361::6e73:32               # dns.dnshome.de
 2a03:4000:6:12af::1                     # doh.defaultroutes.de
 2a04:52c0:101:75::75                    # doh.nl.ahadns.net
 2a04:92c7:37:91::2                      # uk.adhole.org
@@ -134,6 +133,7 @@
 2a09::                                  # doh.dns.sb
 2a09:cd42:f:425b::1                     # dnsse.alekberg.net
 2a0b:f300:40c:100:1:1:19ab:29dc         # us-east.adhole.org
+2a0c:b9c0:f:451d::1                     # dnsnl.alekberg.net
 2a0d:1a43:c010:135::                    # us1.dns.lavate.ch
 2a0d:4d00:81::1                         # doh.dnslify.com
 2a0d:5600:30:28::28                     # doh.no.ahadns.net
