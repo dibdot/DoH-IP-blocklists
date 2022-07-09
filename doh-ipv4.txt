@@ -9,8 +9,8 @@
 5.2.75.75           # doh.nl.ahadns.net
 5.45.107.88         # doh.defaultroutes.de
 5.253.114.91        # uk.adhole.org
-8.8.4.4             # dns.google
-8.8.8.8             # dns.google
+8.8.4.4             # 8888.google
+8.8.8.8             # 8888.google
 9.9.9.9             # dns.quad9.net
 9.9.9.10            # dns10.quad9.net
 9.9.9.11            # dns11.quad9.net
@@ -24,6 +24,10 @@
 15.188.132.119      # httpdns-push.heytapmobile.com
 15.237.131.186      # httpdns-push.heytapmobile.com
 16.170.150.221      # dns.brahma.world
+18.66.97.23         # dns.api.rackspacecloud.com
+18.66.97.26         # dns.api.rackspacecloud.com
+18.66.97.38         # dns.api.rackspacecloud.com
+18.66.97.90         # dns.api.rackspacecloud.com
 18.233.19.235       # dns.api.globus.org
 24.240.146.7        # doh-01.spectrum.com
 24.240.146.8        # doh-02.spectrum.com
@@ -33,6 +37,7 @@
 35.172.33.236       # dns.api.test.globuscs.info
 35.174.40.117       # dns.api.globus.org
 40.76.112.230       # dohtrial.att.net
+42.192.72.231       # i.233py.com
 43.154.198.199      # doh.233py.com
 44.192.102.16       # dns.api.integration.globuscs.info
 44.200.61.63        # dns.api.preview.globus.org
@@ -60,10 +65,6 @@
 51.158.147.50       # resolver-eu.lelux.fi
 52.20.174.18        # dns.api.globus.org
 52.47.179.83        # httpdns-push.heytapmobile.com
-65.9.86.77          # dns.api.rackspacecloud.com
-65.9.86.96          # dns.api.rackspacecloud.com
-65.9.86.126         # dns.api.rackspacecloud.com
-65.9.86.128         # dns.api.rackspacecloud.com
 66.42.33.135        # doh.eastas.pi-dns.com
 68.183.253.200      # dns1.ryan-palmer.com
 74.82.42.42         # ordns.he.net
@@ -95,6 +96,7 @@
 95.216.229.153      # fi.doh.dns.snopyta.org
 95.217.25.217       # eu1.dns.lavate.ch
 101.6.6.6           # dns.tuna.tsinghua.edu.cn
+101.34.204.157      # i.233py.com
 101.35.161.25       # i.233py.com
 101.101.101.101     # dns.twnic.tw
 101.198.192.33      # doh.360.cn
@@ -117,13 +119,13 @@
 107.155.83.188      # us-central.adhole.org
 107.172.216.248     # doh.233py.com
 116.202.176.26      # doh.libredns.gr
-129.146.13.150      # dns.us-phoenix-1.oraclecloud.com
+129.146.12.195      # dns.us-phoenix-1.oraclecloud.com
 129.159.57.203      # ibuki.cgnat.net
-129.213.2.162       # dns.us-ashburn-1.oraclecloud.com
+129.213.4.166       # dns.us-ashburn-1.oraclecloud.com
 130.59.31.248       # dns.switch.ch
 130.59.31.251       # dns.switch.ch
 130.61.2.165        # dns.eu-frankfurt-1.oraclecloud.com
-132.145.2.168       # dns.uk-london-1.oraclecloud.com
+132.145.4.175       # dns.uk-london-1.oraclecloud.com
 134.169.34.57       # doh.ibr.cs.tu-bs.de
 136.144.215.158     # doh.powerdns.org
 139.59.48.222       # doh.captnemo.in

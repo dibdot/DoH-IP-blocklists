@@ -14,8 +14,8 @@
 2001:470:b441:d8bd:12d8:9492:be02:2a83  # ibksturm.synology.me
 2001:4860:4860::64                      # dns64.dns.google
 2001:4860:4860::6464                    # dns64.dns.google
-2001:4860:4860::8844                    # dns.google
-2001:4860:4860::8888                    # dns.google
+2001:4860:4860::8844                    # 8888.google
+2001:4860:4860::8888                    # 8888.google
 2001:4b98:dc2:41:216:3eff:fe16:1080     # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fece:3e55     # dns.hostux.net
 2001:558:feed:443::99                   # doh.xfinity.com
@@ -34,7 +34,7 @@
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
 2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
