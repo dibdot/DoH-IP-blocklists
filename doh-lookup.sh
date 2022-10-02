@@ -18,7 +18,7 @@ dns_tool="$(command -v dig)"
 
 # set upstream dns server
 #
-upstream="1.1.1.1 8.8.8.8 1.1.1.1 8.8.8.8 64.6.64.6 8.8.8.8 1.1.1.1 208.67.222.222 8.26.56.26"
+upstream="1.1.1.1 8.8.8.8 64.6.64.6 1.1.1.1 8.8.8.8 208.67.222.222 1.1.1.1 8.8.8.8 8.26.56.26"
 
 # domain per resolver processing
 #
