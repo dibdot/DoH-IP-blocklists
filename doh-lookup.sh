@@ -18,7 +18,7 @@ dns_tool="$(command -v dig)"
 
 # set upstream dns server
 #
-upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222 8.26.56.26"
+upstream="1.1.1.1 1.1.1.1 1.1.1.1 8.8.8.8 8.8.8.8 8.8.8.8"
 
 # domain per resolver processing
 #
@@ -49,7 +49,6 @@ while IFS= read -r domain; do
 			fi
 		else
 			printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
-			break
 		fi
 	done
 	if [ "${domain_ok}" = "false" ]; then
