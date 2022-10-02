@@ -1,5 +1,5 @@
 #!/bin/sh
-# doh-lookup - retrieve IPv4/IPv6 addresses via nslookup from given domain & resolver list
+# doh-lookup - retrieve IPv4/IPv6 addresses via dig from a given domain list
 # and write the adjusted output to separate lists (IPv4/IPv6 addresses plus domains)
 # Copyright (c) 2019-2022 Dirk Brenken (dev@brenken.org)
 #
@@ -14,31 +14,20 @@ export LC_ALL=C
 : >./domains.tmp
 : >./domains_abandoned.tmp
 input="./doh-domains_overall.txt"
-
-# set the dns utility, 'host' or 'nslookup'
-#
-dns_tool="host"
-dns_tool="$(command -v ${dns_tool})"
+dns_tool="$(command -v dig)"
 
 # set upstream dns server
 #
-upstream="1.1.1.1 8.8.8.8 9.9.9.9 208.67.222.222"
+upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222 8.26.56.26"
 
 # domain per resolver processing
 #
 while IFS= read -r domain; do
 	domain_ok="false"
 	for resolver in ${upstream}; do
-		out="$(
-			"${dns_tool}" "${domain}" "${resolver}" 2>/dev/null
-			printf "%s" "${?}"
-		)"
-		if [ "$(printf "%s" "${out}" | tail -1)" = "0" ]; then
-			if [ "${dns_tool##*/}" = "host" ]; then
-				ips="$(printf "%s" "${out}" | awk '{if ($0 ~ "has address|has IPv6 address"){ORS=" ";print $NF}}')"
-			elif [ "${dns_tool##*/}" = "nslookup" ]; then
-				ips="$(printf "%s" "${out}" | awk '/^Address[ 0-9]*: /{ORS=" ";print $NF}')"
-			fi
+		out="$("${dns_tool}" +noall +answer "${domain}" "A" "${domain}" "AAAA" "@${resolver}" 2>/dev/null)"
+		if [ -n "${out}" ]; then
+			ips="$(printf "%s" "${out}" | awk '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
 			if [ -n "${ips}" ]; then
 				printf "%-40s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
 				for ip in ${ips}; do
@@ -54,12 +43,13 @@ while IFS= read -r domain; do
 					fi
 				done
 			else
-				out="$(printf "%s" "${out}" | grep -o "connection timed out\|SERVFAIL\|NXDOMAIN")"
+				out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN")"
 				printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
+				break
 			fi
 		else
-			out="$(printf "%s" "${out}" | grep -o "connection timed out\|SERVFAIL\|NXDOMAIN")"
-			printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
+			printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
+			break
 		fi
 	done
 	if [ "${domain_ok}" = "false" ]; then
