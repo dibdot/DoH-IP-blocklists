@@ -14,20 +14,37 @@ export LC_ALL=C
 : >./domains.tmp
 : >./domains_abandoned.tmp
 input="./doh-domains_overall.txt"
+wc_tool="$(command -v wc)"
 dns_tool="$(command -v dig)"
+awk_tool="$(command -v awk)"
+upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222 8.26.56.26"
+check_domains="google.com heise.de openwrt.org"
 
-# set upstream dns server
+# sanity checks
 #
-upstream="1.1.1.1 8.8.8.8 64.6.64.6 1.1.1.1 8.8.8.8 208.67.222.222 1.1.1.1 8.8.8.8 8.26.56.26"
+if [ ! -x "${wc_tool}" ] || [ ! -x "${dns_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ] || [ -z "${upstream}" ]; then
+	printf "%s\n" "ERR: general pre-check failed"
+	exit 1
+fi
+
+for domain in ${check_domains}; do
+	for resolver in ${upstream}; do
+		out="$("${dns_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
+		if [ -z "${out}" ]; then
+			printf "%s\n" "ERR: domain pre-check failed"
+			exit 1
+		fi
+	done
+done
 
 # domain per resolver processing
 #
 while IFS= read -r domain; do
 	domain_ok="false"
 	for resolver in ${upstream}; do
-		out="$("${dns_tool}" +noall +answer "${domain}" "A" "${domain}" "AAAA" "@${resolver}" 2>/dev/null)"
+		out="$("${dns_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
 		if [ -n "${out}" ]; then
-			ips="$(printf "%s" "${out}" | awk '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
+			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
 			if [ -n "${ips}" ]; then
 				printf "%-40s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
 				for ip in ${ips}; do
@@ -35,7 +52,7 @@ while IFS= read -r domain; do
 						continue
 					else
 						domain_ok="true"
-						if [ -n "$(printf "%s" "${ip}" | awk '/^(([0-9]{1,3}\.){3}[0-9]{1,3}(\/[0-9]{1,2})?)([[:space:]]|$)/{print $1}')" ]; then
+						if [ -n "$(printf "%s" "${ip}" | "${awk_tool}" '/^(([0-9]{1,3}\.){3}[0-9]{1,3}(\/[0-9]{1,2})?)([[:space:]]|$)/{print $1}')" ]; then
 							printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
 						else
 							printf "%-40s%s\n" "${ip}" "# ${domain}" >>./ipv6.tmp
@@ -43,7 +60,7 @@ while IFS= read -r domain; do
 					fi
 				done
 			else
-				out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN")"
+				out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN" 2>/dev/null)"
 				printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
 				break
 			fi
@@ -57,6 +74,20 @@ while IFS= read -r domain; do
 		printf "%s\n" "${domain}" >>./domains.tmp
 	fi
 done <"${input}"
+
+# sanity checks
+#
+if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] || [ ! -f "./domains_abandoned.tmp" ]; then
+	printf "%s\n" "ERR: general re-check failed"
+	exit 1
+fi
+
+cnt_bad="$("${wc_tool}" -l "./domains_abandoned.tmp" 2>/dev/null | "${awk_tool}" '{print $1}')"
+max_bad="$(( $("${wc_tool}" -l "${input}" 2>/dev/null | awk '{print $1}') * 20 / 100 ))"
+if [ "${cnt_bad:-"0"}" -ge "${max_bad:-"0"}" ]; then
+	printf "%s\n" "ERR: count re-check failed"
+	exit 1
+fi
 
 # final sort/merge step
 #
