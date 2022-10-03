@@ -4,7 +4,9 @@
 # Copyright (c) 2019-2022 Dirk Brenken (dev@brenken.org)
 #
 # This is free software, licensed under the GNU General Public License v3.
-#
+
+# disable (s)hellcheck in release
+# shellcheck disable=all
 
 # prepare environment
 #
@@ -15,21 +17,21 @@ export LC_ALL=C
 : >./domains_abandoned.tmp
 input="./doh-domains_overall.txt"
 wc_tool="$(command -v wc)"
-dns_tool="$(command -v dig)"
+dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
 upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222 8.26.56.26"
 check_domains="google.com heise.de openwrt.org"
 
-# sanity checks
+# sanity pre-checks
 #
-if [ ! -x "${wc_tool}" ] || [ ! -x "${dns_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ] || [ -z "${upstream}" ]; then
+if [ ! -x "${wc_tool}" ] || [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ] || [ -z "${upstream}" ]; then
 	printf "%s\n" "ERR: general pre-check failed"
 	exit 1
 fi
 
 for domain in ${check_domains}; do
 	for resolver in ${upstream}; do
-		out="$("${dns_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
+		out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
 		if [ -z "${out}" ]; then
 			printf "%s\n" "ERR: domain pre-check failed"
 			exit 1
@@ -42,7 +44,7 @@ done
 while IFS= read -r domain; do
 	domain_ok="false"
 	for resolver in ${upstream}; do
-		out="$("${dns_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
+		out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
 		if [ -n "${out}" ]; then
 			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
 			if [ -n "${ips}" ]; then
@@ -75,7 +77,7 @@ while IFS= read -r domain; do
 	fi
 done <"${input}"
 
-# sanity checks
+# sanity re-checks
 #
 if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] || [ ! -f "./domains_abandoned.tmp" ]; then
 	printf "%s\n" "ERR: general re-check failed"
