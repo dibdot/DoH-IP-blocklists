@@ -13,7 +13,7 @@
 export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="./doh-domains_overall.txt"
-upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222 8.26.56.26"
+upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222"
 check_domains="google.com heise.de openwrt.org"
 wc_tool="$(command -v wc)"
 dig_tool="$(command -v dig)"
