@@ -18,10 +18,10 @@ check_domains="google.com heise.de openwrt.org"
 wc_tool="$(command -v wc)"
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
-: >./ipv4.tmp
-: >./ipv6.tmp
-: >./domains.tmp
-: >./domains_abandoned.tmp
+: >"./ipv4.tmp"
+: >"./ipv6.tmp"
+: >"./domains.tmp"
+: >"./domains_abandoned.tmp"
 
 # sanity pre-checks
 #
@@ -36,6 +36,12 @@ for domain in ${check_domains}; do
 		if [ -z "${out}" ]; then
 			printf "%s\n" "ERR: domain pre-check failed"
 			exit 1
+		else
+			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
+			if [ -z "${ips}" ]; then
+				printf "%s\n" "ERR: ip pre-check failed"
+				exit 1
+			fi
 		fi
 	done
 done
@@ -94,8 +100,8 @@ fi
 
 # final sort/merge step
 #
-sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 ./ipv4.tmp >./doh-ipv4.txt
-sort -b -u -k1,1 ./ipv6.tmp >./doh-ipv6.txt
-sort -b -u ./domains.tmp >./doh-domains.txt
-sort -b -u ./domains_abandoned.tmp >./doh-domains_abandoned.txt
-rm ./ipv4.tmp ./ipv6.tmp ./domains.tmp ./domains_abandoned.tmp
+sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4.tmp" >"./doh-ipv4.txt"
+sort -b -u -k1,1 "./ipv6.tmp" >"./doh-ipv6.txt"
+sort -b -u "./domains.tmp" >"./doh-domains.txt"
+sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
+rm "./ipv4.tmp" "./ipv6.tmp" "./domains.tmp" "./domains_abandoned.tmp"
