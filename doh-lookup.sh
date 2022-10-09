@@ -13,7 +13,7 @@
 export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="./doh-domains_overall.txt"
-upstream="1.1.1.1 8.8.8.8 64.6.64.6 208.67.222.222"
+upstream="1.1.1.1 8.8.8.8 77.88.8.88 223.5.5.5"
 check_domains="google.com heise.de openwrt.org"
 wc_tool="$(command -v wc)"
 dig_tool="$(command -v dig)"
@@ -71,7 +71,6 @@ while IFS= read -r domain; do
 			else
 				out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN" 2>/dev/null)"
 				printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
-				break
 			fi
 		else
 			printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
