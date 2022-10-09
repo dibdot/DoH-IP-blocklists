@@ -55,7 +55,7 @@ while IFS= read -r domain; do
 		if [ -n "${out}" ]; then
 			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
 			if [ -n "${ips}" ]; then
-				printf "%-40s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
+				printf "%-45s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
 				for ip in ${ips}; do
 					if [ "${ip}" = "0.0.0.0" ] || [ "${ip}" = "::" ]; then
 						continue
@@ -70,10 +70,10 @@ while IFS= read -r domain; do
 				done
 			else
 				out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN" 2>/dev/null)"
-				printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
+				printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
 			fi
 		else
-			printf "%-40s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
+			printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
 		fi
 	done
 	if [ "${domain_ok}" = "false" ]; then
