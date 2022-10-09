@@ -5,9 +5,9 @@ The main domain list `doh-domains_overall.txt` is manually updated on a regular 
   * `doh-domains.txt`: active or accessible domains  
   * `doh-domains_abandoned.txt`: unavailable domains  
   * `doh-ipv4.txt`: list with the ipv4 addresses of the accessible domains  
-  * `doh-ipv6.txt`: list with the ipv6 addresses of the accessible domains 
+  * `doh-ipv6.txt`: list with the ipv6 addresses of the accessible domains  
 
-The doh-lookup script runs automatically on a daily basis (00:00 UTC) via github actions and updates the above listed text files within the repo if anything has changed. 
+The doh-lookup script runs automatically twice a day via github actions and updates the above listed text files within the repo if anything has changed.  
 
 Have fun!  
-Dirk Brenken
+Dirk Brenken  

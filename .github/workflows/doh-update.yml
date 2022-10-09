@@ -5,10 +5,10 @@ name: doh-update
 # Controls when the workflow will run (on push, on schedule or manually)
 on:
   push:
-    branches: 
+    branches:
      - 'master'
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
