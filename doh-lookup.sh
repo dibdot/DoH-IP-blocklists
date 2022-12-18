@@ -48,40 +48,47 @@ done
 
 # domain per resolver processing
 #
+cnt=0
 while IFS= read -r domain; do
-	domain_ok="false"
-	for resolver in ${upstream}; do
-		out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
-		if [ -n "${out}" ]; then
-			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
-			if [ -n "${ips}" ]; then
-				printf "%-45s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
-				for ip in ${ips}; do
-					if [ "${ip}" = "0.0.0.0" ] || [ "${ip}" = "::" ]; then
-						continue
-					else
-						domain_ok="true"
-						if [ -n "$(printf "%s" "${ip}" | "${awk_tool}" '/^(([0-9]{1,3}\.){3}[0-9]{1,3}(\/[0-9]{1,2})?)([[:space:]]|$)/{print $1}')" ]; then
-							printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
+	(
+		domain_ok="false"
+		for resolver in ${upstream}; do
+			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
+			if [ -n "${out}" ]; then
+				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
+				if [ -n "${ips}" ]; then
+					printf "%-45s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
+					for ip in ${ips}; do
+						if [ "${ip%%.*}" = "0" ] || [ "${ip}" = "::" ] || [ "${ip}" = "1.1.1.1" ] || [ "${ip}" = "8.8.8.8" ]; then
+							continue
 						else
-							printf "%-40s%s\n" "${ip}" "# ${domain}" >>./ipv6.tmp
+							domain_ok="true"
+							if [ -n "$(printf "%s" "${ip}" | "${awk_tool}" '/^(([0-9]{1,3}\.){3}[0-9]{1,3}(\/[0-9]{1,2})?)([[:space:]]|$)/{print $1}')" ]; then
+								printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
+							else
+								printf "%-40s%s\n" "${ip}" "# ${domain}" >>./ipv6.tmp
+							fi
 						fi
-					fi
-				done
+					done
+				else
+					out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN" 2>/dev/null)"
+					printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
+				fi
 			else
-				out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN" 2>/dev/null)"
-				printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
+				printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
 			fi
+		done
+		if [ "${domain_ok}" = "false" ]; then
+			printf "%s\n" "${domain}" >>./domains_abandoned.tmp
 		else
-			printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
+			printf "%s\n" "${domain}" >>./domains.tmp
 		fi
-	done
-	if [ "${domain_ok}" = "false" ]; then
-		printf "%s\n" "${domain}" >>./domains_abandoned.tmp
-	else
-		printf "%s\n" "${domain}" >>./domains.tmp
-	fi
+	) &
+	hold=$((cnt % 100))
+	[ "${hold}" = "0" ] && wait
+	cnt=$((cnt + 1))
 done <"${input}"
+wait
 
 # sanity re-checks
 #
@@ -91,7 +98,7 @@ if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] ||
 fi
 
 cnt_bad="$("${wc_tool}" -l "./domains_abandoned.tmp" 2>/dev/null | "${awk_tool}" '{print $1}')"
-max_bad="$(( $("${wc_tool}" -l "${input}" 2>/dev/null | awk '{print $1}') * 20 / 100 ))"
+max_bad="$(($("${wc_tool}" -l "${input}" 2>/dev/null | awk '{print $1}') * 20 / 100))"
 if [ "${cnt_bad:-"0"}" -ge "${max_bad:-"0"}" ]; then
 	printf "%s\n" "ERR: count re-check failed"
 	exit 1
