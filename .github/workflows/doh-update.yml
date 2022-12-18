@@ -29,7 +29,7 @@ jobs:
 
       # Commit changed files to your repo
       - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v4.15.0
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
         with:
           # Commit message
           commit_message: automatic/regular ip address updates
