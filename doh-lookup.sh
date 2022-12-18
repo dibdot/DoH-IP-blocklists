@@ -32,12 +32,12 @@ fi
 
 for domain in ${check_domains}; do
 	for resolver in ${upstream}; do
-		out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
+		out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=1 2>/dev/null)"
 		if [ -z "${out}" ]; then
 			printf "%s\n" "ERR: domain pre-check failed"
 			exit 1
 		else
-			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
+			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 			if [ -z "${ips}" ]; then
 				printf "%s\n" "ERR: ip pre-check failed"
 				exit 1
@@ -51,15 +51,15 @@ done
 cnt=0
 while IFS= read -r domain; do
 	(
+		printf "%s\n" "$(date +%D-%T) ::: Start processing '${domain}' ..."
 		domain_ok="false"
 		for resolver in ${upstream}; do
-			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer 2>/dev/null)"
+			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=1 2>/dev/null)"
 			if [ -n "${out}" ]; then
-				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{ORS=" ";print $NF}')"
+				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 				if [ -n "${ips}" ]; then
-					printf "%-45s%-22s%s\n" "OK : ${domain}" "DNS: ${resolver}" "IP: ${ips}"
 					for ip in ${ips}; do
-						if [ "${ip%%.*}" = "0" ] || [ "${ip}" = "::" ] || [ "${ip}" = "1.1.1.1" ] || [ "${ip}" = "8.8.8.8" ]; then
+						if [ "${ip%%.*}" = "0" ] || [ "${ip}" = "::" ]; then
 							continue
 						else
 							domain_ok="true"
@@ -70,12 +70,7 @@ while IFS= read -r domain; do
 							fi
 						fi
 					done
-				else
-					out="$(printf "%s" "${out}" | grep -m1 -o "timed out\|SERVFAIL\|NXDOMAIN" 2>/dev/null)"
-					printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: ${out:-"unknown"}"
 				fi
-			else
-				printf "%-45s%-22s%s\n" "ERR: ${domain}" "DNS: ${resolver}" "RC: empty output"
 			fi
 		done
 		if [ "${domain_ok}" = "false" ]; then
@@ -84,7 +79,7 @@ while IFS= read -r domain; do
 			printf "%s\n" "${domain}" >>./domains.tmp
 		fi
 	) &
-	hold=$((cnt % 100))
+	hold=$((cnt % 1000))
 	[ "${hold}" = "0" ] && wait
 	cnt=$((cnt + 1))
 done <"${input}"
@@ -111,3 +106,4 @@ sort -b -u -k1,1 "./ipv6.tmp" >"./doh-ipv6.txt"
 sort -b -u "./domains.tmp" >"./doh-domains.txt"
 sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
 rm "./ipv4.tmp" "./ipv6.tmp" "./domains.tmp" "./domains_abandoned.tmp"
+printf "%s\n" "$(date +%D-%T) ::: Finished processing"
