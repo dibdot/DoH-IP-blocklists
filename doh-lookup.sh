@@ -59,7 +59,7 @@ while IFS= read -r domain; do
 				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 				if [ -n "${ips}" ]; then
 					for ip in ${ips}; do
-						if [ "${ip%%.*}" = "0" ] || [ "${ip}" = "::" ]; then
+						if [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 							continue
 						else
 							domain_ok="true"
