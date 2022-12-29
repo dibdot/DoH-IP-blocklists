@@ -48,13 +48,13 @@ done
 
 # domain per resolver processing
 #
-cnt=0
+cnt="1"
 while IFS= read -r domain; do
 	(
 		printf "%s\n" "$(date +%D-%T) ::: Start processing '${domain}' ..."
 		domain_ok="false"
 		for resolver in ${upstream}; do
-			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=1 2>/dev/null)"
+			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=3 2>/dev/null)"
 			if [ -n "${out}" ]; then
 				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 				if [ -n "${ips}" ]; then
@@ -79,9 +79,8 @@ while IFS= read -r domain; do
 			printf "%s\n" "${domain}" >>./domains.tmp
 		fi
 	) &
-	hold=$((cnt % 1000))
-	[ "${hold}" = "0" ] && wait
-	cnt=$((cnt + 1))
+	hold=$((cnt % 2048))
+	[ "${hold}" = "0" ] && { wait; cnt="1";	} || cnt="$((cnt + 1))"
 done <"${input}"
 wait
 
