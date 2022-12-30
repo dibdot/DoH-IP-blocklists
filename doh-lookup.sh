@@ -64,7 +64,8 @@ while IFS= read -r domain; do
 						if [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 							continue
 						else
-							if ipcalc-ng -cs "${ip}"; then
+							echo "IP: $ip, $(ipcalc-ng -c "${ip}" 2>&1; echo $?)"
+							if ipcalc-ng -c "${ip}" 2>/dev/null; then
 								domain_ok="true"
 								ip_cnt="$((ip_cnt + 1))"
 								if [ "${ip##*:}" = "${ip}" ]; then
@@ -118,4 +119,4 @@ sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
 cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./${feed_name}-ipv4.txt" 2>/dev/null)"
 cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./${feed_name}-ipv6.txt" 2>/dev/null)"
 rm "./ipv4.tmp" "./ipv6.tmp" "./domains.tmp" "./domains_abandoned.tmp"
-printf "%s\n" "$(date +%D-%T) ::: Finished processing, domains: ${domain_cnt}, IPs: ${ip_cnt}, unique IPv4: ${cnt_ipv4}, unique IPv6: ${cnt_ipv6}"
+printf "%s\n" "$(date +%D-%T) ::: Finished processing, domains: ${domain_cnt}, IPs: ${ip_cnt}, unique IPv4: ${cnt_ipv4:-"0"}, unique IPv6: ${cnt_ipv6:-"0"}"
