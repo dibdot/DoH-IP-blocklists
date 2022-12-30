@@ -1,7 +1,7 @@
 #!/bin/sh
 # doh-lookup - retrieve IPv4/IPv6 addresses via dig from a given domain list
 # and write the adjusted output to separate lists (IPv4/IPv6 addresses plus domains)
-# Copyright (c) 2019-2022 Dirk Brenken (dev@brenken.org)
+# Copyright (c) 2019-2023 Dirk Brenken (dev@brenken.org)
 #
 # This is free software, licensed under the GNU General Public License v3.
 
@@ -13,7 +13,7 @@
 export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="./doh-domains_overall.txt"
-upstream="1.1.1.1 8.8.8.8 77.88.8.88 223.5.5.5"
+upstream="1.1.1.1 8.8.8.8"
 check_domains="google.com heise.de openwrt.org"
 wc_tool="$(command -v wc)"
 dig_tool="$(command -v dig)"
@@ -55,7 +55,7 @@ while IFS= read -r domain; do
 		printf "%s\n" "$(date +%D-%T) ::: Start processing '${domain}' ..."
 		domain_ok="false"
 		for resolver in ${upstream}; do
-			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=1 2>/dev/null)"
+			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=5 2>/dev/null)"
 			if [ -n "${out}" ]; then
 				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 				if [ -n "${ips}" ]; then
@@ -83,7 +83,7 @@ while IFS= read -r domain; do
 		fi
 	) &
 	domain_cnt="$((domain_cnt + 1))"
-	hold="$((cnt % 2048))"
+	hold="$((cnt % 64))"
 	if [ "${hold}" = "0" ]; then
 		wait
 		cnt="1"
