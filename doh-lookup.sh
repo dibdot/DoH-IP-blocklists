@@ -50,7 +50,6 @@ done
 #
 cnt="1"
 domain_cnt="0"
-ip_cnt="0"
 while IFS= read -r domain; do
 	(
 		printf "%s\n" "$(date +%D-%T) ::: Start processing '${domain}' ..."
@@ -64,10 +63,8 @@ while IFS= read -r domain; do
 						if [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 							continue
 						else
-							echo "IP: $ip, $(ipcalc-ng -c "${ip}" 2>&1; echo $?)"
-							if ipcalc-ng -c "${ip}" 2>/dev/null; then
+							if ipcalc-ng -cs "${ip}"; then
 								domain_ok="true"
-								ip_cnt="$((ip_cnt + 1))"
 								if [ "${ip##*:}" = "${ip}" ]; then
 									printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
 								else
@@ -116,7 +113,7 @@ sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4.tmp" >"./doh-ipv4.txt"
 sort -b -u -k1,1 "./ipv6.tmp" >"./doh-ipv6.txt"
 sort -b -u "./domains.tmp" >"./doh-domains.txt"
 sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
-cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./${feed_name}-ipv4.txt" 2>/dev/null)"
-cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./${feed_name}-ipv6.txt" 2>/dev/null)"
+cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv4.txt" 2>/dev/null)"
+cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv6.txt" 2>/dev/null)"
 rm "./ipv4.tmp" "./ipv6.tmp" "./domains.tmp" "./domains_abandoned.tmp"
-printf "%s\n" "$(date +%D-%T) ::: Finished processing, domains: ${domain_cnt}, IPs: ${ip_cnt}, unique IPv4: ${cnt_ipv4:-"0"}, unique IPv6: ${cnt_ipv6:-"0"}"
+printf "%s\n" "$(date +%D-%T) ::: Finished processing, domains: ${domain_cnt}, unique IPv4: ${cnt_ipv4:-"0"}, unique IPv6: ${cnt_ipv6:-"0"}"
