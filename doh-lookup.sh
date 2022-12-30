@@ -13,7 +13,7 @@
 export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="./doh-domains_overall.txt"
-upstream="1.1.1.1 8.8.8.8"
+upstream="1.1.1.1"
 check_domains="google.com heise.de openwrt.org"
 wc_tool="$(command -v wc)"
 dig_tool="$(command -v dig)"
@@ -66,9 +66,9 @@ while IFS= read -r domain; do
 							if ipcalc-ng -cs "${ip}"; then
 								domain_ok="true"
 								if [ "${ip##*:}" = "${ip}" ]; then
-									printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
+									printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
 								else
-									printf "%-40s%s\n" "${ip}" "# ${domain}" >>./ipv6.tmp
+									printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
 								fi
 							fi
 						fi
