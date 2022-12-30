@@ -49,12 +49,14 @@ done
 # domain per resolver processing
 #
 cnt="1"
+domain_cnt="0"
+ip_cnt="0"
 while IFS= read -r domain; do
 	(
 		printf "%s\n" "$(date +%D-%T) ::: Start processing '${domain}' ..."
 		domain_ok="false"
 		for resolver in ${upstream}; do
-			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=3 2>/dev/null)"
+			out="$("${dig_tool}" "@${resolver}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=1 2>/dev/null)"
 			if [ -n "${out}" ]; then
 				ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 				if [ -n "${ips}" ]; then
@@ -62,11 +64,14 @@ while IFS= read -r domain; do
 						if [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 							continue
 						else
-							domain_ok="true"
-							if [ -n "$(printf "%s" "${ip}" | "${awk_tool}" '/^(([0-9]{1,3}\.){3}[0-9]{1,3}(\/[0-9]{1,2})?)([[:space:]]|$)/{print $1}')" ]; then
-								printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
-							else
-								printf "%-40s%s\n" "${ip}" "# ${domain}" >>./ipv6.tmp
+							if ipcalc-ng -cs "${ip}"; then
+								domain_ok="true"
+								ip_cnt="$((ip_cnt + 1))"
+								if [ "${ip##*:}" = "${ip}" ]; then
+									printf "%-20s%s\n" "${ip}" "# ${domain}" >>./ipv4.tmp
+								else
+									printf "%-40s%s\n" "${ip}" "# ${domain}" >>./ipv6.tmp
+								fi
 							fi
 						fi
 					done
@@ -79,8 +84,14 @@ while IFS= read -r domain; do
 			printf "%s\n" "${domain}" >>./domains.tmp
 		fi
 	) &
-	hold=$((cnt % 2048))
-	[ "${hold}" = "0" ] && { wait; cnt="1";	} || cnt="$((cnt + 1))"
+	domain_cnt="$((domain_cnt + 1))"
+	hold="$((cnt % 2048))"
+	if [ "${hold}" = "0" ]; then
+		wait
+		cnt="1"
+	else
+		cnt="$((cnt + 1))"
+	fi
 done <"${input}"
 wait
 
@@ -104,5 +115,7 @@ sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4.tmp" >"./doh-ipv4.txt"
 sort -b -u -k1,1 "./ipv6.tmp" >"./doh-ipv6.txt"
 sort -b -u "./domains.tmp" >"./doh-domains.txt"
 sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
+cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./${feed_name}-ipv4.txt" 2>/dev/null)"
+cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./${feed_name}-ipv6.txt" 2>/dev/null)"
 rm "./ipv4.tmp" "./ipv6.tmp" "./domains.tmp" "./domains_abandoned.tmp"
-printf "%s\n" "$(date +%D-%T) ::: Finished processing"
+printf "%s\n" "$(date +%D-%T) ::: Finished processing, domains: ${domain_cnt}, IPs: ${ip_cnt}, unique IPv4: ${cnt_ipv4}, unique IPv6: ${cnt_ipv6}"
