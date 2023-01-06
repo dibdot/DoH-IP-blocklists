@@ -52,7 +52,7 @@ done
 #
 cnt="0"
 doh_start1="$(date "+%s")"
-doh_cnt="$("${awk_tool}" 'END{printf "%d",NR}' "./${input}" 2>/dev/null)"
+doh_cnt="$("${awk_tool}" 'END{printf "%d",NR}' "./${input1}" 2>/dev/null)"
 printf "%s\n" "::: Start DOH-processing, overall domains: ${doh_cnt}"
 while IFS= read -r domain; do
 	(
