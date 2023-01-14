@@ -86,7 +86,7 @@ while IFS= read -r domain; do
 		fi
 	) &
 	hold1="$((cnt % 512))"
-	hold2="$((cnt % 4096))"
+	hold2="$((cnt % 2048))"
 	[ "${hold1}" = "0" ] && sleep 3
 	[ "${hold2}" = "0" ] && wait
 	cnt="$((cnt + 1))"
@@ -104,7 +104,7 @@ doh_start2="$(date "+%s")"
 while IFS= read -r domain; do
 	(
 		domain_ok="false"
-		out="$("${dig_tool}" "@${upstream}" "${domain}" A "${domain}" AAAA +noall +answer +time=10 +tries=1 2>/dev/null)"
+		out="$("${dig_tool}" "@${upstream}" "${domain}" A "${domain}" AAAA +noall +answer +time=5 +tries=1 2>/dev/null)"
 		if [ -n "${out}" ]; then
 			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
 			if [ -n "${ips}" ]; then
@@ -133,7 +133,7 @@ while IFS= read -r domain; do
 		fi
 	) &
 	hold1="$((cnt % 512))"
-	hold2="$((cnt % 4096))"
+	hold2="$((cnt % 2048))"
 	[ "${hold1}" = "0" ] && sleep 3
 	[ "${hold2}" = "0" ] && wait
 	cnt="$((cnt + 1))"
