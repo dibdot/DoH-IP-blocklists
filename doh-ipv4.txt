@@ -27,8 +27,8 @@
 8.8.8.8             # 8888.google
 8.20.247.20         # ns2.recursive.dnsbycomodo.com
 8.26.56.26          # ns1.recursive.dnsbycomodo.com
-8.218.33.237        # doh.beauty
-8.218.192.32        # doh.beauty
+8.218.33.237        # doh.buzz
+8.218.192.32        # doh.buzz
 9.9.9.9             # dns.quad9.net
 9.9.9.10            # dns-nosec.quad9.net
 9.9.9.11            # dns11.quad9.net
@@ -42,7 +42,6 @@
 13.225.47.66        # dns.api.rackspacecloud.com
 13.225.47.67        # dns.api.rackspacecloud.com
 13.233.191.147      # pihole.aws.ketan.dev
-14.229.63.21        # tungdnsne.duckdns.org
 15.165.113.96       # secure.onedns.cc
 15.204.56.57        # dns.stevenz.net
 16.170.150.221      # dns.brahma.world
@@ -72,6 +71,7 @@
 17.248.169.199      # mask.icloud.com
 17.248.169.200      # mask.icloud.com
 17.248.185.200      # mask-api.icloud.com
+17.248.185.238      # mask-api.icloud.com
 17.248.191.69       # mask-api.icloud.com
 17.248.191.73       # mask-api.icloud.com
 17.248.191.79       # mask-api.icloud.com
@@ -84,6 +84,7 @@
 17.248.191.171      # mask-api.icloud.com
 17.248.191.175      # mask-api.icloud.com
 17.248.191.176      # mask-api.icloud.com
+17.248.241.4        # mask-api.icloud.com
 17.248.241.6        # mask-api.icloud.com
 17.248.241.16       # mask-api.icloud.com
 17.248.241.34       # mask-api.icloud.com
@@ -92,7 +93,10 @@
 17.248.241.47       # mask-api.icloud.com
 17.248.241.57       # mask-api.icloud.com
 17.248.241.73       # mask-api.icloud.com
+17.248.241.75       # mask-api.icloud.com
 17.248.241.78       # mask-api.icloud.com
+17.248.241.83       # mask-api.icloud.com
+17.248.241.100      # mask-api.icloud.com
 17.248.241.133      # mask-api.icloud.com
 17.248.241.138      # mask-api.icloud.com
 17.248.241.139      # mask-api.icloud.com
@@ -101,8 +105,11 @@
 17.248.241.178      # mask-api.icloud.com
 17.248.241.203      # mask-api.icloud.com
 17.248.241.206      # mask-api.icloud.com
+17.248.241.230      # mask-api.icloud.com
+17.248.241.231      # mask-api.icloud.com
 17.248.241.233      # mask-api.icloud.com
 17.248.241.237      # mask-api.icloud.com
+17.248.241.240      # mask-api.icloud.com
 17.248.241.242      # mask-api.icloud.com
 17.248.241.243      # mask-api.icloud.com
 17.248.246.132      # mask-api.icloud.com
@@ -117,6 +124,7 @@
 17.248.246.203      # mask-h2.icloud.com
 17.253.20.119       # doh.dns.apple.com
 17.253.20.247       # doh.dns.apple.com.v.aaplimg.com
+17.253.22.213       # doh.dns.apple.com.v.aaplimg.com
 17.253.22.247       # doh.dns.apple.com
 17.253.82.113       # doh.dns.apple.com.v.aaplimg.com
 17.253.82.115       # doh.dns.apple.com.v.aaplimg.com
@@ -131,6 +139,7 @@
 18.233.19.235       # dns.api.globus.org
 20.89.157.157       # dns.hakutakucn.com
 20.210.244.237      # armorrush.eu.org
+23.82.12.34         # dns.futuredns.me
 23.88.6.31          # doh.niyawe.de
 23.94.211.166       # dns.novali.date
 23.105.231.66       # ru-mow.doh.sb
@@ -161,6 +170,7 @@
 35.244.200.159      # dns.invisv.com
 35.247.39.128       # your-dns.run
 35.247.80.47        # dns.bitdefender.net
+36.81.28.149        # gustamadh.dynv6.net
 36.99.50.35         # opencdn.jomodns.com
 37.120.173.157      # securenet.mhsystems.net
 37.120.183.220      # dns.kernel-error.de
@@ -217,8 +227,8 @@
 45.132.75.16        # doh.pl.ahadns.net
 45.147.54.7         # uk.teradns.org
 45.151.167.2        # dns.artikel10.org
-45.153.187.96       # dnsse.alekberg.net
-45.155.171.163      # doh.42l.fr
+45.153.187.96       # dnsse-noads.alekberg.net
+45.155.171.163      # doh.lacontrevoie.fr
 45.159.48.234       # jp.68360612.xyz
 46.17.107.180       # dns.iamninja.ru
 46.38.234.60        # dns.murgi.de
@@ -233,7 +243,7 @@
 46.227.203.52       # pdns.faelix.net
 46.227.207.52       # pdns.faelix.net
 47.107.121.125      # dns.ikataruto.com
-47.242.67.184       # doh.beauty
+47.242.67.184       # doh.buzz
 47.242.199.113      # tlz.asia
 47.254.192.66       # dns.bebasid.com
 49.0.2.184          # dns1.irumatech.com
@@ -438,7 +448,7 @@
 104.21.33.245       # dns.hotta.page
 104.21.44.104       # dns.unerror.network
 104.21.46.121       # adguard-ironhide.ultima-thule.ru
-104.21.49.234       # basic.bravedns.com
+104.21.49.234       # bravedns.com
 104.21.50.188       # doh.velyn.my.id
 104.21.51.76        # guard.sntrk.ru
 104.21.53.69        # dns.silentlybren.com
@@ -446,12 +456,11 @@
 104.21.57.234       # doh.ccb-net.it
 104.21.62.28        # aihe.app
 104.21.62.158       # dns.silen.org
-104.21.63.61        # bld.sys-adm.in
 104.21.65.52        # doh.disconnect.app
 104.21.76.154       # doh.killtw.im
 104.21.78.15        # adguard-server.cf
 104.26.2.137        # blitz.ahadns.com
-104.26.3.137        # blitz-setup.ahadns.com
+104.26.3.137        # blitz.ahadns.com
 104.199.26.56       # block.abstergo.it
 104.200.18.74       # dns.bobstrecansky.com
 104.236.116.148     # ns.00dani.me
@@ -475,6 +484,7 @@
 111.170.27.1        # opencdn.jomodns.com
 112.91.222.49       # dns.lsho.top
 112.213.32.219      # syd.adfilter.net
+113.167.120.68      # tungdnsne.duckdns.org
 113.219.142.35      # opencdn.jomodns.com
 115.29.235.168      # dns.indust.me
 116.118.44.237      # adguard.cloudmini.net
@@ -488,7 +498,7 @@
 124.239.243.35      # opencdn.jomodns.com
 125.64.104.35       # opencdn.jomodns.com
 125.229.161.13      # dns.david888.com
-126.40.35.141       # dns.kosan.moe
+126.65.177.246      # dns.kosan.moe
 128.93.162.64       # qlf-doh.inria.fr
 128.139.197.53      # doh.iucc.ac.il
 128.199.154.79      # dns.scapetical.com
@@ -500,7 +510,7 @@
 129.232.183.24      # pihole.datamatter.co.za
 130.59.31.248       # dns.switch.ch
 130.59.31.251       # dns.switch.ch
-130.61.4.165        # dns.eu-frankfurt-1.oraclecloud.com
+130.61.2.165        # dns.eu-frankfurt-1.oraclecloud.com
 130.61.24.160       # adguard.meddy94.de
 130.61.121.181      # mainframe.dewed.de
 130.61.173.117      # adguard-kartoffel.zernico.de
@@ -522,6 +532,7 @@
 134.169.34.57       # doh.ibr.cs.tu-bs.de
 134.255.228.135     # pihole2.hoerli.net
 134.255.247.23      # dns.lars-lehmann.net
+135.125.204.230     # bld.sys-adm.in
 136.144.215.158     # doh.powerdns.org
 136.244.65.20       # v.dnscrypt.uk
 136.244.97.114      # chewbacca.meganerd.nl
@@ -622,6 +633,7 @@
 154.49.211.211      # dns.dgea.fr
 155.138.148.63      # tor.vasi.li
 155.248.176.107     # jp2.ooroot.com
+156.146.38.142      # secure.avastdns.com
 157.245.205.238     # dns.infosec.xyz
 158.64.1.29         # kaitain.restena.lu
 158.69.158.186      # dns.islandnet.com
@@ -640,7 +652,6 @@
 161.35.136.3        # doh-primary-pool.goodbyegambling.com
 162.14.21.178       # dns.pub
 162.19.129.20       # dns.b33.space
-162.210.199.87      # dns.futuredns.me
 163.47.117.176      # adl.adfilter.net
 164.90.247.98       # dns.moog.sh
 164.92.237.199      # fra1.eyecay.xyz
@@ -676,7 +687,6 @@
 172.67.137.18       # dns.silen.org
 172.67.138.140      # adguard-ironhide.ultima-thule.ru
 172.67.140.171      # doh.disconnect.app
-172.67.143.223      # bld.sys-adm.in
 172.67.149.34       # gztech.me
 172.67.149.152      # adguard.dessoi.cloud
 172.67.151.251      # dns.hotta.page
@@ -690,7 +700,7 @@
 172.67.178.76       # dns.hafidzradhival.my.id
 172.67.182.154      # dns.paesa.es
 172.67.193.126      # doh.ccb-net.it
-172.67.195.148      # basic.bravedns.com
+172.67.195.148      # bravedns.com
 172.67.197.42       # doh.killtw.im
 172.67.198.185      # dns.unerror.network
 172.67.203.91       # dns.0ooo.icu
@@ -703,8 +713,10 @@
 172.104.206.174     # dns.therifleman.name
 172.105.52.109      # adguard.avdkishore.dev
 172.224.0.5         # mask.icloud.com
+172.224.0.6         # mask-h2.icloud.com
 172.224.0.9         # mask-h2.icloud.com
 172.224.0.12        # mask-h2.icloud.com
+172.224.0.13        # mask-h2.icloud.com
 172.224.0.14        # mask.icloud.com
 172.224.0.15        # mask-h2.icloud.com
 172.224.1.3         # mask.icloud.com
@@ -713,9 +725,12 @@
 172.224.1.7         # mask.icloud.com
 172.224.1.11        # mask.icloud.com
 172.224.1.13        # mask-h2.icloud.com
+172.224.1.131       # mask-h2.icloud.com
 172.224.1.132       # mask-h2.icloud.com
 172.224.1.134       # mask.icloud.com
 172.224.1.135       # mask.icloud.com
+172.224.1.137       # mask.icloud.com
+172.224.1.138       # mask-h2.icloud.com
 172.224.1.139       # mask.icloud.com
 172.224.1.142       # mask-h2.icloud.com
 172.224.73.4        # mask.icloud.com
@@ -724,9 +739,11 @@
 172.224.73.8        # mask-h2.icloud.com
 172.224.73.9        # mask-h2.icloud.com
 172.224.73.10       # mask.icloud.com
+172.224.73.12       # mask.icloud.com
 172.224.73.13       # mask-h2.icloud.com
 172.224.73.15       # mask-h2.icloud.com
 172.224.73.132      # mask.icloud.com
+172.224.73.133      # mask.icloud.com
 172.224.73.134      # mask-h2.icloud.com
 172.224.73.137      # mask-h2.icloud.com
 172.224.73.138      # mask.icloud.com
@@ -764,8 +781,7 @@
 178.209.51.242      # nsec.arnor.org
 178.254.22.166      # ns2.opennameserver.org
 180.214.247.134     # dgca.myds.me
-180.247.25.231      # doh.zephyrus.id
-180.254.93.69       # gustamadh.dynv6.net
+180.253.33.198      # doh.zephyrus.id
 183.171.204.129     # punono.duckdns.org
 184.163.126.251     # adguard.jfchenier.ca
 185.17.3.188        # dns.nas-server.ru
@@ -814,7 +830,6 @@
 188.68.57.106       # kids.5ososea.com
 188.165.20.42       # doh.xcom.pro
 188.165.229.99      # adguard.ender.fr
-188.172.251.1       # dns.nextdns.io
 188.214.144.137     # surt.ml
 192.99.125.157      # mailer.amlegion.org
 192.109.42.41       # dns1.in-berlin.de
@@ -884,8 +899,7 @@
 212.60.63.246       # doh.quickline.ch
 212.83.72.150       # jurre-home.duckdns.org
 212.86.101.213      # adguard.dekonix.ru
-212.102.40.114      # doh1.b-cdn.net
-212.102.40.142      # secure.avastdns.com
+212.102.40.113      # doh1.b-cdn.net
 212.126.59.63       # dns0.eu
 212.185.200.25      # dns1.conne.net
 212.227.68.175      # externalmobiel.lekdijk.online
@@ -900,7 +914,7 @@
 216.230.232.29      # chromium.dns.nextdns.io
 216.238.80.219      # helios.plan9-dns.com
 216.238.107.112     # br.servers.legat.ml
-217.0.43.2          # dns.telekom.de
+217.0.43.114        # dns.telekom.de
 217.0.43.162        # dns.telekom.de
 217.61.98.63        # nsec.arnor.org
 217.62.142.157      # ipoac.nl
