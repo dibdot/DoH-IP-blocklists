@@ -45,7 +45,7 @@
 2001:4b98:dc2:45:216:3eff:fed8:6c2d     # iris.woozeno.eu
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
-2001:558:fee3:37::4                     # doh2.gslb2.xfinity.com
+2001:558:feed:443::99                   # doh.xfinity.com
 2001:620:0:ff::2                        # dns.switch.ch
 2001:620:0:ff::3                        # dns.switch.ch
 2001:638:602:1181:dcad:beff:feef:14     # doh.ibr.cs.tu-bs.de
@@ -76,8 +76,8 @@
 2001:8d8:1801:1d0::1                    # dns.clanless.ovh
 2001:8d8:1801:86e7::1                   # ns1.opennameserver.org
 2001:8d8:820:3a00::b:c47                # secure-dns.dns-ga.de
-2001:9e8:4003:ae8d:464e:6dff:fe3a:9dbc  # area51.mywire.org
-2001:9e8:4039:b6fc:9a9b:cbff:fe1a:1cdd  # adguard.bitteeinbyte.de
+2001:9e8:4003:bfdb:464e:6dff:fe3a:9dbc  # area51.mywire.org
+2001:9e8:4039:c8ac:9a9b:cbff:fe1a:1cdd  # adguard.bitteeinbyte.de
 2001:a18:1::29                          # kaitain.restena.lu
 2001:b000:168::1                        # dns.hinet.net
 2001:b000:168::2                        # dns.hinet.net
@@ -87,11 +87,11 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
 2003:180:2:8100:0:4:0:53                # dns.telekom.de
-2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
-2400:2410:ac61:6e00:f25d:91af:3cb6:7d1a # dns.kosan.moe
+2400:2410:ac61:6e00:7e30:589f:4a93:ec69 # dns.kosan.moe
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:6180:0:d0::45a:b001                # sg-sin.doh.sb
@@ -166,8 +166,8 @@
 2605:9880:300:2700:30:1270:f9c2:2622    # dns.stevenz.net
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
-2606:4700:20::681a:289                  # blitz.ahadns.com
-2606:4700:20::681a:389                  # blitz.ahadns.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
+2606:4700:20::681a:389                  # blitz-setup.ahadns.com
 2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:3030::6815:1db6               # adguard.dessoi.cloud
 2606:4700:3030::6815:2c68               # dns.unerror.network
@@ -248,6 +248,7 @@
 2620:119:fc::2                          # doh.opendns.com
 2620:119:fc::3                          # doh.familyshield.opendns.com
 2620:119:fc::4                          # doh.sandbox.opendns.com
+2620:149:1361:1::5                      # mask.icloud.com
 2620:149:1361:1::6                      # mask.icloud.com
 2620:149:1361:1::8                      # mask.icloud.com
 2620:149:1361:1::9                      # mask-h2.icloud.com
@@ -257,6 +258,7 @@
 2620:149:1361:2::6                      # mask.icloud.com
 2620:149:1361:2::8                      # mask.icloud.com
 2620:149:1361:2::9                      # mask.icloud.com
+2620:149:1361:2::a                      # mask.icloud.com
 2620:149:1361:3::10                     # mask-api.icloud.com
 2620:149:1361:3::13                     # mask-api.icloud.com
 2620:149:1361:3::14                     # mask-api.icloud.com
@@ -268,6 +270,7 @@
 2620:149:1361:3::d                      # mask-api.icloud.com
 2620:149:1361:3::e                      # mask-api.icloud.com
 2620:149:1361::4                        # mask.icloud.com
+2620:149:1361::5                        # mask-h2.icloud.com
 2620:149:1361::8                        # mask-h2.icloud.com
 2620:149:1361::a                        # mask.icloud.com
 2620:149:1361::b                        # mask.icloud.com
@@ -431,11 +434,14 @@
 2620:149:a42:1008::9                    # mask.icloud.com
 2620:149:a42:1008::a                    # mask.icloud.com
 2620:149:a42:1008::b                    # mask.icloud.com
+2620:149:a42:200::12                    # mask-h2.icloud.com
 2620:149:a42:200::13                    # mask.icloud.com
 2620:149:a42:200::14                    # mask.icloud.com
 2620:149:a42:200::16                    # mask.icloud.com
 2620:149:a42:200::17                    # mask-h2.icloud.com
+2620:149:a42:201::12                    # mask-h2.icloud.com
 2620:149:a42:201::15                    # mask-h2.icloud.com
+2620:149:a42:201::16                    # mask-h2.icloud.com
 2620:149:a42:206::12                    # mask-api.icloud.com
 2620:149:a42:206::13                    # mask-api.icloud.com
 2620:149:a42:206::15                    # mask-api.icloud.com
@@ -450,6 +456,7 @@
 2620:149:a42:208::13                    # mask-api.icloud.com
 2620:149:a42:208::1a                    # mask-api.icloud.com
 2620:149:a42:208::1b                    # mask-api.icloud.com
+2620:149:a42:208::1c                    # mask-api.icloud.com
 2620:149:a42:208::1e                    # mask-api.icloud.com
 2620:149:a42:208::5                     # mask-api.icloud.com
 2620:149:a42:208::9                     # mask-api.icloud.com
@@ -466,6 +473,7 @@
 2620:149:a42:20d::f                     # mask-api.icloud.com
 2620:149:a42:20e::10                    # mask-api.icloud.com
 2620:149:a42:20e::7                     # mask-api.icloud.com
+2620:149:a42:20e::b                     # mask-api.icloud.com
 2620:149:a42:20e::d                     # mask-api.icloud.com
 2620:149:a42:20e::e                     # mask-api.icloud.com
 2620:149:a42:20f::5                     # mask-api.icloud.com
@@ -496,6 +504,7 @@
 2620:149:a42:213::10                    # mask-api.icloud.com
 2620:149:a42:213::11                    # mask-api.icloud.com
 2620:149:a42:213::5                     # mask-api.icloud.com
+2620:149:a42:213::6                     # mask-api.icloud.com
 2620:149:a42:213::7                     # mask-api.icloud.com
 2620:149:a42:213::9                     # mask-api.icloud.com
 2620:149:a42:213::a                     # mask-api.icloud.com
@@ -503,6 +512,7 @@
 2620:149:a42:213::f                     # mask-api.icloud.com
 2620:149:a42:214::4                     # mask-api.icloud.com
 2620:149:a42:214::7                     # mask-api.icloud.com
+2620:149:a42:214::a                     # mask-api.icloud.com
 2620:149:a42:214::b                     # mask-api.icloud.com
 2620:149:a42:214::c                     # mask-api.icloud.com
 2620:149:a42:214::d                     # mask-api.icloud.com
@@ -637,7 +647,7 @@
 2a01:111:f100:6000::4134:a07f           # dns.mzrme.cn
 2a01:238:4231:5200::1                   # ns3.opennameserver.org
 2a01:378:ff42:6942:81:18:191:7          # nsc.torgues.net
-2a01:3a0:53:53::                        # unicast.uncensoreddns.org
+2a01:3a0:53:53::                        # unicast.censurfridns.dk
 2a01:4f8:10a:11ef::2                    # pihole1.hoerli.net
 2a01:4f8:13a:250b::187                  # dns.decloudus.com
 2a01:4f8:13b:3407::face                 # dns.digitalsize.net
@@ -664,7 +674,6 @@
 2a01:4f9:2b:aa3::89                     # dns.neubsi.at
 2a01:4f9:c010:1609::1                   # dns.truong.fi
 2a01:4f9:c010:1942::1                   # pope.cnblw.me
-2a01:4f9:c010:2b9f::2                   # fuchur.pentament.de
 2a01:4f9:c010:43ce::1                   # doh-fi.blahdns.com
 2a01:4f9:c01f:4::abcd                   # doh.northeu.pi-dns.com
 2a01:4f9:c01f:74::1                     # eu1.dns.lavate.ch
@@ -681,7 +690,7 @@
 2a02:168:6604:25::65                    # doh.datacore.ch
 2a02:1788:8ff::1                        # ns1.recursive.dnsbycomodo.com
 2a02:1788:8ff::2                        # ns2.recursive.dnsbycomodo.com
-2a02:1b8:10:234::2                      # doh.appliedprivacy.net
+2a02:1b8:10:234::2                      # doh.applied-privacy.net
 2a02:200:1:11::100                      # zrh1-ns01.monzoon.net
 2a02:26f7:74:0:ace0:4904::              # mask.icloud.com
 2a02:26f7:74:0:ace0:4906::              # mask.icloud.com
@@ -786,7 +795,7 @@
 2a09:0:1:a::a                           # de-fra.doh.sb
 2a09:0:7:4::2                           # nl-ams2.doh.sb
 2a09:0:8::15                            # de-dus.doh.sb
-2a09:6382:4000:3:45:155:171:163         # doh.42l.fr
+2a09:6382:4000:3:45:155:171:163         # doh.lacontrevoie.fr
 2a09:8280:1::1:da1b                     # dns.dnswarden.com
 2a09::                                  # doh.sb
 2a09:cd42:f:425b::1                     # dnsse.alekberg.net
@@ -796,10 +805,10 @@
 2a0b:f300:40c:100:1:1:19ab:29dc         # us-east.adhole.org
 2a0c:3d00:11:6942:5:180:59:37           # nsc.torgues.net
 2a0c:59c0:19::3                         # nl-ams.doh.sb
-2a0c:8902::53                           # dns.dnshome.de
+2a0c:8901::53                           # dns.dnshome.de
 2a0c:b641:204::1                        # dns.azsopro.net
 2a0c:b641:204::2                        # dns.azsopro.net
-2a0c:b9c0:f:451d::1                     # dnsnl.alekberg.net
+2a0c:b9c0:f:451d::1                     # dnsnl-noads.alekberg.net
 2a0d:1a43:c010:135::                    # us1.dns.lavate.ch
 2a0d:4d00:81::1                         # doh.dnslify.com
 2a0d:5600:30:28::28                     # doh.no.ahadns.net
