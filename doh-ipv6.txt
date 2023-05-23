@@ -45,7 +45,7 @@
 2001:4b98:dc2:45:216:3eff:fed8:6c2d     # iris.woozeno.eu
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
-2001:558:fee3:37::4                     # doh.xfinity.com
+2001:558:fee3:36::4                     # doh2.gslb2.xfinity.com
 2001:620:0:ff::2                        # dns.switch.ch
 2001:620:0:ff::3                        # dns.switch.ch
 2001:638:602:1181:dcad:beff:feef:14     # doh.ibr.cs.tu-bs.de
@@ -87,8 +87,8 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
+2003:180:2:8100:0:4:0:53                # dns.telekom.de
 2003:180:2::4:0:53                      # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:c635:351c:a76a:c5e2 # dns.kosan.moe
@@ -594,6 +594,7 @@
 2620:149:a43:208::11                    # mask-api.icloud.com
 2620:149:a43:208::4                     # mask-api.icloud.com
 2620:149:a43:208::5                     # mask-api.icloud.com
+2620:149:a43:208::6                     # mask-api.icloud.com
 2620:149:a43:208::7                     # mask-api.icloud.com
 2620:149:a43:208::8                     # mask-api.icloud.com
 2620:149:a43:208::9                     # mask-api.icloud.com
@@ -608,6 +609,7 @@
 2620:149:a43:209::5                     # mask-api.icloud.com
 2620:149:a43:209::7                     # mask-api.icloud.com
 2620:149:a43:209::8                     # mask-api.icloud.com
+2620:149:a43:209::9                     # mask-api.icloud.com
 2620:149:a43:209::a                     # mask-api.icloud.com
 2620:149:a43:209::b                     # mask-api.icloud.com
 2620:149:a43:209::c                     # mask-api.icloud.com
@@ -656,7 +658,6 @@
 2a00:c98:4002:2:c::117                  # dns.keweon.center
 2a00:d78:0:712:94:198:159:3             # doh.sidnlabs.nl
 2a00:f826:8:1::254                      # opennic1.eth-services.de
-2a00:f940:4::10                         # axaxa.fun
 2a01:111:f100:6000::4134:a07f           # dns.mzrme.cn
 2a01:238:4231:5200::1                   # ns3.opennameserver.org
 2a01:378:ff42:6942:81:18:191:7          # nsc.torgues.net
@@ -704,7 +705,7 @@
 2a02:168:6604:25::65                    # doh.datacore.ch
 2a02:1788:8ff::1                        # ns1.recursive.dnsbycomodo.com
 2a02:1788:8ff::2                        # ns2.recursive.dnsbycomodo.com
-2a02:1b8:10:234::2                      # doh.appliedprivacy.net
+2a02:1b8:10:234::2                      # doh.applied-privacy.net
 2a02:200:1:11::100                      # zrh1-ns01.monzoon.net
 2a02:26f7:74:0:ace0:4904::              # mask.icloud.com
 2a02:26f7:74:0:ace0:4906::              # mask.icloud.com
