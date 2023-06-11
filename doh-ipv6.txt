@@ -32,6 +32,7 @@
 2001:470:1f15:b80::53                   # opennic.i2pd.xyz
 2001:470:20::2                          # ordns.he.net
 2001:470:26:7c:b26e:bfff:fe1d:e19b      # ibksturm.synology.me
+2001:470:36:b90:beba:5:0:1d             # dns.bebasid.com
 2001:470:71:6dc::53                     # opennic2.i2pd.xyz
 2001:4860:4860::64                      # dns64.dns.google
 2001:4860:4860::6464                    # dns64.dns.google
@@ -42,7 +43,7 @@
 2001:4b98:dc2:45:216:3eff:fed8:6c2d     # iris.woozeno.eu
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
-2001:558:feed:443::99                   # doh2.gslb2.xfinity.com
+2001:558:feed:443::99                   # doh.xfinity.com
 2001:620:0:ff::2                        # dns.switch.ch
 2001:620:0:ff::3                        # dns.switch.ch
 2001:638:602:1181:dcad:beff:feef:14     # doh.ibr.cs.tu-bs.de
@@ -61,7 +62,7 @@
 2001:67c:2268::100                      # doh.datahata.by
 2001:67c:2354:2::53                     # dns.njal.la
 2001:67c:27e4::35                       # privacydns.go6lab.si
-2001:67c:28a4::                         # anycast.censurfridns.dk
+2001:67c:28a4::                         # anycast.uncensoreddns.org
 2001:67c:a8:1:91:217:86:4               # dns.tls-data.de
 2001:6a8:3c80::16                       # dns.belnet.be
 2001:6a8:3c80:c000::53                  # dns.belnet.be
@@ -83,8 +84,8 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:c0a6:29ae:8f93:f10d # dns.kosan.moe
@@ -130,8 +131,6 @@
 2603:c020:4000:3d34:6160:20db:353b:24d3 # o.rsaikat.com
 2603:c020:4002:be00:780d:ac99:b43f:299a # dns.stevenz.net
 2603:c020:5:3566:beef:beef:beef:beef    # dns.ofdoom.net
-2603:c021:8002:5c77:1e9f:20d:512e:3fc3  # virga.pp.ua
-2603:c021:8002:5c77:6a7c:6bf2:eaa0:b8fd # awan.ftp.sh
 2603:c021:c001:31fa:780:b000:0:415      # ibuki.cgnat.net
 2603:c023:1:8763:80d6:891:ed34:7b18     # dns.chromeina.top
 2603:c023:7:8700::8888                  # oraclejp2.chungyu.com
@@ -158,9 +157,9 @@
 2605:9880:300:2700:30:1270:f9c2:2622    # dns.stevenz.net
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
-2606:4700:20::681a:289                  # blitz.ahadns.com
-2606:4700:20::681a:389                  # blitz-setup.ahadns.com
-2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
+2606:4700:20::681a:389                  # blitz.ahadns.com
+2606:4700:20::ac43:4595                 # blitz.ahadns.com
 2606:4700:3030::6815:1db6               # adguard.dessoi.cloud
 2606:4700:3030::6815:2c68               # dns.unerror.network
 2606:4700:3030::ac43:9a99               # arashi.eu.org
@@ -679,7 +678,7 @@
 2620:fe::11                             # dns11.quad9.net
 2620:fe::12                             # dns12.quad9.net
 2620:fe::13                             # dns13.quad9.net
-2620:fe::9                              # dns9.quad9.net
+2620:fe::9                              # dns.quad9.net
 2620:fe::fe                             # dns.quad9.net
 2620:fe::fe:10                          # dns10.quad9.net
 2620:fe::fe:11                          # dns11.quad9.net
@@ -754,7 +753,7 @@
 2a02:168:6604:25::65                    # doh.datacore.ch
 2a02:1788:8ff::1                        # ns1.recursive.dnsbycomodo.com
 2a02:1788:8ff::2                        # ns2.recursive.dnsbycomodo.com
-2a02:1b8:10:234::2                      # doh.appliedprivacy.net
+2a02:1b8:10:234::2                      # doh.applied-privacy.net
 2a02:200:1:11::100                      # zrh1-ns01.monzoon.net
 2a02:26f7:74:0:ace0:4904::              # mask.icloud.com
 2a02:26f7:74:0:ace0:4905::              # mask-h2.icloud.com
@@ -861,7 +860,7 @@
 2a05:f480:1400:aff:590a:34ce:66f:5188   # adguardhome.atakorah.com
 2a05:fc84::42                           # dns.digitale-gesellschaft.ch
 2a05:fc84::43                           # dns.digitale-gesellschaft.ch
-2a06:1287:1605:beba:51d::               # dns.bebasid.com
+2a06:1287:1605:5353::beba:51d           # dns.bebasid.com
 2a06:1c40:3::13                         # dns.lars-lehmann.net
 2a06:98c1:52::4                         # mozilla.cloudflare-dns.com
 2a07:a8c0::                             # anycast.dns.nextdns.io
@@ -876,7 +875,7 @@
 2a09:6382:4000:3:45:155:171:163         # doh.42l.fr
 2a09:8280:1::1:da1b                     # dns.dnswarden.com
 2a09::                                  # doh.sb
-2a09:cd42:f:425b::1                     # dnsse-noads.alekberg.net
+2a09:cd42:f:425b::1                     # dnsse.alekberg.net
 2a0a:51c0::7fe                          # dns.lars-lehmann.net
 2a0a:be80::cbe:4444                     # cubedns.com
 2a0a:be80::cbe:4445                     # cubedns.com
