@@ -80,8 +80,8 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:7000:0:4:0:53                # dns.telekom.de
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:78ad:32fb:1d9:aa38  # dns.kosan.moe
@@ -153,9 +153,10 @@
 2605:9880:300:2700:30:1270:f9c2:2622    # dns.stevenz.net
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
-2606:4700:20::681a:289                  # blitz.ahadns.com
+2606:4700:130:436c:6f75:6466:6c61:7265  # dns.silentlybren.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
 2606:4700:20::681a:389                  # blitz.ahadns.com
-2606:4700:20::ac43:4595                 # blitz.ahadns.com
+2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:3030::6815:1db6               # adguard.dessoi.cloud
 2606:4700:3030::6815:2c68               # dns.unerror.network
 2606:4700:3030::ac43:9a99               # arashi.eu.org
@@ -181,14 +182,12 @@
 2606:4700:3033::ac43:9522               # gztech.me
 2606:4700:3033::ac43:a21b               # basic.rethinkdns.com
 2606:4700:3033::ac43:c6b9               # dns.unerror.network
-2606:4700:3034::6815:3545               # dns.silentlybren.com
 2606:4700:3034::6815:7eb                # doh.dns.sb
 2606:4700:3034::6815:a0d                # basic.rethinkdns.com
 2606:4700:3034::ac43:a60e               # lindung.pp.ua
 2606:4700:3034::ac43:d682               # adguard-server.cf
 2606:4700:3035::6815:1ea2               # doh.tiarap.org
 2606:4700:3035::ac43:9c88               # doh.dns.sb
-2606:4700:3035::ac43:d1ad               # dns.silentlybren.com
 2606:4700:3036::6815:4e0f               # adguard-server.cf
 2606:4700:3036::6815:e7e                # dns.0ooo.icu
 2606:4700:3036::ac43:869d               # doh.crypto.sx
@@ -1006,7 +1005,7 @@
 2a09:6382:4000:3:45:155:171:163         # doh.42l.fr
 2a09:8280:1::1:da1b                     # dns.dnswarden.com
 2a09::                                  # doh.sb
-2a09:cd42:f:425b::1                     # dnsse.alekberg.net
+2a09:cd42:f:425b::1                     # dnsse-noads.alekberg.net
 2a0a:51c0::7fe                          # dns.lars-lehmann.net
 2a0a:be80::cbe:4444                     # cubedns.com
 2a0a:be80::cbe:4445                     # cubedns.com
@@ -1016,7 +1015,7 @@
 2a0c:8902::53                           # dns.dnshome.de
 2a0c:b641:204::1                        # dns.azsopro.net
 2a0c:b641:204::2                        # dns.azsopro.net
-2a0c:b9c0:f:451d::1                     # dnsnl-noads.alekberg.net
+2a0c:b9c0:f:451d::1                     # dnsnl.alekberg.net
 2a0d:1a43:c010:135::                    # us1.dns.lavate.ch
 2a0d:4d00:81::1                         # doh.dnslify.com
 2a0d:5600:30:28::28                     # doh.no.ahadns.net
