@@ -58,7 +58,7 @@
 2001:67c:2268::100                      # doh.datahata.by
 2001:67c:2354:2::53                     # dns.njal.la
 2001:67c:27e4::35                       # privacydns.go6lab.si
-2001:67c:28a4::                         # anycast.uncensoreddns.org
+2001:67c:28a4::                         # anycast.censurfridns.dk
 2001:67c:a8:1:91:217:86:4               # dns.tls-data.de
 2001:6a8:3c80::16                       # dns.belnet.be
 2001:6a8:3c80:c000::53                  # dns.belnet.be
@@ -80,11 +80,11 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
 2003:180:2::4:0:53                      # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
-2400:2410:ac61:6e00:6116:80e2:d59a:de1c # dns.kosan.moe
+2400:2410:ac61:6e00:51e1:d6aa:3219:20e6 # dns.kosan.moe
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:6180:0:d0::45a:b001                # sg-sin.doh.sb
@@ -114,7 +114,7 @@
 2406:ef80:2:8f28::1                     # sg.teradns.org
 2406:ef80:4:1537::1                     # doh-jp.blahdns.com
 2407:24c0:2::154:3                      # dns.gi.co.id
-2408:8256:d087:2ceb::564                # dns.lsho.top
+2408:8256:d087:2b33::564                # dns.lsho.top
 240e:e9:900b::5                         # dns.ipv6dns.com
 2600:1f18:6296:8903::beef               # doth.huque.com
 2600:3c00::f03c:93ff:fe79:3686          # tx.teradns.org
@@ -154,7 +154,7 @@
 2605:9880:300:2700:30:1270:f9c2:2622    # dns.stevenz.net
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
-2606:4700:20::681a:289                  # blitz.ahadns.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
 2606:4700:20::681a:389                  # blitz.ahadns.com
 2606:4700:20::ac43:4595                 # blitz.ahadns.com
 2606:4700:3030::6815:1db6               # adguard.dessoi.cloud
@@ -224,7 +224,7 @@
 2606:4700::6812:a6db                    # resolver.unstoppable.io
 2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io
 2607:5300:60:8449:31:ffff:ffff:ffff     # mailer.amlegion.org
-2607:5300:61:95f:7283:11d9:f86:e689     # dns1.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e689     # dns1.ipv6.dnscrypt.ca
 2607:5300:61:95f:7283:11d9:f86:e690     # dns2.ipv6.dnscrypt.ca
 2607:f1c0:1801:37::1                    # pihole3.hoerli.net
 2620:10a:80bb::10                       # private.canadianshield.cira.ca
@@ -336,6 +336,7 @@
 2620:149:a41:802::8                     # mask-api.icloud.com
 2620:149:a41:802::9                     # mask-api.icloud.com
 2620:149:a41:802::a                     # mask-api.icloud.com
+2620:149:a41:802::b                     # mask-api.icloud.com
 2620:149:a41:802::c                     # mask-api.icloud.com
 2620:149:a41:802::d                     # mask-api.icloud.com
 2620:149:a41:802::e                     # mask-api.icloud.com
@@ -950,6 +951,7 @@
 2a02:26f7:c6:0:ace0:70c::               # mask-h2.icloud.com
 2a02:26f7:c6:0:ace0:70d::               # mask.icloud.com
 2a02:26f7:c6:0:ace0:70e::               # mask-h2.icloud.com
+2a02:6ea0:c454::1                       # doh1.b-cdn.net
 2a02:8106:20c:dd00:dea6:32ff:fe04:71d4  # irre.li
 2a02:c205:2025:2368::1                  # jackyes.ovh
 2a03:1ac0:5857:455d::24                 # adguard.onlyfriends.info
