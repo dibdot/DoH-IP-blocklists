@@ -25,7 +25,7 @@
 2001:41d0:404:200::976                  # dns.kawa.tf
 2001:41d0:601:2000::2386                # dns.panszelescik.pl
 2001:41d0:8:9a14::1                     # yarp.lefolgoc.net
-2001:448a:404b:1d83::1                  # gustamadh.dynv6.net
+2001:448a:404c:545a::1                  # gustamadh.dynv6.net
 2001:4610:a:4b::87bd                    # dandelionsprout.asuscomm.com
 2001:470:1c:76d::53                     # dns.cmrg.net
 2001:470:1f15:b80::53                   # opennic.i2pd.xyz
@@ -81,8 +81,8 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:b0ee:82ff:fe16:bd71 # dns.kosan.moe
@@ -157,7 +157,7 @@
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
 2606:4700:20::681a:289                  # blitz-setup.ahadns.com
-2606:4700:20::681a:389                  # blitz-setup.ahadns.com
+2606:4700:20::681a:389                  # blitz.ahadns.com
 2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:3030::6815:1db6               # adguard.dessoi.cloud
 2606:4700:3030::6815:2a7e               # dns.dgea.fr
@@ -178,7 +178,7 @@
 2606:4700:3032::6815:4f6c               # armorrush.eu.org
 2606:4700:3032::ac43:8a8c               # adguard-ironhide.ultima-thule.ru
 2606:4700:3032::ac43:8cab               # doh.disconnect.app
-2606:4700:3032::ac43:c394               # basic.bravedns.com
+2606:4700:3032::ac43:c394               # bravedns.com
 2606:4700:3032::ac43:d2c8               # jp.68360612.xyz
 2606:4700:3033::6815:101f               # lindung.pp.ua
 2606:4700:3033::6815:25ae               # jp.68360612.xyz
@@ -228,8 +228,8 @@
 2606:4700::6812:a6db                    # resolver.unstoppable.io
 2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io
 2607:5300:60:8449:31:ffff:ffff:ffff     # mailer.amlegion.org
-2607:5300:61:95f:7283:11d9:f86:e689     # dns1.ipv6.dnscrypt.ca
-2607:5300:61:95f:7283:11d9:f86:e690     # dns2.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e689     # dns1.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e690     # dns2.ipv6.dnscrypt.ca
 2607:f1c0:1801:37::1                    # pihole3.hoerli.net
 2620:10a:80bb::10                       # private.canadianshield.cira.ca
 2620:10a:80bb::20                       # protected.canadianshield.cira.ca
@@ -670,6 +670,7 @@
 2620:149:a42:214::d                     # mask-api.icloud.com
 2620:149:a42:214::e                     # mask-api.icloud.com
 2620:149:a42:214::f                     # mask-api.icloud.com
+2620:149:a42:280::2:1                   # mask-api.icloud.com
 2620:149:a42:606::10                    # mask-api.icloud.com
 2620:149:a42:606::11                    # mask-api.icloud.com
 2620:149:a42:606::12                    # mask-api.icloud.com
@@ -880,9 +881,7 @@
 2a01:e0a:10f:ed30:baac:6fff:feaa:6e7d   # cloud.tezoi.com
 2a01:e0a:b08:b6d0:96de:80ff:feb7:a7a2   # rayneau.fr
 2a02:168:6604:25::65                    # doh.datacore.ch
-2a02:1788:8ff::1                        # ns1.recursive.dnsbycomodo.com
-2a02:1788:8ff::2                        # ns2.recursive.dnsbycomodo.com
-2a02:1b8:10:234::2                      # doh.applied-privacy.net
+2a02:1b8:10:234::2                      # doh.appliedprivacy.net
 2a02:200:1:11::100                      # zrh1-ns01.monzoon.net
 2a02:26f7:74:0:ace0:4904::              # mask.icloud.com
 2a02:26f7:74:0:ace0:4905::              # mask-h2.icloud.com
@@ -1059,7 +1058,7 @@
 2a10:50c0::1:ff                         # dns-unfiltered.adguard.com
 2a10:50c0::2:ff                         # dns-unfiltered.adguard.com
 2a10:50c0::ad1:ff                       # dns.adguard-dns.com
-2a10:50c0::ad2:ff                       # dns.adguard.com
+2a10:50c0::ad2:ff                       # dns.adguard-dns.com
 2a10:50c0::bad1:ff                      # dns-family.adguard.com
 2a10:50c0::bad2:ff                      # dns-family.adguard.com
 2a11:3::66                              # au-syd.doh.sb
