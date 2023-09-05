@@ -36,8 +36,8 @@
 2001:470:71:6dc::53                     # opennic2.i2pd.xyz
 2001:4860:4860::64                      # dns64.dns.google
 2001:4860:4860::6464                    # dns64.dns.google
-2001:4860:4860::8844                    # 8888.google
-2001:4860:4860::8888                    # 8888.google
+2001:4860:4860::8844                    # dns.google.com
+2001:4860:4860::8888                    # dns.google.com
 2001:4b98:dc2:41:216:3eff:fe16:1080     # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fece:3e55     # dns.hostux.net
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
@@ -70,7 +70,7 @@
 2001:8d8:1800:835d::1                   # pihole4.hoerli.net
 2001:8d8:1801:1d0::1                    # dns.clanless.ovh
 2001:8d8:1801:86e7::1                   # ns1.opennameserver.org
-2001:9e8:4003:bcff:464e:6dff:fe3a:9dbc  # area51.mywire.org
+2001:9e8:4003:c7f5:464e:6dff:fe3a:9dbc  # area51.mywire.org
 2001:a18:1::29                          # kaitain.restena.lu
 2001:b000:168::1                        # dns.hinet.net
 2001:b000:168::2                        # dns.hinet.net
@@ -154,9 +154,9 @@
 2605:9880:300:2700:30:1270:f9c2:2622    # dns.stevenz.net
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
-2606:4700:20::681a:289                  # blitz.ahadns.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
 2606:4700:20::681a:389                  # blitz.ahadns.com
-2606:4700:20::ac43:4595                 # blitz.ahadns.com
+2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:3030::6815:1db6               # adguard.dessoi.cloud
 2606:4700:3030::6815:2a7e               # dns.dgea.fr
 2606:4700:3030::6815:2c68               # dns.unerror.network
@@ -225,8 +225,8 @@
 2606:4700::6812:a6db                    # resolver.unstoppable.io
 2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io
 2607:5300:60:8449:31:ffff:ffff:ffff     # mailer.amlegion.org
-2607:5300:61:95f:7283:11d9:f86:e689     # dns1.dnscrypt.ca
-2607:5300:61:95f:7283:11d9:f86:e690     # dns2.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e689     # dns1.ipv6.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e690     # dns2.ipv6.dnscrypt.ca
 2607:f1c0:1801:37::1                    # pihole3.hoerli.net
 2620:10a:80bb::10                       # private.canadianshield.cira.ca
 2620:10a:80bb::20                       # protected.canadianshield.cira.ca
@@ -671,6 +671,7 @@
 2620:149:a42:214::f                     # mask-api.icloud.com
 2620:149:a42:280::2:1                   # mask-api.icloud.com
 2620:149:a42:280::2:3                   # mask-api.icloud.com
+2620:149:a42:280::2:4                   # mask-api.icloud.com
 2620:149:a42:280::2:5                   # mask-api.icloud.com
 2620:149:a42:280::2:6                   # mask-api.icloud.com
 2620:149:a42:280::2:a                   # mask-api.icloud.com
@@ -900,6 +901,7 @@
 2a02:26f7:74:0:ace0:490c::              # mask-h2.icloud.com
 2a02:26f7:74:0:ace0:490d::              # mask.icloud.com
 2a02:26f7:74:0:ace0:490e::              # mask.icloud.com
+2a02:26f7:74:0:ace0:490f::              # mask.icloud.com
 2a02:26f7:74:2:ace0:4985::              # mask-h2.icloud.com
 2a02:26f7:74:2:ace0:4986::              # mask.icloud.com
 2a02:26f7:74:2:ace0:4987::              # mask.icloud.com
@@ -1066,7 +1068,7 @@
 2a10:50c0::1:ff                         # dns-unfiltered.adguard.com
 2a10:50c0::2:ff                         # dns-unfiltered.adguard.com
 2a10:50c0::ad1:ff                       # dns.adguard.com
-2a10:50c0::ad2:ff                       # dns.adguard-dns.com
+2a10:50c0::ad2:ff                       # dns.adguard.com
 2a10:50c0::bad1:ff                      # dns-family.adguard.com
 2a10:50c0::bad2:ff                      # dns-family.adguard.com
 2a11:3::66                              # au-syd.doh.sb
