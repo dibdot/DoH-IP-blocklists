@@ -47,7 +47,7 @@
 2001:620:0:ff::3                        # dns.switch.ch
 2001:638:602:1181:dcad:beff:feef:14     # doh.ibr.cs.tu-bs.de
 2001:638:708:20::20                     # ines.zfn.uni-bremen.de
-2001:678:84::                           # doh.nic.lv
+2001:678:84::                           # doh.lv
 2001:678:888:300:1234:5678::            # dns.flatuslifir.is
 2001:678:888:69:c45d:2738:c3f2:1878     # dns.flatuslifir.is
 2001:678:8::3                           # doh.dns4all.eu
@@ -84,8 +84,8 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:4000:0:4:0:53                # dns.telekom.de
-2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:1000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:9cdc:dcff:fea3:f601 # dns.kosan.moe
@@ -115,7 +115,7 @@
 2404:9400:214e:ea00::1                  # syd.adfilter.net
 2404:9400:41a9:4800::1                  # per.adfilter.net
 2404:9400:4:0:216:3eff:fee1:a280        # dns.slinkyman.net
-2405:9800:b910:d0f:b4ed:6e3d:6756:a683  # dns.hanahira.dev
+2405:9800:b910:d0f:1c4c:b1d5:715a:eb24  # dns.hanahira.dev
 2406:da12:6cb:df00:7a77:c387:2bed:613c  # kr-sel.doh.sb
 2406:da18:ce3:9801:6aa2:5634:9873:71fe  # puredns.org
 2406:da18:ce3:9803:7106:3bbb:f9df:c955  # puredns.org
@@ -173,11 +173,11 @@
 2606:1a40::11                           # freedns.controld.com
 2606:4700:20::681a:14e                  # adguard.dessoi.cloud
 2606:4700:20::681a:289                  # blitz-setup.ahadns.com
-2606:4700:20::681a:389                  # blitz-setup.ahadns.com
+2606:4700:20::681a:389                  # blitz.ahadns.com
 2606:4700:20::681a:4e                   # adguard.dessoi.cloud
 2606:4700:20::681a:e60                  # dns.aaytorr.com
 2606:4700:20::681a:f60                  # dns.aaytorr.com
-2606:4700:20::ac43:4595                 # blitz.ahadns.com
+2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:20::ac43:4863                 # adguard.dessoi.cloud
 2606:4700:20::ac43:491d                 # dns.aaytorr.com
 2606:4700:3030::6815:2a7e               # dns.dgea.fr
@@ -192,7 +192,7 @@
 2606:4700:3030::ac43:c52a               # doh.killtw.im
 2606:4700:3030::ac43:ce5a               # dns.240527.xyz
 2606:4700:3030::ac43:d608               # ivnkn.xyz
-2606:4700:3031::6815:31ea               # bravedns.com
+2606:4700:3031::6815:31ea               # basic.bravedns.com
 2606:4700:3031::6815:3e9e               # dns.silen.org
 2606:4700:3031::6815:4134               # doh.disconnect.app
 2606:4700:3031::6815:4c9a               # doh.killtw.im
@@ -267,7 +267,7 @@
 2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io
 2607:5300:60:8449:31:ffff:ffff:ffff     # mailer.amlegion.org
 2607:5300:61:95f:7283:11d9:f86:e689     # dns1.dnscrypt.ca
-2607:5300:61:95f:7283:11d9:f86:e690     # dns2.ipv6.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e690     # dns2.dnscrypt.ca
 2620:10a:80bb::10                       # private.canadianshield.cira.ca
 2620:10a:80bb::20                       # protected.canadianshield.cira.ca
 2620:10a:80bb::30                       # family.canadianshield.cira.ca
@@ -720,6 +720,7 @@
 2620:149:a42:280::2:6                   # mask-api.icloud.com
 2620:149:a42:280::2:7                   # mask-api.icloud.com
 2620:149:a42:280::2:8                   # mask-api.icloud.com
+2620:149:a42:280::2:9                   # mask-api.icloud.com
 2620:149:a42:280::2:a                   # mask-api.icloud.com
 2620:149:a42:280::2:b                   # mask-api.icloud.com
 2620:149:a42:606::10                    # mask-api.icloud.com
@@ -879,7 +880,6 @@
 2a00:11c0:39:353::3                     # chromium.dns.nextdns.io
 2a00:4820:31b0:0:dacb:8aff:feba:55d7    # doh.port53.dk
 2a00:5980:94::71                        # dns.circl.lu
-2a00:6800:3:4bd::                       # ns2.opennameserver.org
 2a00:c98:4002:1:6::42                   # dns.keweon.center
 2a00:c98:4002:1:6::44                   # dns.keweon.center
 2a00:c98:4002:1:7::51                   # dns.keweon.center
@@ -899,7 +899,7 @@
 2a01:238:20a:202:1149::                 # project-evoex.de
 2a01:238:4231:5200::1                   # ns3.opennameserver.org
 2a01:378:ff42:6942:81:18:191:7          # nsc.torgues.net
-2a01:3a0:53:53::                        # unicast.censurfridns.dk
+2a01:3a0:53:53::                        # unicast.uncensoreddns.org
 2a01:4f8:10a:11ef::2                    # pihole1.hoerli.net
 2a01:4f8:13a:250b::187                  # dns.decloudus.com
 2a01:4f8:13b:3407::face                 # dns.digitalsize.net
@@ -920,6 +920,7 @@
 2a01:4f8:c010:21c1::1                   # hole.elbschloss.xyz
 2a01:4f8:c010:8ba4::1                   # dns.molinero.dev
 2a01:4f8:c010:a181::1                   # doh.luigi.nexific.it
+2a01:4f8:c0c:e514::1                    # secure-dns.dns-ga.de
 2a01:4f8:c0c:f97f::1                    # dns.daw.dev
 2a01:4f8:c17:ec67::1                    # doh-de.blahdns.com
 2a01:4f9:2b:1305::2                     # dns.froth.zone
@@ -1119,14 +1120,14 @@
 2a09:6382:4000:5:45:155:169:132         # dns.privado.ovh
 2a09:8280:1::1:da1b                     # dns.dnswarden.com
 2a09::                                  # doh.sb
-2a09:cd42:f:425b::1                     # dnsse.alekberg.net
+2a09:cd42:f:425b::1                     # dnsse-noads.alekberg.net
 2a0a:51c0::7fe                          # dns.lars-lehmann.net
 2a0a:be80::cbe:4444                     # cubedns.com
 2a0a:be80::cbe:4445                     # cubedns.com
 2a0b:f300:40c:100:1:1:19ab:29dc         # us-east.adhole.org
 2a0c:3d00:11:6942:5:180:59:37           # nsc.torgues.net
 2a0c:59c0:19::3                         # nl-ams.doh.sb
-2a0c:8901::53                           # dns.dnshome.de
+2a0c:8902::53                           # dns.dnshome.de
 2a0c:b641:204::1                        # dns.azsopro.net
 2a0c:b641:204::2                        # dns.azsopro.net
 2a0c:b9c0:f:451d::1                     # dnsnl-noads.alekberg.net
@@ -1147,8 +1148,8 @@
 2a0f:5707:ba00::53                      # dnscache.e-utp.net
 2a10:50c0::1:ff                         # dns-unfiltered.adguard.com
 2a10:50c0::2:ff                         # dns-unfiltered.adguard.com
-2a10:50c0::ad1:ff                       # dns.adguard.com
-2a10:50c0::ad2:ff                       # dns.adguard.com
+2a10:50c0::ad1:ff                       # dns.adguard-dns.com
+2a10:50c0::ad2:ff                       # dns.adguard-dns.com
 2a10:50c0::bad1:ff                      # dns-family.adguard.com
 2a10:50c0::bad2:ff                      # dns-family.adguard.com
 2a11:3::66                              # au-syd.doh.sb
