@@ -55,7 +55,6 @@
 2001:678:e3c::2                         # dns.artikel10.org
 2001:678:e68:f000::                     # doh.ffmuc.net
 2001:678:ed0:f000::                     # doh.ffmuc.net
-2001:67c:1400:800:53::1                 # dns1.in-berlin.de
 2001:67c:21ec::53                       # dnscache.e-utp.net
 2001:67c:2268::100                      # doh.datahata.by
 2001:67c:2354:2::53                     # dns.njal.la
@@ -84,8 +83,8 @@
 2001:da8:d800:931::153                  # neatdns.ustclug.org
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:9cdc:dcff:fea3:f601 # dns.kosan.moe
@@ -132,9 +131,12 @@
 2600:1700:4e60:b98f::157                # dns.sarak.as
 2600:1700:4e60:b98f::158                # dns.sarak.as
 2600:1f18:6296:8903::beef               # doth.huque.com
+2600:1f28:60:800:625:b6c0:cf81:f79f     # dns.api.sandbox.globuscs.info
 2600:1f28:60:800:b581:3ede:8398:8fa3    # dns.api.staging.globuscs.info
 2600:1f28:60:801:78e9:1d40:2653:f1e3    # dns.api.staging.globuscs.info
+2600:1f28:60:801:8b6c:396e:d632:9986    # dns.api.sandbox.globuscs.info
 2600:1f28:60:802:167c:cb11:e924:6bb8    # dns.api.staging.globuscs.info
+2600:1f28:60:802:4b8e:5d36:7e94:2864    # dns.api.sandbox.globuscs.info
 2600:3c00::f03c:93ff:fe79:3686          # tx.teradns.org
 2600:3c00::f03c:93ff:feca:d2be          # us1.blissdns.net
 2600:3c01:e000:130::8:0                 # dns.elemental.software
@@ -152,6 +154,7 @@
 2603:c021:c001:31fa:780:b000:0:415      # ibuki.cgnat.net
 2603:c023:1:8763:80d6:891:ed34:7b18     # dns.chromeina.top
 2603:c023:7:8700::8888                  # oraclejp2.chungyu.com
+2603:c024:4507:6821:456c:317b:2f25:11bc # tuandns.duckdns.org
 2603:c024:4509:b8aa:420a:4988:30a:5acd  # dns.0ooo.icu
 2603:c024:8003:6b00:33e4:a388:fcd2:46e3 # ag.ssrahul96.xyz
 2603:c024:9:35af:19c7:3532:ac18:f4b9    # dns.moonssif.com
@@ -174,7 +177,7 @@
 2605:aa80:1:1688::1                     # ny.teradns.org
 2606:1a40::11                           # freedns.controld.com
 2606:4700:20::681a:14e                  # adguard.dessoi.cloud
-2606:4700:20::681a:289                  # blitz.ahadns.com
+2606:4700:20::681a:289                  # blitz-setup.ahadns.com
 2606:4700:20::681a:389                  # blitz.ahadns.com
 2606:4700:20::681a:4e                   # adguard.dessoi.cloud
 2606:4700:20::681a:e60                  # dns.aaytorr.com
@@ -194,7 +197,7 @@
 2606:4700:3030::ac43:c52a               # doh.killtw.im
 2606:4700:3030::ac43:ce5a               # dns.240527.xyz
 2606:4700:3030::ac43:d608               # ivnkn.xyz
-2606:4700:3031::6815:31ea               # basic.bravedns.com
+2606:4700:3031::6815:31ea               # bravedns.com
 2606:4700:3031::6815:3e9e               # dns.silen.org
 2606:4700:3031::6815:4134               # doh.disconnect.app
 2606:4700:3031::6815:4c9a               # doh.killtw.im
@@ -206,7 +209,7 @@
 2606:4700:3032::6815:4f6c               # armorrush.eu.org
 2606:4700:3032::ac43:8a8c               # adguard-ironhide.ultima-thule.ru
 2606:4700:3032::ac43:8cab               # doh.disconnect.app
-2606:4700:3032::ac43:c394               # basic.bravedns.com
+2606:4700:3032::ac43:c394               # bravedns.com
 2606:4700:3032::ac43:d2c8               # jp.68360612.xyz
 2606:4700:3033::6815:101f               # lindung.pp.ua
 2606:4700:3033::6815:25ae               # jp.68360612.xyz
@@ -269,7 +272,7 @@
 2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io
 2607:5300:60:8449:31:ffff:ffff:ffff     # mailer.amlegion.org
 2607:5300:61:95f:7283:11d9:f86:e689     # dns1.ipv6.dnscrypt.ca
-2607:5300:61:95f:7283:11d9:f86:e690     # dns2.dnscrypt.ca
+2607:5300:61:95f:7283:11d9:f86:e690     # dns2.ipv6.dnscrypt.ca
 2620:10a:80bb::10                       # private.canadianshield.cira.ca
 2620:10a:80bb::20                       # protected.canadianshield.cira.ca
 2620:10a:80bb::30                       # family.canadianshield.cira.ca
@@ -945,6 +948,7 @@
 2a01:9e00::55                           # rdns.faelix.net
 2a01:9e01::54                           # rdns.faelix.net
 2a01:9e01::55                           # rdns.faelix.net
+2a01:e0a:10f:ed30:baac:6fff:feaa:6e7d   # cloud.tezoi.com
 2a01:e0a:b08:b6d0:96de:80ff:feb7:a7a2   # rayneau.fr
 2a02:168:6604:25::65                    # doh.datacore.ch
 2a02:1788:8ff::1                        # ns1.recursive.dnsbycomodo.com
@@ -1111,7 +1115,7 @@
 2a07:a8c0::                             # anycast.dns.nextdns.io
 2a07:a8c1::                             # anycast.dns.nextdns.io
 2a07:e340::2                            # dns.mullvad.net
-2a07:e340::3                            # adblock.doh.mullvad.net
+2a07:e340::3                            # adblock.dns.mullvad.net
 2a07:e340::4                            # base.dns.mullvad.net
 2a07:e340::5                            # extended.dns.mullvad.net
 2a07:e340::9                            # all.dns.mullvad.net
@@ -1123,7 +1127,7 @@
 2a09:6382:4000:5:45:155:169:132         # dns.privado.ovh
 2a09:8280:1::1:da1b                     # dns.dnswarden.com
 2a09::                                  # doh.sb
-2a09:cd42:f:425b::1                     # dnsse.alekberg.net
+2a09:cd42:f:425b::1                     # dnsse-noads.alekberg.net
 2a0a:51c0::7fe                          # dns.lars-lehmann.net
 2a0a:be80::cbe:4444                     # cubedns.com
 2a0a:be80::cbe:4445                     # cubedns.com
@@ -1133,7 +1137,7 @@
 2a0c:8902::53                           # dns.dnshome.de
 2a0c:b641:204::1                        # dns.azsopro.net
 2a0c:b641:204::2                        # dns.azsopro.net
-2a0c:b9c0:f:451d::1                     # dnsnl-noads.alekberg.net
+2a0c:b9c0:f:451d::1                     # dnsnl.alekberg.net
 2a0d:1a43:c010:135::                    # us1.dns.lavate.ch
 2a0d:4d00:81::1                         # doh.dnslify.com
 2a0d:5600:30:28::28                     # doh.no.ahadns.net
