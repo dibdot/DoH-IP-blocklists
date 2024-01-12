@@ -5,7 +5,7 @@
 2001:19f0:5:3bd7:5400:4ff:fe05:da83     # kronos.plan9-dns.com
 2001:19f0:5:6d5c:5400:2ff:feed:db51     # adguard1.jsanagustin.net
 2001:19f0:5c00:1cff:5400:4ff:fe35:a82d  # chromium.dns.nextdns.io
-2001:19f0:7001:225d::1                  # doh.eastas.pi-dns.com
+2001:19f0:7001:225d::1                  # dot.eastas.pi-dns.com
 2001:19f0:7001:4532:5400:3ff:fe2d:82bb  # adguard.konikoni428.com
 2001:19f0:8001:1e9d:5400:2ff:fec8:70cf  # chromium.dns.nextdns.io
 2001:19f0:9002:de4:5400:4ff:fe08:7de3   # pluton.plan9-dns.com
@@ -21,7 +21,7 @@
 2001:1c01:2d0a:b700::1                  # ipoac.nl
 2001:300::5                             # public.dns.iij.jp
 2001:300::6                             # public.dns.iij.jp
-2001:418:8006::12                       # rgnet-iad.anycast.censurfridns.dk
+2001:418:8006::12                       # rgnet-iad.anycast.uncensoreddns.org
 2001:41d0:302:2200::180                 # doh.bortzmeyer.fr
 2001:41d0:303:2cc7:100::                # ns1-doh.iriseden.fr
 2001:41d0:303:2cc7:200::                # ns2-doh.iriseden.fr
@@ -50,7 +50,7 @@
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
 2001:550:5a00:5eb::db5:f001             # rdu01.dnscry.pt
 2001:558:fe21:6b:96:113:151:145         # dot.xfinity.com
-2001:558:feed:443::99                   # doh.xfinity.com
+2001:558:feed:443::99                   # doh2.gslb2.xfinity.com
 2001:578:3f::30                         # doh.cox.net
 2001:610:1:40ba:145:100:185:15          # dnsovertls.sinodun.com
 2001:610:1:40ba:145:100:185:16          # dnsovertls1.sinodun.com
@@ -69,7 +69,7 @@
 2001:678:8::3                           # doh.dns4all.eu
 2001:678:d08:ff::53                     # dns.moulticast.net
 2001:678:e68:f000::                     # doh.ffmuc.net
-2001:678:ed0:f000::                     # doh.ffmuc.net
+2001:678:ed0:f000::                     # dot.ffmuc.net
 2001:67c:1400:800:53::1                 # dns1.in-berlin.de
 2001:67c:1401:2120::1                   # dns.artikel10.org
 2001:67c:21ec::53                       # dnscache.e-utp.net
@@ -83,7 +83,7 @@
 2001:6a8:3c80:c000::53                  # dns.belnet.be
 2001:780:250::beaf                      # dns.lars-lehmann.net
 2001:878:0:e000:82:e1:f4:a6             # deic-lgb.anycast.censurfridns.dk
-2001:878:0:e000:82:e2:a1:22             # deic-ore.anycast.censurfridns.dk
+2001:878:0:e000:82:e2:a1:22             # deic-ore.anycast.uncensoreddns.org
 2001:8b0:24:24::24                      # dns-tls.bitwiseshift.net
 2001:8b0::2022                          # dns.aa.net.uk
 2001:8b0::2023                          # dns.aa.net.uk
@@ -94,7 +94,7 @@
 2001:8d8:820:3a00::b:c47                # secure-dns.dns-ga.de
 2001:910:800::12                        # ns0.fdn.fr
 2001:910:800::40                        # ns1.fdn.fr
-2001:9e8:4003:cfc8:6b4:feff:fe9b:eb1d   # area51.mywire.org
+2001:9e8:4003:e504:6b4:feff:fe9b:eb1d   # area51.mywire.org
 2001:a18:1::29                          # kaitain.restena.lu
 2001:b000:168::1                        # dns.hinet.net
 2001:b000:168::2                        # dns.hinet.net
@@ -103,15 +103,15 @@
 2001:bc8:710:1efa:dc00:ff:fe34:a339     # fr-dns1.bancuh.com
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
-2003:180:2:4000:0:4:0:53                # dns.telekom.de
-2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2400:2410:ac61:6e00:9cdc:dcff:fea3:f601 # dns.kosan.moe
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:6180:0:d0::45a:b001                # sg-sin.doh.sb
-2400:6180:0:d0::5f73:4001               # doh.tiar.app
+2400:6180:0:d0::5f73:4001               # dot.tiar.app
 2400:6180:0:d0::f7:1001                 # sg-dns1.bancuh.com
 2400:6180:0:d1::873:7001                # dns.infosec.xyz
 2400:6180:100:d0::4e0:6001              # do.shimul.me
@@ -217,10 +217,9 @@
 2606:4700:10::6816:4a9b                 # adblock.mydns.network
 2606:4700:10::6816:4b9b                 # adblock.mydns.network
 2606:4700:10::ac43:1e99                 # adblock.mydns.network
-2606:4700:130:436c:6f75:6466:6c61:7265  # armorrush.eu.org
 2606:4700:20::681a:14e                  # adguard.dessoi.cloud
-2606:4700:20::681a:289                  # blitz-setup.ahadns.com
-2606:4700:20::681a:389                  # blitz-setup.ahadns.com
+2606:4700:20::681a:289                  # blitz.ahadns.com
+2606:4700:20::681a:389                  # blitz.ahadns.com
 2606:4700:20::681a:4e                   # adguard.dessoi.cloud
 2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:20::ac43:4863                 # adguard.dessoi.cloud
@@ -247,11 +246,12 @@
 2606:4700:3031::ac43:853f               # hitian.me
 2606:4700:3031::ac43:c9c8               # gclouddns.com
 2606:4700:3032::6815:39ea               # doh.ccb-net.it
+2606:4700:3032::6815:4f6c               # armorrush.eu.org
 2606:4700:3032::6815:5fc7               # adguard-dns.com
 2606:4700:3032::ac43:8a8c               # adguard-ironhide.ultima-thule.ru
 2606:4700:3032::ac43:8cab               # doh.disconnect.app
 2606:4700:3032::ac43:93b2               # adguard-dns.com
-2606:4700:3032::ac43:c394               # basic.bravedns.com
+2606:4700:3032::ac43:c394               # bravedns.com
 2606:4700:3032::ac43:d2c8               # jp.68360612.xyz
 2606:4700:3033::6815:101f               # lindung.pp.ua
 2606:4700:3033::6815:25ae               # jp.68360612.xyz
@@ -292,6 +292,7 @@
 2606:4700:3037::6815:3790               # gztech.me
 2606:4700:3037::ac43:8912               # dns.silen.org
 2606:4700:3037::ac43:8b89               # family.puredns.org
+2606:4700:3037::ac43:9118               # armorrush.eu.org
 2606:4700:3108::ac42:2872               # comss.ru
 2606:4700:3108::ac42:2922               # dns.rotunneling.net
 2606:4700:3108::ac42:2ade               # dns.rotunneling.net
@@ -312,8 +313,8 @@
 2606:4700::6812:3                       # tor.cloudflare-dns.com
 2606:4700::6812:a5db                    # resolver.unstoppable.io
 2606:4700::6812:a6db                    # resolver.unstoppable.io
-2606:4700:e4::ac40:ac04                 # basic.rethinkdns.com
-2606:4700:e4::ac40:ad04                 # basic.rethinkdns.com
+2606:4700:e2::ac40:8627                 # basic.rethinkdns.com
+2606:4700:e2::ac40:8727                 # basic.rethinkdns.com
 2606:65c0:40:4:5f3:54c4:8d10:9b98       # dtw01.dnscry.pt
 2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io
 2606:6680:45:1::e859:6f4e               # yul01.dnscry.pt
@@ -1236,7 +1237,7 @@
 2a04:6f00:4::17a                        # tll01.dnscry.pt
 2a04:b900:0:100::37                     # getdnsapi.net
 2a04:bdc7:100:70::70                    # doh.la.ahadns.net
-2a04:bdc7:100:70::abcd                  # doh.westus.pi-dns.com
+2a04:bdc7:100:70::abcd                  # dot.westus.pi-dns.com
 2a04:ff00:501:bf36::1                   # uk.teradns.org
 2a05:1500:600:8:1c00:45ff:fe00:13ce     # ns3.bit-trail.nl
 2a05:4140:700:e::a                      # lon01.dnscry.pt
@@ -1294,7 +1295,7 @@
 2a0c:8fc3:8002::2216                    # mia01.dnscry.pt
 2a0c:b641:204::1                        # dns.azsopro.net
 2a0c:b641:204::2                        # dns.azsopro.net
-2a0c:b9c0:f:451d::1                     # dnsnl.alekberg.net
+2a0c:b9c0:f:451d::1                     # dnsnl-noads.alekberg.net
 2a0c:e300::1337                         # dns.aquilenet.fr
 2a0d:1a43:c010:135::                    # us1.dns.lavate.ch
 2a0d:4d00:81::1                         # doh.dnslify.com
