@@ -1,7 +1,7 @@
 #!/bin/sh
 # doh-lookup - retrieve IPv4/IPv6 addresses via dig from a given domain list
 # and write the adjusted output to separate lists (IPv4/IPv6 addresses plus domains)
-# Copyright (c) 2019-2023 Dirk Brenken (dev@brenken.org)
+# Copyright (c) 2019-2024 Dirk Brenken (dev@brenken.org)
 #
 # This is free software, licensed under the GNU General Public License v3.
 
@@ -18,7 +18,6 @@ input3="input3.txt"
 upstream="8.8.8.8"
 check_domains="google.com heise.de openwrt.org"
 cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud.com mask-h2.icloud.com mask.icloud.com dns.nextdns.io"
-wc_tool="$(command -v wc)"
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
 : >"./${input2}"
@@ -32,7 +31,7 @@ awk_tool="$(command -v awk)"
 
 # sanity pre-checks
 #
-if [ ! -x "${wc_tool}" ] || [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input1}" ] || [ -z "${upstream}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input1}" ] || [ -z "${upstream}" ]; then
 	printf "%s\n" "ERR: general pre-check failed"
 	exit 1
 fi
