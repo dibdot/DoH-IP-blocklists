@@ -81,7 +81,6 @@ while IFS= read -r domain; do
 						fi
 					fi
 				done
-				break
 			fi
 		fi
 		if [ "${domain_ok}" = "true" ]; then
