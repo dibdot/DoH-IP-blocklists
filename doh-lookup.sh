@@ -69,7 +69,10 @@ while IFS= read -r domain; do
 					if [ "${ip%%.*}" = "127" ] || [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 						continue
 					else
+						set -x
 						check="$(ipcalc-ng -s --addrspace "${ip}" | "${awk_tool}" '/Internet/{print $0}')"
+						set +x
+						break 2
 						if [ -n "${check}" ]; then
 							domain_ok="true"
 							if [ "${ip##*:}" = "${ip}" ]; then
