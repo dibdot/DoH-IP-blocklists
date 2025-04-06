@@ -69,7 +69,8 @@ while IFS= read -r domain; do
 					if [ "${ip%%.*}" = "127" ] || [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 						continue
 					else
-						if ipcalc-ng -cs "${ip}"; then
+						check="$(ipcalc-ng -s --addrspace "${ip}" | "${awk_tool}" '/Internet/{print $0}')"
+						if [ -n "${check}" ]; then
 							domain_ok="true"
 							if [ "${ip##*:}" = "${ip}" ]; then
 								printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
