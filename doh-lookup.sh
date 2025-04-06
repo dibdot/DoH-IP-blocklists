@@ -69,8 +69,11 @@ while IFS= read -r domain; do
 					if [ "${ip%%.*}" = "127" ] || [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
 						continue
 					else
+					set -x
 						check="$(ipcalc-ng -s --addrspace "${ip}" | "${awk_tool}" '/Internet/{print $0}')"
 						rc="${?}"
+					set +x
+						break
 						if [ -n "${check}" ] && [ "${rc}" = "0" ]; then
 							domain_ok="true"
 							if [ "${ip##*:}" = "${ip}" ]; then
@@ -99,11 +102,12 @@ wait
 
 # post-processing check
 #
+set -x
 if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] || [ ! -f "./domains_abandoned.tmp" ]; then
 	printf "%s\n" "ERR: post-processing check failed"
 	exit 1
 fi
-
+set +x
 # final sort/merge step
 #
 sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.txt"
