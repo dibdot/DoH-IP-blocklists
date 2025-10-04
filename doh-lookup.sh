@@ -110,6 +110,12 @@ sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./do
 sort -b -u -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.txt"
 sort -b -u "./domains.tmp" >"./doh-domains.txt"
 sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
+# convert .txt to .json
+"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-ipv4.txt ./doh-ipv4.txt >./doh-ipv4.json
+"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-ipv6.txt ./doh-ipv6.txt >./doh-ipv6.json
+"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-domains.txt ./doh-domains.txt >./doh-domains.json
+"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-domains_abandoned.txt ./doh-domains_abandoned.txt >./doh-domains_abandoned.json
+# END
 cnt_cache_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4_cache.tmp" 2>/dev/null)"
 cnt_cache_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6_cache.tmp" 2>/dev/null)"
 cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4.tmp" 2>/dev/null)"
