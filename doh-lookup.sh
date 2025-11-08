@@ -17,6 +17,7 @@ check_domains="google.com heise.de openwrt.org"
 cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud.com mask-h2.icloud.com mask.icloud.com dns.nextdns.io"
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
+srt_tool="$(command -v sort)"
 : >"./ipv4.tmp"
 : >"./ipv6.tmp"
 : >"./ipv4_cache.tmp"
@@ -106,16 +107,20 @@ fi
 
 # final sort/merge step
 #
-sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.txt"
-sort -b -u -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.txt"
-sort -b -u "./domains.tmp" >"./doh-domains.txt"
-sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
-# convert .txt to .json
+"${srt_tool}" -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.txt"
+"${srt_tool}" -b -u -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.txt"
+"${srt_tool}" -b -u "./domains.tmp" >"./doh-domains.txt"
+"${srt_tool}" -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
+
+# prepare additional json output
+#
 "${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-ipv4.txt ./doh-ipv4.txt >./doh-ipv4.json
 "${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-ipv6.txt ./doh-ipv6.txt >./doh-ipv6.json
 "${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-domains.txt ./doh-domains.txt >./doh-domains.json
 "${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-domains_abandoned.txt ./doh-domains_abandoned.txt >./doh-domains_abandoned.json
-# END
+
+# final stats output
+#
 cnt_cache_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4_cache.tmp" 2>/dev/null)"
 cnt_cache_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6_cache.tmp" 2>/dev/null)"
 cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4.tmp" 2>/dev/null)"
