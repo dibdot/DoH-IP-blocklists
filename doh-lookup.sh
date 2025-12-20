@@ -33,12 +33,12 @@ if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ]; then
 fi
 
 for domain in ${check_domains}; do
-	out="$("${dig_tool}" +noall +answer +time=5 +tries=5 "${domain}" A "${domain}" AAAA 2>/dev/null)"
+	out="$("${dig_tool}" +noall +answer +time=1 +tries=2 "${domain}" A "${domain}" AAAA 2>/dev/null)"
 	if [ -z "${out}" ]; then
 		printf "%s\n" "ERR: domain pre-processing check failed"
 		exit 1
 	else
-		ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
+		ips="$(printf "%s" "${out}" | "${awk_tool}" '{printf "%s ",$NF}')"
 		if [ -z "${ips}" ]; then
 			printf "%s\n" "ERR: ip pre-processing check failed"
 			exit 1
@@ -60,25 +60,28 @@ doh_start="$(date "+%s")"
 doh_cnt="$("${awk_tool}" 'END{printf "%d",NR}' "./${input}" 2>/dev/null)"
 printf "%s\n" "::: Start DOH-processing, overall domains: ${doh_cnt}"
 while IFS= read -r domain; do
+	[ -z "${domain}" ] && continue
 	(
 		domain_ok="false"
-		out="$("${dig_tool}" +noall +answer +time=5 +tries=5 "${domain}" A "${domain}" AAAA 2>/dev/null)"
+		out="$("${dig_tool}" +noall +answer +time=1 +tries=2 "${domain}" A "${domain}" AAAA 2>/dev/null)"
 		if [ -n "${out}" ]; then
-			ips="$(printf "%s" "${out}" | "${awk_tool}" '/^.*[[:space:]]+IN[[:space:]]+A{1,4}[[:space:]]+/{printf "%s ",$NF}')"
+			ips="$(printf "%s" "${out}" | "${awk_tool}" '{printf "%s ",$NF}')"
 			if [ -n "${ips}" ]; then
 				for ip in ${ips}; do
-					if [ "${ip%%.*}" = "127" ] || [ "${ip%%.*}" = "0" ] || [ -z "${ip%%::*}" ]; then
-						continue
-					else
-						check="$(ipcalc-ng -s --addrspace "${ip}" | "${awk_tool}" '!/Private/{print $0}')"
-						rc="${?}"
-						if [ -n "${check}" ] && [ "${rc}" = "0" ]; then
-							domain_ok="true"
-							if [ "${ip##*:}" = "${ip}" ]; then
-								printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
-							else
-								printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
-							fi
+					case "${ip}" in
+						10.*|192.168.*|172.1[6-9].*|172.2[0-9].*|172.3[0-1].*|127.*|0.*)
+							continue
+							;;
+						fc*|fd*|fe80:*|::1)
+							continue
+							;;
+					esac
+					if ipcalc-ng -s --addrspace "${ip}" | grep -qv "Private"; then
+						domain_ok="true"
+						if [ "${ip##*:}" = "${ip}" ]; then
+							printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
+						else
+							printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
 						fi
 					fi
 				done
@@ -114,10 +117,10 @@ fi
 
 # prepare additional json output
 #
-"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-ipv4.txt ./doh-ipv4.txt >./doh-ipv4.json
-"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-ipv6.txt ./doh-ipv6.txt >./doh-ipv6.json
-"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-domains.txt ./doh-domains.txt >./doh-domains.json
-"${awk_tool}" 'BEGIN { print "["; } FNR==NR{last++;next}{print "\""$1"\""((last==FNR)?"":",")} END { print "]" }' ./doh-domains_abandoned.txt ./doh-domains_abandoned.txt >./doh-domains_abandoned.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-ipv4.txt > ./doh-ipv4.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-ipv6.txt > ./doh-ipv6.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-domains.txt > ./doh-domains.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-domains_abandoned.txt > ./doh-domains_abandoned.json
 
 # final stats output
 #
