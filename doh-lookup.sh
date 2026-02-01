@@ -1,7 +1,7 @@
 #!/bin/sh
 # doh-lookup - retrieve IPv4/IPv6 addresses via dig from a given domain list
 # and write the adjusted output to separate lists (IPv4/IPv6 addresses plus domains)
-# Copyright (c) 2019-2025 Dirk Brenken (dev@brenken.org)
+# Copyright (c) 2019-2026 Dirk Brenken (dev@brenken.org)
 #
 # This is free software, licensed under the GNU General Public License v3.
 
@@ -108,12 +108,43 @@ if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] ||
 	exit 1
 fi
 
-# final sort/merge step
+# final sort/merge step (IPv4 + IPv6 with domain aggregation)
 #
-"${srt_tool}" -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.txt"
-"${srt_tool}" -b -u -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.txt"
-"${srt_tool}" -b -u "./domains.tmp" >"./doh-domains.txt"
-"${srt_tool}" -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
+"${srt_tool}" -b -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" > "./doh-ipv4.raw"
+"${awk_tool}" '
+{
+	match($0, /^([0-9\.]+)[[:space:]]+/, m)
+	ip=m[1]
+	match($0, /#[[:space:]]*(.*)$/, m2)
+	domain=m2[1]
+	gsub(/^ +| +$/, "", domain)
+	if (domain != "")
+		map[ip] = (map[ip] ? map[ip] ", " domain : domain)
+}
+END {
+	for (ip in map)
+		printf "%-20s# %s\n", ip, map[ip]
+}
+' "./doh-ipv4.raw" | "${srt_tool}" -t. -k1,1n -k2,2n -k3,3n -k4,4n > "./doh-ipv4.txt"
+
+"${srt_tool}" -b -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" > "./doh-ipv6.raw"
+"${awk_tool}" '
+{
+	match($0, /^([0-9a-fA-F:]+)[[:space:]]+/, m)
+	ip=m[1]
+	match($0, /#[[:space:]]*(.*)$/, m2)
+	domain=m2[1]
+	gsub(/^ +| +$/, "", domain)
+	if (domain != "")
+		map[ip] = (map[ip] ? map[ip] ", " domain : domain)
+}
+END {
+	for (ip in map)
+		printf "%-40s# %s\n", ip, map[ip]
+}
+' "./doh-ipv6.raw" | "${srt_tool}" -k1,1 > "./doh-ipv6.txt"
+"${srt_tool}" -b -u "./domains.tmp" > "./doh-domains.txt"
+"${srt_tool}" -b -u "./domains_abandoned.tmp" > "./doh-domains_abandoned.txt"
 
 # prepare additional json output
 #
