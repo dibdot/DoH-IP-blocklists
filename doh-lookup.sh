@@ -49,8 +49,8 @@ done
 # pre-fill cache domains
 #
 for domain in ${cache_domains}; do
-	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv4.txt" >>"./ipv4_cache.tmp"
-	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv6.txt" >>"./ipv6_cache.tmp"
+	"${awk_tool}" -v dom="${domain}" '$0~dom{printf"%-20s# %s\n",$1, dom}' "./doh-ipv4.txt" >>"./ipv4_cache.tmp"
+	"${awk_tool}" -v dom="${domain}" '$0~dom{printf"%-40s# %s\n",$1, dom}' "./doh-ipv6.txt" >>"./ipv6_cache.tmp"
 done
 
 # domain processing
@@ -109,6 +109,7 @@ if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] ||
 fi
 
 # final sort/merge step (IPv4 + IPv6 with domain aggregation)
+# IPv4
 #
 "${srt_tool}" -b -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" > "./doh-ipv4.raw"
 "${awk_tool}" '
@@ -118,8 +119,9 @@ fi
 	match($0, /#[[:space:]]*(.*)$/, m2)
 	domain=m2[1]
 	gsub(/^ +| +$/, "", domain)
-	if (domain != "")
+	if (domain != "" && !seen[ip,domain]++) {
 		map[ip] = (map[ip] ? map[ip] ", " domain : domain)
+	}
 }
 END {
 	for (ip in map)
@@ -127,6 +129,8 @@ END {
 }
 ' "./doh-ipv4.raw" | "${srt_tool}" -t. -k1,1n -k2,2n -k3,3n -k4,4n > "./doh-ipv4.txt"
 
+# IPv6
+#
 "${srt_tool}" -b -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" > "./doh-ipv6.raw"
 "${awk_tool}" '
 {
@@ -135,8 +139,9 @@ END {
 	match($0, /#[[:space:]]*(.*)$/, m2)
 	domain=m2[1]
 	gsub(/^ +| +$/, "", domain)
-	if (domain != "")
+	if (domain != "" && !seen[ip,domain]++) {
 		map[ip] = (map[ip] ? map[ip] ", " domain : domain)
+	}
 }
 END {
 	for (ip in map)
