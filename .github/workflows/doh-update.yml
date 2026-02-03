@@ -21,7 +21,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          # Value already defaults to true, but `persist-credentials` is required to push new commits to the repository.
+          persist-credentials: true
 
       # install ipcalc-ng
       - name: Install ipcalc-ng
@@ -33,7 +37,7 @@ jobs:
 
       # Commit changed files to your repo
       - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v4.16.0
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           # Commit message
           commit_message: automatic/regular ip address updates
