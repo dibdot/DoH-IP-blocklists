@@ -40,6 +40,9 @@
 2001:470:1f15:b80::53                   # opennic.i2pd.xyz
 2001:470:20::2                          # ordns.he.net
 2001:470:26:7c::195                     # ibksturm.synology.me
+2001:470:28:286:1::                     # ns.trcnet.fi
+2001:470:28:287:1::                     # ns.trcnet.fi
+2001:470:28:aa2:1::                     # ns.trcnet.fi
 2001:470:36:3fc:0:feed:dad:b055         # dns.repinger.com
 2001:470:71:6dc::53                     # opennic2.i2pd.xyz
 2001:470:f829:8593:3::7                 # doh.max.net.id
@@ -55,7 +58,7 @@
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
 2001:550:5a00:5eb::db5:face             # rdu01.dnscry.pt
-2001:558:fd00:ca::a                     # doh.xfinity.com, doh2.gslb2.xfinity.com
+2001:558:fd00:ca::5                     # doh.xfinity.com, doh2.gslb2.xfinity.com
 2001:558:fe21:6b:96:113:151:145         # dot.xfinity.com
 2001:578:3f::30                         # doh.cox.net, dot.cox.net
 2001:620:0:ff::2                        # dns.switch.ch
@@ -86,7 +89,6 @@
 2001:878:0:e000:82:e1:f4:a6             # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 2001:878:0:e000:82:e2:a1:22             # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 2001:8a0:dfeb:8100::2                   # dns.qrtz.club
-2001:8b0:24:24::24                      # dns-tls.bitwiseshift.net
 2001:8b0:836:900:978f:88ff:f46c:bd67    # dns.neilzone.co.uk
 2001:8b0::2022                          # dns.aa.net.uk
 2001:8b0::2023                          # dns.aa.net.uk
@@ -116,8 +118,8 @@
 2001:df7:5300:15::dc                    # puredns.org
 2001:df7:5300:18::64f                   # puredns.org
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
-2003:180:2:4000:0:4:0:53                # dns.telekom.de
-2003:180:2::4:0:53                      # dns.telekom.de
+2003:180:2:1000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:133:1500::2                      # doh.kekew.info
@@ -165,7 +167,6 @@
 2400:ddc0:b000::2                       # jp-kix.doh.sb
 2401:4520:1122::a                       # sin02.dnscry.pt
 2401:8360:a2:4::a                       # lon01.dnscry.pt
-2402:1f00:8000:800::794                 # adblock.krctech.dev
 2402:4e00:c050:2800:e4e:cf0e:740c:1     # dns.beardic.cn
 2402:6b00:f83e:9200:e71a:7e56:b675:aa36 # dns.yuu-g.net
 2402:7340:5000:6200::a                  # syd02.dnscry.pt
@@ -251,6 +252,7 @@
 2600:3c01:e000:130::8:0                 # dns.elemental.software
 2600:3c01:e000:341::8:0                 # dns.startupstack.tech
 2600:3c01:e000:3e2::8:0                 # dns.falkenthal.org
+2600:3c01:e000:446::8:0                 # dns.efficientdocuments.com
 2600:3c01:e000:449::8:0                 # dns.stirringphoto.com
 2600:3c01:e000:7e5::8:0                 # dns.csswg.org
 2600:3c01:e000:7e9::8:0                 # dns.scott-smith.us
@@ -263,14 +265,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2064:3000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:3600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:4000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:8200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:b200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:d600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:dc00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:e600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:3400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:3a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:7a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:9200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:9400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:d000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:de00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:ec00:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -1408,6 +1410,7 @@
 2620:171:80d::1                         # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2620:46:8000:128::100                   # cluster-0.gac.edu
 2620:46:8000:128::101                   # cluster-1.gac.edu
+2620:87:a000::39                        # blocker.thethorsens.org
 2620:fe::10                             # dns-nosec.quad9.net, dns10.quad9.net
 2620:fe::11                             # dns11.quad9.net
 2620:fe::12                             # dns12.quad9.net
@@ -1733,7 +1736,6 @@
 2a03:4000:32:16a::1                     # vorlif.org
 2a03:4000:38:20e::853                   # dns.kernel-error.de
 2a03:4000:42:6c5::1                     # dns.bermeitinger.eu
-2a03:4000:47:8b::1                      # dns.kescher.at
 2a03:4000:4d:c92:88c0:96ff:fec6:b9d     # www.morbitzer.de
 2a03:4000:51:be:c458:19ff:fe28:b481     # dns.immanuelschaffer.de
 2a03:4000:52:be:38fd:75ff:fef8:852a     # adguard.pangerl.it
@@ -1745,6 +1747,7 @@
 2a03:4000:6:d07e::                      # dukun.de
 2a03:4000:6b:191:9825:1cff:fe34:bbe     # jabber-germany.de, www.jabber-germany.de
 2a03:4000:a:71::1                       # doh.webnmail.de
+2a03:50a0:14:7a::2                      # ns.trcnet.fi
 2a03:5180:7:2:84ba:82f4:da86:1          # adguard.wirimij.nl
 2a03:7900:2:0:31:3:104:161              # nat64.tuxis.nl
 2a03:90c0:1e7::39                       # tlv01.dnscry.pt
@@ -1840,7 +1843,7 @@
 2a0c:5700:3133:650:ba68:95ff:fe53:3d16  # dns.anon.no
 2a0c:59c0:19::3                         # nl-ams.doh.sb
 2a0c:82c0::1                            # doh.suche.org
-2a0c:8902::53                           # dns.dnshome.de
+2a0c:8901::53                           # dns.dnshome.de
 2a0c:8fc0:1749:66:18::16                # muc01.dnscry.pt
 2a0c:8fc1:6441::412:ab34                # tyo01.dnscry.pt
 2a0c:9a40:2201:10::1912                 # dns.flatuslifir.is
