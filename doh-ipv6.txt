@@ -60,7 +60,7 @@
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
 2001:550:5a00:5eb::db5:face             # rdu01.dnscry.pt
-2001:558:fd00:ca::5                     # doh.xfinity.com, doh2.gslb2.xfinity.com
+2001:558:fd00:ca::a                     # doh.xfinity.com, doh2.gslb2.xfinity.com
 2001:558:fe21:6b:96:113:151:145         # dot.xfinity.com
 2001:578:3f::30                         # doh.cox.net, dot.cox.net
 2001:620:0:ff::2                        # dns.switch.ch
@@ -121,8 +121,8 @@
 2001:df7:5300:15::dc                    # puredns.org
 2001:df7:5300:18::64f                   # puredns.org
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
-2003:180:2:7000:0:4:0:53                # dns.telekom.de
 2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:133:1500::2                      # doh.kekew.info
@@ -170,6 +170,7 @@
 2400:ddc0:b000::2                       # jp-kix.doh.sb
 2401:4520:1122::a                       # sin02.dnscry.pt
 2401:8360:a2:4::a                       # lon01.dnscry.pt
+2402:1f00:8000:800::794                 # adblock.krctech.dev
 2402:4e00:c050:2800:e4e:cf0e:740c:1     # dns.beardic.cn
 2402:6b00:f83e:9200:e71a:7e56:b675:aa36 # dns.yuu-g.net
 2402:7340:5000:6200::a                  # syd02.dnscry.pt
@@ -209,7 +210,6 @@
 240d:c000:f000:ea00:70d8:5996:f8e4:0    # dns.flymc.cc
 240d:c000:f05f:7900:8234:d91e:8082:0    # blog.kimiblock.top
 240d:c000:f05f:7900:8234:d91e:8082:1    # blog.kimiblock.top
-240d:c000:f07f:9500:58dc:b774:bc9e:0    # dns.imaicool.com
 240d:c010:74:2::171                     # doh.totoro.pub
 240d:c010:75:1::119                     # dns.233py.com, doh.233py.com, edns.233py.com, i.233py.com, ndns.233py.com, sdns.233py.com, wdns.233py.com
 240d:c010:75:1::19a                     # doh.totoro.pub
@@ -253,6 +253,7 @@
 2600:3c01:e000:130::8:0                 # dns.elemental.software
 2600:3c01:e000:341::8:0                 # dns.startupstack.tech
 2600:3c01:e000:3e2::8:0                 # dns.falkenthal.org
+2600:3c01:e000:446::8:0                 # dns.efficientdocuments.com
 2600:3c01:e000:449::8:0                 # dns.stirringphoto.com
 2600:3c01:e000:7e5::8:0                 # dns.csswg.org
 2600:3c01:e000:7e9::8:0                 # dns.scott-smith.us
@@ -265,14 +266,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:234b:2200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:4200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:b600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:d400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:ec00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:ee00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:f600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:fa00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:1a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:2800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:6800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:7000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:7e00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:b400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:e200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:f400:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -563,6 +564,7 @@
 2606:a8c0:3:202::a                      # geg01.dnscry.pt
 2606:fc40:4003:f::a                     # sin03.dnscry.pt
 2607:5300:205:200::4b24                 # dns.asysec.com
+2607:5300:60:8449:31:ffff:ffff:ffff     # mailer.amlegion.org
 2607:a680:6:f016::3a25                  # den01.dnscry.pt
 2607:a680:9:f005::86e7                  # sea01.dnscry.pt
 2607:ac80:303:102:638a:ba7f:2013:b0c    # doh.ersei.net
@@ -1521,6 +1523,7 @@
 2a01:4f8:c17:de8b::1                    # dns.deadsec.net
 2a01:4f8:c17:ec67::1                    # dot-de.blahdns.com
 2a01:4f8:c17:f85c::1                    # dns.nick-slowinski.de
+2a01:4f9:2b:1305::2                     # dns.froth.zone
 2a01:4f9:c010:2b9f::2                   # fuchur.pentament.de
 2a01:4f9:c010:9863::1                   # resolver-eu.haringstad.com
 2a01:4f9:c010:d7f4::1                   # dns.anon.no
@@ -1528,12 +1531,12 @@
 2a01:4f9:c011:aa31::1                   # kids.ns.nwps.fi
 2a01:4f9:c011:addc::1                   # dns.braene.com
 2a01:4f9:c012:25a0::1                   # ns.nwps.fi, public.ns.nwps.fi
+2a01:4f9:c012:ca1f::1                   # resolver.rferee.dev
 2a01:4f9:c013:dc4e::1                   # juuri.hagezi.org
 2a01:4f9:c01f:74::1                     # eu1.dns.lavate.ch
 2a01:4ff:f0:ac5::1                      # dns.nextdns.io
 2a01:678:3:8::2                         # resolver2.absolight.net
 2a01:678:3:9::2                         # resolver1.absolight.net
-2a01:678:3:a::2                         # resolver3.absolight.net
 2a01:7c8:bb01:6d9::1                    # meganerd.nl
 2a01:7c8:d002:1ef:5054:ff:fe40:3703     # doh.powerdns.org
 2a01:8740:1:863::3b8c                   # sof01.dnscry.pt
@@ -1788,7 +1791,6 @@
 2a05:fc87:1:11::170                     # resolv1.trash.net
 2a05:fc87:1:11::171                     # resolv2.trash.net
 2a05:fc87:1:11::173                     # resolv3.trash.net
-2a06:1700:100:20::1                     # resolv.flokinet.net
 2a06:1700:1:3a::cba                     # hel01.dnscry.pt
 2a06:98c1:52::3                         # chrome.cloudflare-dns.com
 2a06:98c1:52::4                         # mozilla.cloudflare-dns.com
