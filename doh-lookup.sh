@@ -65,12 +65,12 @@ for domain in ${cache_domains}; do
 			fi
 		) &
 		cnt="$((cnt + 1))"
-		hold="$((cnt % 64))"
+		hold="$((cnt % 512))"
 		[ "${hold}" = "0" ] && wait
 	done
 	wait
 	if [ ! -s "./ipv4_cache_${domain}.tmp" ]; then
-		printf "%s\n" "Iv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
+		printf "%s\n" "IPv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
 		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
 		while read -r ip; do
 			[ -z "${ip}" ] && continue
