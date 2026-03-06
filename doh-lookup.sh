@@ -19,7 +19,6 @@ dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
 srt_tool="$(command -v sort)"
 cat_tool="$(command -v cat)"
-to_tool="$(command -v timeout)"
 nc_tool="$(command -v nc)"
 : >"./ipv4.tmp"
 : >"./ipv6.tmp"
@@ -30,7 +29,7 @@ nc_tool="$(command -v nc)"
 
 # sanity pre-checks
 #
-if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${cat_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${cat_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
 	printf "%s\n" "ERR: base pre-processing check failed"
 	exit 1
 fi
@@ -51,7 +50,6 @@ done
 
 # pre-fill cache domains (only reachable IPs or fallback to raw cache entries)
 #
-printf "%s\n" "NC-DEBUG: $(${nc_tool} -h)"
 cnt="0"
 for domain in ${cache_domains}; do
 
@@ -62,12 +60,12 @@ for domain in ${cache_domains}; do
 	while read -r ip; do
 		[ -z "${ip}" ] && continue
 		(
-			if "${to_tool}" 2 "${nc_tool}" -z "${ip}" 443 >/dev/null 2>&1; then
+			if "${nc_tool}" -4 -w 3 -z "${ip}" 443 >/dev/null 2>&1; then
 				printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache_${domain}.tmp"
 			fi
 		) &
 		cnt="$((cnt + 1))"
-		hold="$((cnt % 512))"
+		hold="$((cnt % 64))"
 		[ "${hold}" = "0" ] && wait
 	done
 	wait
@@ -87,7 +85,7 @@ for domain in ${cache_domains}; do
 	while read -r ip; do
 		[ -z "${ip}" ] && continue
 		(
-			if "${to_tool}" 2 "${nc_tool}" -z -6 "${ip}" 443 >/dev/null 2>&1; then
+			if "${nc_tool}" -6 -w 3 -z "${ip}" 443 >/dev/null 2>&1; then
 				printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache_${domain}.tmp"
 			fi
 		) &
