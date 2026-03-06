@@ -18,6 +18,8 @@ cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
 srt_tool="$(command -v sort)"
+to_tool="$(command -v timeout)"
+nc_tool="$(command -v nc)"
 : >"./ipv4.tmp"
 : >"./ipv6.tmp"
 : >"./ipv4_cache.tmp"
@@ -27,7 +29,7 @@ srt_tool="$(command -v sort)"
 
 # sanity pre-checks
 #
-if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
 	printf "%s\n" "ERR: base pre-processing check failed"
 	exit 1
 fi
@@ -46,12 +48,42 @@ for domain in ${check_domains}; do
 	fi
 done
 
-# pre-fill cache domains
+# pre-fill cache domains (only reachable IPs)
 #
+cnt="0"
 for domain in ${cache_domains}; do
-	"${awk_tool}" -v dom="${domain}" '$0~dom{printf"%-20s# %s\n",$1, dom}' "./doh-ipv4.txt" >>"./ipv4_cache.tmp"
-	"${awk_tool}" -v dom="${domain}" '$0~dom{printf"%-40s# %s\n",$1, dom}' "./doh-ipv6.txt" >>"./ipv6_cache.tmp"
+
+	# IPv4 Cache-Check
+	#
+	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
+	while read -r ip; do
+		[ -z "${ip}" ] && continue
+		(
+			if "${to_tool}" 2 "${nc_tool}" -z "${ip}" 443 >/dev/null 2>&1; then
+				printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache.tmp"
+			fi
+		) &
+		cnt="$((cnt + 1))"
+		hold="$((cnt % 512))"
+		[ "${hold}" = "0" ] && wait
+	done
+
+	# IPv6 Cache-Check
+	#
+	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
+	while read -r ip; do
+		[ -z "${ip}" ] && continue
+		(
+			if "${to_tool}" 2 "${nc_tool}" -z -6 "${ip}" 443 >/dev/null 2>&1; then
+				printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache.tmp"
+			fi
+		) &
+		cnt="$((cnt + 1))"
+		hold="$((cnt % 512))"
+		[ "${hold}" = "0" ] && wait
+	done
 done
+wait
 
 # domain processing
 #
@@ -93,11 +125,11 @@ while IFS= read -r domain; do
 			printf "%s\n" "${domain}" >>./domains_abandoned.tmp
 		fi
 	) &
+	cnt="$((cnt + 1))"
 	hold1="$((cnt % 512))"
 	hold2="$((cnt % 2048))"
 	[ "${hold1}" = "0" ] && sleep 3
 	[ "${hold2}" = "0" ] && wait
-	cnt="$((cnt + 1))"
 done <"${input}"
 wait
 
