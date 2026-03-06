@@ -18,6 +18,7 @@ cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
 srt_tool="$(command -v sort)"
+cat_tool="$(command -v cat)"
 to_tool="$(command -v timeout)"
 nc_tool="$(command -v nc)"
 : >"./ipv4.tmp"
@@ -29,7 +30,7 @@ nc_tool="$(command -v nc)"
 
 # sanity pre-checks
 #
-if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${cat_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
 	printf "%s\n" "ERR: base pre-processing check failed"
 	exit 1
 fi
@@ -73,7 +74,7 @@ for domain in ${cache_domains}; do
 		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
 		while read -r ip; do
 			[ -z "${ip}" ] && continue
-			printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache.tmp"
+			printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache_${domain}.tmp"
 		done
 	fi
 
@@ -97,10 +98,12 @@ for domain in ${cache_domains}; do
 		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
 		while read -r ip; do
 			[ -z "${ip}" ] && continue
-			printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache.tmp"
+			printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache_${domain}.tmp"
 		done
 	fi
 done
+"${cat_tool}" ipv4_cache_*.tmp > ipv4_cache.tmp
+"${cat_tool}" ipv6_cache_*.tmp > ipv6_cache.tmp
 
 # domain processing
 #
