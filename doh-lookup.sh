@@ -20,6 +20,7 @@ awk_tool="$(command -v awk)"
 srt_tool="$(command -v sort)"
 to_tool="$(command -v timeout)"
 nc_tool="$(command -v nc)"
+ip_tool="$(command -v ip)"
 : >"./ipv4.tmp"
 : >"./ipv6.tmp"
 : >"./ipv4_cache.tmp"
@@ -29,7 +30,7 @@ nc_tool="$(command -v nc)"
 
 # sanity pre-checks
 #
-if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -x "${ip_tool}" ] || [ ! -s "${input}" ]; then
 	printf "%s\n" "ERR: base pre-processing check failed"
 	exit 1
 fi
@@ -48,40 +49,74 @@ for domain in ${check_domains}; do
 	fi
 done
 
-# pre-fill cache domains (only reachable IPs)
+# detect IPv4 availability
+#
+if "${ip_tool}" -4 route show 2>/dev/null | "${awk_tool}" 'NF {found=1} END{exit !found}'; then
+	ipv4_available="true"
+else
+	ipv4_available="false"
+	printf "%s\n" "::: IPv4 not available, skipping IPv4 reachability checks (copying raw cache entries)"
+fi
+
+# detect IPv6 availability
+#
+if "${ip_tool}" -6 route show 2>/dev/null | "${awk_tool}" '!/^::1/ {found=1} END{exit !found}'; then
+	ipv6_available="true"
+else
+	ipv6_available="false"
+	printf "%s\n" "::: IPv6 not available, skipping IPv6 reachability checks (copying raw cache entries)"
+fi
+
+# pre-fill cache domains (only reachable IPs or fallback to raw cache entries)
 #
 cnt="0"
 for domain in ${cache_domains}; do
 
-	# IPv4 Cache-Check
+	# IPv4 cache check
 	#
-	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
-	while read -r ip; do
-		[ -z "${ip}" ] && continue
-		(
-			if "${to_tool}" 2 "${nc_tool}" -z "${ip}" 443 >/dev/null 2>&1; then
-				printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache.tmp"
-			fi
-		) &
-		cnt="$((cnt + 1))"
-		hold="$((cnt % 512))"
-		[ "${hold}" = "0" ] && wait
-	done
+	if [ "${ipv4_available}" = "true" ]; then
+		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
+		while read -r ip; do
+			[ -z "${ip}" ] && continue
+			(
+				if "${to_tool}" 2 "${nc_tool}" -z "${ip}" 443 >/dev/null 2>&1; then
+					printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache.tmp"
+				fi
+			) &
+			cnt="$((cnt + 1))"
+			hold="$((cnt % 512))"
+			[ "${hold}" = "0" ] && wait
+		done
+	else
+		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
+		while read -r ip; do
+			[ -z "${ip}" ] && continue
+			printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache.tmp"
+		done
+	fi
 
-	# IPv6 Cache-Check
+	# IPv6 cache check
 	#
-	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
-	while read -r ip; do
-		[ -z "${ip}" ] && continue
-		(
-			if "${to_tool}" 2 "${nc_tool}" -z -6 "${ip}" 443 >/dev/null 2>&1; then
-				printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache.tmp"
-			fi
-		) &
-		cnt="$((cnt + 1))"
-		hold="$((cnt % 512))"
-		[ "${hold}" = "0" ] && wait
-	done
+	if [ "${ipv6_available}" = "true" ]; then
+		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
+		while read -r ip; do
+			[ -z "${ip}" ] && continue
+			(
+				if "${to_tool}" 2 "${nc_tool}" -z -6 "${ip}" 443 >/dev/null 2>&1; then
+					printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache.tmp"
+				fi
+			) &
+			cnt="$((cnt + 1))"
+			hold="$((cnt % 512))"
+			[ "${hold}" = "0" ] && wait
+		done
+	else
+		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
+		while read -r ip; do
+			[ -z "${ip}" ] && continue
+			printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache.tmp"
+		done
+	fi
 done
 wait
 
