@@ -50,7 +50,7 @@ done
 
 # pre-fill cache domains (only reachable IPs or fallback to raw cache entries)
 #
-printf "%s\n" "::: Start cache pre-filling, overall domains"
+printf "%s\n" "::: Start cache pre-filling"
 cnt="0"
 for domain in ${cache_domains}; do
 
