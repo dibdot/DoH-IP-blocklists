@@ -50,6 +50,7 @@ done
 
 # pre-fill cache domains (only reachable IPs or fallback to raw cache entries)
 #
+printf "%s\n" "::: Start cache pre-filling, overall domains"
 cnt="0"
 for domain in ${cache_domains}; do
 
@@ -70,7 +71,7 @@ for domain in ${cache_domains}; do
 	done
 	wait
 	if [ ! -s "./ipv4_cache_${domain}.tmp" ]; then
-		printf "%s\n" "IPv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
+		printf "%s\n" "::: IPv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
 		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
 		while read -r ip; do
 			[ -z "${ip}" ] && continue
@@ -95,7 +96,7 @@ for domain in ${cache_domains}; do
 	done
 	wait
 	if [ ! -s "./ipv6_cache_${domain}.tmp" ]; then
-		printf "%s\n" "IPv6: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
+		printf "%s\n" "::: IPv6: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
 		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
 		while read -r ip; do
 			[ -z "${ip}" ] && continue
