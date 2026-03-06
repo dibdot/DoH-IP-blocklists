@@ -65,7 +65,7 @@ for domain in ${cache_domains}; do
 			fi
 		) &
 		cnt="$((cnt + 1))"
-		hold="$((cnt % 512))"
+		hold="$((cnt % 10))"
 		[ "${hold}" = "0" ] && wait
 	done
 	wait
@@ -90,7 +90,7 @@ for domain in ${cache_domains}; do
 			fi
 		) &
 		cnt="$((cnt + 1))"
-		hold="$((cnt % 512))"
+		hold="$((cnt % 10))"
 		[ "${hold}" = "0" ] && wait
 	done
 	wait
@@ -147,8 +147,8 @@ while IFS= read -r domain; do
 		fi
 	) &
 	cnt="$((cnt + 1))"
-	hold1="$((cnt % 512))"
-	hold2="$((cnt % 2048))"
+	hold1="$((cnt % 256))"
+	hold2="$((cnt % 1024))"
 	[ "${hold1}" = "0" ] && sleep 3
 	[ "${hold2}" = "0" ] && wait
 done <"${input}"
