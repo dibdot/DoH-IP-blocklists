@@ -51,6 +51,7 @@ done
 
 # pre-fill cache domains (only reachable IPs or fallback to raw cache entries)
 #
+printf "%s\n" "NC-DEBUG: $(${nc_tool} -h)"
 cnt="0"
 for domain in ${cache_domains}; do
 
@@ -71,7 +72,7 @@ for domain in ${cache_domains}; do
 	done
 	wait
 	if [ ! -s "./ipv4_cache_${domain}.tmp" ]; then
-		printf "%s\n" "Iv4: no reachable IPs for ${domain}, fallback to raw cache entries"
+		printf "%s\n" "Iv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
 		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
 		while read -r ip; do
 			[ -z "${ip}" ] && continue
