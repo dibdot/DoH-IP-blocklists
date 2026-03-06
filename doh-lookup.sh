@@ -29,7 +29,7 @@ nc_tool="$(command -v nc)"
 
 # sanity pre-checks
 #
-if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -x "${ip_tool}" ] || [ ! -s "${input}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] || [ ! -x "${to_tool}" ] || [ ! -x "${nc_tool}" ] || [ ! -s "${input}" ]; then
 	printf "%s\n" "ERR: base pre-processing check failed"
 	exit 1
 fi
