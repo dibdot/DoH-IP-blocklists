@@ -155,10 +155,15 @@ while IFS= read -r domain; do
 done <"${input}"
 wait
 
-# post-processing check
+# post-processing checks
 #
 if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] || [ ! -f "./domains_abandoned.tmp" ]; then
-	printf "%s\n" "ERR: post-processing check failed"
+	printf "%s\n" "ERR: empty output files in post-processing check"
+	exit 1
+fi
+dom_cnt="$("${awk_tool}" 'END{printf "%d",NR}' "./domains.tmp" 2>/dev/null)"
+if [ "${dom_cnt}" -lt "$((doh_cnt / 2))" ]; then
+	printf "%s\n" "ERR: too many failed domains in post-processing check"
 	exit 1
 fi
 
