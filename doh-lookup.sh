@@ -35,7 +35,7 @@ if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${srt_tool}" ] ||
 fi
 
 for domain in ${check_domains}; do
-	out="$("${dig_tool}" +noall +answer +time=1 +tries=2 "${domain}" A "${domain}" AAAA 2>/dev/null)"
+	out="$("${dig_tool}" +noall +answer +time=2 +tries=3 "${domain}" A "${domain}" AAAA 2>/dev/null)"
 	if [ -z "${out}" ]; then
 		printf "%s\n" "ERR: domain pre-processing check failed"
 		exit 1
@@ -117,7 +117,7 @@ while IFS= read -r domain; do
 	[ -z "${domain}" ] && continue
 	(
 		domain_ok="false"
-		out="$("${dig_tool}" +noall +answer +time=1 +tries=2 "${domain}" A "${domain}" AAAA 2>/dev/null)"
+		out="$("${dig_tool}" +noall +answer +time=2 +tries=3 "${domain}" A "${domain}" AAAA 2>/dev/null)"
 		if [ -n "${out}" ]; then
 			ips="$(printf "%s" "${out}" | "${awk_tool}" '{printf "%s ",$NF}')"
 			if [ -n "${ips}" ]; then
@@ -148,8 +148,8 @@ while IFS= read -r domain; do
 		fi
 	) &
 	cnt="$((cnt + 1))"
-	hold1="$((cnt % 256))"
-	hold2="$((cnt % 1024))"
+	hold1="$((cnt % 128))"
+	hold2="$((cnt % 256))"
 	[ "${hold1}" = "0" ] && sleep 3
 	[ "${hold2}" = "0" ] && wait
 done <"${input}"
