@@ -345,10 +345,10 @@
 2606:4700:20::681a:1f1                  # v.recipes
 2606:4700:20::681a:289                  # blitz-setup.ahadns.com
 2606:4700:20::681a:389                  # blitz-setup.ahadns.com
-2606:4700:20::681a:cf0                  # doh-de.blahdns.com, doh-sg.blahdns.com
-2606:4700:20::681a:df0                  # doh-de.blahdns.com, doh-sg.blahdns.com
+# 2606:4700:20::681a:cf0                  # doh-de.blahdns.com, doh-sg.blahdns.com
+# 2606:4700:20::681a:df0                  # doh-de.blahdns.com, doh-sg.blahdns.com
 2606:4700:20::681a:f1                   # v.recipes
-2606:4700:20::ac43:4585                 # doh-de.blahdns.com, doh-sg.blahdns.com
+# 2606:4700:20::ac43:4585                 # doh-de.blahdns.com, doh-sg.blahdns.com
 2606:4700:20::ac43:4595                 # blitz-setup.ahadns.com
 2606:4700:20::ac43:45f3                 # v.recipes
 2606:4700:3030::6815:10f9               # dns.xiumu.org
@@ -1093,6 +1093,8 @@
 2a06:98c1:52::8                         # dns.cloudflare.com
 2a06:98c1:53::1                         # odoh.cloudflare-dns.com
 2a06:98c1:53::2                         # dooh.cloudflare-dns.com
+2a06:98c1:3120::                        # doh-sg.blahdns.com
+2a06:98c1:3121::                        # doh-sg.blahdns.com
 2a06:9f44:f3e0:1::b3b4:51d              # antivirus.bebasid.com
 2a06:9f44:f3e0:b00b:beba::51d           # internetsehat.bebasid.com
 2a06:a006:d1d1::116                     # zal01.dnscry.pt
