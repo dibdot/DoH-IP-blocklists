@@ -57,7 +57,7 @@ for domain in ${cache_domains}; do
 	# IPv4 cache check
 	#
 	: >"./ipv4_cache_${domain}.tmp"
-	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
+	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" > "./cache_ips.tmp"
 	while read -r ip; do
 		[ -z "${ip}" ] && continue
 		(
@@ -66,9 +66,9 @@ for domain in ${cache_domains}; do
 			fi
 		) &
 		cnt="$((cnt + 1))"
-		hold="$((cnt % 10))"
+		hold="$((cnt % 50))"
 		[ "${hold}" = "0" ] && wait
-	done
+	done < "./cache_ips.tmp"
 	wait
 	if [ ! -s "./ipv4_cache_${domain}.tmp" ]; then
 		printf "%s\n" "::: IPv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
@@ -82,7 +82,7 @@ for domain in ${cache_domains}; do
 	# IPv6 cache check
 	#
 	: >"./ipv6_cache_${domain}.tmp"
-	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
+	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" > "./cache_ips.tmp"
 	while read -r ip; do
 		[ -z "${ip}" ] && continue
 		(
@@ -91,9 +91,9 @@ for domain in ${cache_domains}; do
 			fi
 		) &
 		cnt="$((cnt + 1))"
-		hold="$((cnt % 10))"
+		hold="$((cnt % 50))"
 		[ "${hold}" = "0" ] && wait
-	done
+	done < "./cache_ips.tmp"
 	wait
 	if [ ! -s "./ipv6_cache_${domain}.tmp" ]; then
 		printf "%s\n" "::: IPv6: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
@@ -148,8 +148,8 @@ while IFS= read -r domain; do
 		fi
 	) &
 	cnt="$((cnt + 1))"
-	hold1="$((cnt % 128))"
-	hold2="$((cnt % 256))"
+	hold1="$((cnt % 512))"
+	hold2="$((cnt % 1024))"
 	[ "${hold1}" = "0" ] && sleep 3
 	[ "${hold2}" = "0" ] && wait
 done <"${input}"
