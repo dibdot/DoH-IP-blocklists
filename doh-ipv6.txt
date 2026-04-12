@@ -59,7 +59,7 @@
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
 2001:550:2:6f::f3:2                     # doh1.b-cdn.net, doh2.b-cdn.net
 2001:550:5a00:5eb::db5:face             # rdu01.dnscry.pt
-2001:558:fd00:ca::a                     # doh.xfinity.com, doh2.gslb2.xfinity.com
+2001:558:fd00:ca::5                     # doh.xfinity.com, doh2.gslb2.xfinity.com
 2001:558:fe21:6b:96:113:151:145         # dot.xfinity.com
 2001:578:3f::30                         # doh.cox.net, dot.cox.net
 2001:620:0:ff::2                        # dns.switch.ch
@@ -122,7 +122,7 @@
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:716::10                   # dns.surobe.com
 2003:180:2:7000:0:4:0:53                # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
+2003:180:2:8100:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:133:1500::2                      # doh.kekew.info
@@ -198,7 +198,7 @@
 2406:da12:6cb:df00:7a77:c387:2bed:613c  # kr-sel.doh.sb
 2406:da14:16ca:be00:596f:3a82:90e5:3d2e # dns.nodoa.me
 2406:da1a:1b5:d610:c66d:4ace:e191:b3b1  # pihole.aws.ketan.dev
-2407:0:3006:35b4:fa5e:3cff:fe46:e018    # gustamadh.dynv6.net
+2407:0:3006:3ba3:1ab0:a4ff:fe4d:a423    # gustamadh.dynv6.net
 2407:24c0:2::154:3                      # dns.gi.co.id
 2407:3640:2205:1668::1                  # dot-sg.blahdns.com
 2407:3640:2238:5447::1                  # asia.tri-dns.net
@@ -263,14 +263,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:28a3:1600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:2800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:2c00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:4000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:5a00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:7600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:8600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:a200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:1a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:3600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:5400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:6200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:7400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:a600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:b400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:da00:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
