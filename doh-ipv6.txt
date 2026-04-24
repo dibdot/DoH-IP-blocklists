@@ -122,8 +122,8 @@
 2001:df7:5300:18::64f                   # puredns.org
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:429::10                   # dns.surobe.com
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
-2003:180:2::4:0:53                      # dns.telekom.de
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:133:1500::4                      # doh.kekew.info
@@ -221,6 +221,8 @@
 2600:1900:4001:96e:8000:1:2af4:845d     # www.dnsadguard.co.uk
 2600:1901:0:618c::                      # dns.guard.io
 2600:1901:0:c197::                      # use-application-dns.net
+2600:1f18:4ae:c605:dd5d:b838:5816:d7fb  # dns.flightspace.net, dns.scapetical.com
+2600:1f18:4ae:c606:78d4:4260:db4e:aeee  # dns.flightspace.net, dns.scapetical.com
 2600:1f18:6296:8903::beef               # doth.huque.com
 2600:1f28:14:800:451c:5481:1f1e:65c6    # dns.api.globus.org
 2600:1f28:14:801:a824:f0af:4d8a:f50a    # dns.api.globus.org
@@ -257,14 +259,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2120:0:f:5c7a:55c0:93a1       # eth.link
+2600:9000:2120:1600:f:5c7a:55c0:93a1    # eth.link
 2600:9000:2120:6600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:6c00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:7e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:800:f:5c7a:55c0:93a1     # eth.link
-2600:9000:2120:a800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:da00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:f600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:6800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:c400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:d600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:de00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:ec00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:f000:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
