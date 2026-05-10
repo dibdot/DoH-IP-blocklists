@@ -194,6 +194,7 @@
 2406:da14:16ca:be00:596f:3a82:90e5:3d2e # dns.nodoa.me
 2406:da1a:1b5:d610:c66d:4ace:e191:b3b1  # pihole.aws.ketan.dev
 2406:ef80:2:4b11::1                     # dns.syaifullah.com
+2407:0:3006:3b95::1                     # gustamadh.dynv6.net
 2407:24c0:2::154:3                      # dns.gi.co.id
 2407:3640:2205:1668::1                  # dot-sg.blahdns.com
 2407:3640:2238:5447::1                  # asia.tri-dns.net
@@ -260,13 +261,13 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2120:2c00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:4200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:6600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:9c00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:ba00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:bc00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2120:d400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:200:f:5c7a:55c0:93a1     # eth.link
+2600:9000:2120:3000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:5c00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:8000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:8200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:9400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2120:a00:f:5c7a:55c0:93a1     # eth.link
 2600:9000:2120:d600:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
@@ -306,6 +307,7 @@
 2603:c023:1:8763:80d6:891:ed34:7b18     # dns.chromeina.top
 2603:c023:7:8700::8888                  # oraclejp2.chungyu.com
 2603:c023:c003:3d4c:0:3106:acb8:2787    # dns.meeo.win
+2603:c024:4507:6821:456c:317b:2f25:11bc # tuandns.duckdns.org
 2603:c024:4509:b8aa:420a:4988:30a:5acd  # dns.0ooo.icu
 2603:c024:8005:35ad:1440:2400:1430:1440 # dns.d94.xyz
 2603:c024:9:35af:19c7:3532:ac18:f4b9    # dns.moonssif.com
@@ -1040,7 +1042,6 @@
 2a01:4f9:c011:addc::1                   # dns.braene.com
 2a01:4f9:c012:25a0::1                   # ns.nwps.fi, public.ns.nwps.fi
 2a01:4f9:c012:ca1f::1                   # resolver.rferee.dev
-2a01:4f9:c012:f3c4::1                   # truta.org
 2a01:4f9:c013:dc4e::1                   # juuri.hagezi.org
 2a01:4f9:c01f:74::1                     # eu1.dns.lavate.ch
 2a01:4ff:f0:ac5::1                      # dns.nextdns.io
@@ -1213,7 +1214,7 @@
 2a0c:5700:3133:650:ba68:95ff:fe53:3d16  # dns.anon.no
 2a0c:59c0:19::3                         # nl-ams.doh.sb
 2a0c:82c0::1                            # doh.suche.org
-2a0c:8901::53                           # dns.dnshome.de
+2a0c:8902::53                           # dns.dnshome.de
 2a0c:8fc0:1749:66:18::16                # muc01.dnscry.pt
 2a0c:8fc1:6441::412:ab34                # tyo01.dnscry.pt
 2a0c:9a46:1e00:9::a                     # dns.practicallyunhackable.com
