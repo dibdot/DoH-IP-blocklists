@@ -9,7 +9,7 @@
 2001:19f0:7002:cf2:5400:4ff:fe4a:f0f0   # dns.fullaccesstointernet.jp.eu.org
 2001:19f0:8001:1e9d:5400:2ff:fec8:70cf  # dns.nextdns.io
 2001:19f0:9002:de4:5400:4ff:fe08:7de3   # pluton.plan9-dns.com
-2001:19f0:ac01:170:5400:2ff:fec8:72c8   # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2001:19f0:ac01:170:5400:2ff:fec8:72c8   # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2001:19f0:b001:322:5400:2ff:fe2b:4238   # tor.vasi.li
 2001:19f0:b001:8fa:5400:3ff:fe8b:d05c   # ca-yyc.doh.sb
 2001:19f0:b002:537:5400:5ff:fe7b:226e   # dns.kusoneko.moe
@@ -95,7 +95,7 @@
 2001:8b0::2023                          # dns.aa.net.uk
 2001:910:800::12                        # ns0.fdn.fr
 2001:910:800::40                        # ns1.fdn.fr
-2001:9e8:4003:d7a1:6b4:feff:fe9b:eb1d   # area51.mywire.org
+2001:9e8:4003:f1ba:6b4:feff:fe9b:eb1d   # area51.mywire.org
 2001:9e8:4039:7761:21a:8cff:fe43:9654   # adguard.bitteeinbyte.de
 2001:a18:1::29                          # dnspub.restena.lu
 2001:a60::53:1                          # dns.mnet-online.de
@@ -120,7 +120,7 @@
 2001:df7:5300:18::64f                   # puredns.org
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:b18::10                   # dns.surobe.com
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
 2003:180:2::4:0:53                      # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
@@ -206,8 +206,8 @@
 240d:c000:2010:1e00:6:52dc:f6a:9874     # dns.weixin.qq.com.cn
 240d:c000:2010:1e00:6:52dc:fa7:17a4     # dns.weixin.qq.com.cn
 240d:c000:f000:9300:ad0:a594:4272:0     # cloud.198.games
-240d:c000:f000:9500:8234:d91e:8082:0    # blog.kimiblock.top
-240d:c000:f000:9500:8234:d91e:8082:1    # blog.kimiblock.top
+240d:c000:f000:9500:8234:d91e:8082:2    # blog.kimiblock.top
+240d:c000:f000:9500:8234:d91e:8082:3    # blog.kimiblock.top
 240d:c000:f000:ea00:70d8:5996:f8e4:0    # dns.flymc.cc
 240d:c010:75:1::119                     # dns.233py.com, doh.233py.com, edns.233py.com, i.233py.com, ndns.233py.com, sdns.233py.com, wdns.233py.com
 240d:c010:75:1::19a                     # doh.totoro.pub
@@ -255,14 +255,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:234b:1600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:3600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:8200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:8c00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:9800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:a800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:cc00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:234b:de00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:0:f:5c7a:55c0:93a1       # eth.link
+2600:9000:234b:4200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:4c00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:600:f:5c7a:55c0:93a1     # eth.link
+2600:9000:234b:8800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:8e00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:ac00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:234b:c600:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -1237,7 +1237,7 @@
 2a0d:f302:110:6517::1                   # vie01.dnscry.pt
 2a0e:6901:201:6:5054:ff:fe21:a3b5       # dns.nextdns.io
 2a0e:6901:301:a:5054:ff:fe14:4256       # dns.nextdns.io
-2a0e:6901:410:25:5054:ff:fe1c:7c81      # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a0e:6901:410:25:5054:ff:fe1c:7c81      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a0e:6902:2002:12b:5054:ff:fed7:6b78    # dns.nextdns.io
 2a0e:6a80:3:669::                       # fra01.dnscry.pt
 2a0e:97c0:38f::2                        # dns.home.daniil.it
