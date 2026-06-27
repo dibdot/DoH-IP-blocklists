@@ -37,7 +37,6 @@
 5.152.130.27        # dns.pesaventofilippo.com
 5.160.117.105       # doh.abraservice.xyz
 5.161.43.197        # dns.nextdns.io
-5.161.191.104       # dns.smartguard.io
 5.175.180.171       # dus01.dnscry.pt
 5.180.59.37         # nsc.torgues.net
 5.188.227.13        # tlv01.dnscry.pt
@@ -690,8 +689,6 @@
 64.176.188.144      # dns.7vpn.com
 64.227.132.183      # squidmall.vip
 65.21.253.73        # fi-hel-w-f-2.nashkan.net
-65.108.54.17        # dns.anon.no
-66.33.60.66         # arashi.net.eu.org
 66.55.159.186       # dnswebvsn.com
 66.63.177.126       # dns.stevenz.net, doh.sz-dns.com
 66.154.118.103      # renardbleu.dev
@@ -720,7 +717,8 @@
 75.119.137.239      # dns.christian.moe, dns.imchristian.de
 76.76.2.11          # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22          # dns.controld.com
-76.76.21.142        # arashi.net.eu.org
+76.76.21.98         # arashi.net.eu.org
+76.76.21.164        # arashi.net.eu.org
 76.223.54.146       # dns.edgy.network, dns.faze.dev, dns.pumplex.com, dns.vip-kingstore.xyz, ikarosalpha.xyz, mikezhang.xyz
 76.223.67.189       # dns.sitdns.com, sitdns.com
 77.68.29.63         # ahoj.email, princez.uk
@@ -897,6 +895,7 @@
 95.174.68.142       # ae-fuj-w-p-2.nashkan.net
 95.174.68.242       # ae-fuj-w-p-1.nashkan.net
 95.179.152.253      # dns.joey01245.nl
+95.179.161.138      # dns.smartguard.io
 95.215.19.53        # dns.njal.la
 95.216.74.89        # dns.neubsi.at
 95.216.74.122       # cube.neubsi.at
@@ -911,7 +910,8 @@
 96.9.215.92         # gb-cov-w-f-1.nashkan.net
 96.9.228.27         # hkg01.dnscry.pt
 96.44.178.68        # dns.foxyfy.net
-96.106.7.234        # doh.xfinity.com, doh2.gslb2.xfinity.com
+96.106.7.232        # doh2.gslb2.xfinity.com
+96.106.7.234        # doh.xfinity.com
 96.113.151.145      # dot.xfinity.com
 98.83.103.232       # dns.api.preview.globus.org
 99.79.182.170       # ca01.dns4me.net
@@ -1116,7 +1116,7 @@
 104.234.167.66      # sg-w-p-1.nashkan.net
 104.236.116.148     # ns.00dani.me
 104.238.165.18      # dns.f4a.fun
-104.238.181.28      # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+104.238.181.28      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 104.244.72.39       # dns.bofh.in
 104.248.104.66      # ca.doh.cloudveil.org
 106.55.44.79        # dns.b612.me
@@ -1154,7 +1154,7 @@
 111.235.222.100     # dns.cwlys.com
 112.119.102.41      # dns.853852.xyz
 112.213.32.219      # syd.adfilter.net
-114.10.44.103       # gustamadh.dynv6.net
+114.10.44.96        # gustamadh.dynv6.net
 114.33.26.67        # dns.jundev.org
 114.34.0.56         # adguard.shuting.idv.tw
 115.36.38.20        # dns.yuu-g.net
@@ -1379,6 +1379,8 @@
 155.248.240.173     # agh.dshubham.xyz
 157.15.124.220      # puredns.org
 157.20.105.115      # sin03.dnscry.pt
+157.90.33.73        # droyd.top
+157.90.33.74        # droyd.top
 157.90.124.62       # dns.brahma.world
 157.131.42.41       # resolver4.dns.openinternet.io
 157.151.179.228     # dns.listo.click
@@ -1631,7 +1633,7 @@
 176.147.243.164     # blockerads.multimediaconcept.fr
 176.164.138.176     # dns.chadeyron.fr
 178.20.42.213       # vd.i81.ru
-178.22.122.100      # free.shecan.ir
+178.22.122.100      # dns.shecan.ir
 178.33.118.153      # dns-1.wil.cloud, dns-2.wil.cloud
 178.85.215.153      # jurre-home.duckdns.org
 178.105.16.6        # doh.42l.fr, doh.lacontrevoie.fr
@@ -1666,7 +1668,7 @@
 185.47.221.200      # dns.kukal.cz
 185.49.141.38       # getdnsapi.net
 185.51.200.1        # pro.shecan.ir
-185.51.200.2        # dns.shecan.ir
+185.51.200.2        # free.shecan.ir
 185.64.79.5         # uk-lon.doh.sb
 185.69.161.122      # dns.fancyorg.at
 185.70.9.10         # dns.kuuhaku.moe
@@ -1706,6 +1708,7 @@
 185.228.168.10      # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 185.228.168.168     # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 185.231.100.57      # adg.tshost.no
+185.231.100.108     # dns.anon.no
 185.234.52.87       # ath01.dnscry.pt
 185.234.98.39       # timmes.nl
 185.236.104.254     # doh.flashstart.com
@@ -1843,7 +1846,7 @@
 208.67.222.222      # dns.opendns.com, dns.umbrella.com, resolver1.opendns.com
 209.182.225.103     # sea01.dnscry.pt
 209.208.26.145      # dns.dyn1.de
-209.209.57.165      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+209.209.57.165      # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 209.209.59.227      # dns.nextdns.io
 209.250.246.198     # adguardhome.atakorah.com
 210.165.170.135     # dns.soldier.terumi.club
