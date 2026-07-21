@@ -54,7 +54,6 @@
 2001:4b98:dc2:41:216:3eff:fe16:1080     # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fe25:d0f0     # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fece:3e55     # dns.hostux.net
-2001:4ba0:cafe:3d2::1                   # ns2.opennameserver.org
 2001:4ba0:cafe:745::19                  # dns.expert
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
@@ -121,8 +120,8 @@
 2001:df7:5300:18::64f                   # puredns.org
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:c09b::10                  # dns.surobe.com
-2003:180:2:4000:0:4:0:53                # dns.telekom.de
-2003:180:2::4:0:53                      # dns.telekom.de
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:133:1500::4                      # doh.kekew.info
@@ -192,13 +191,11 @@
 2404:9400:41a9:4800::1                  # per.adfilter.net
 2404:9400:6903:2100::1                  # adl.adfilter.net
 2404:fbc0:0:11c8::a324                  # han01.dnscry.pt
-2406:7540:1600:0:103:155:191:184        # dns.bebasid.com
 2406:7540:2500:0:103:155:191:225        # dns.caliph.dev
 2406:da12:6cb:df00:7a77:c387:2bed:613c  # kr-sel.doh.sb
 2406:da14:16ca:be00:596f:3a82:90e5:3d2e # dns.nodoa.me
 2406:da1a:1b5:d610:c66d:4ace:e191:b3b1  # pihole.aws.ketan.dev
 2406:ef80:1:2173::b5f                   # hkg02.dnscry.pt
-2407:0:3006:3d27::1                     # gustamadh.dynv6.net
 2407:24c0:2::154:3                      # dns.gi.co.id
 2407:3640:2205:1668::1                  # dot-sg.blahdns.com
 2407:3640:2238:5447::1                  # asia.tri-dns.net
@@ -257,14 +254,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2776:1800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:5a00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:7800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:7e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:9e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:a200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:c600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2776:cc00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:2a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:2e00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:4000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:4e00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:5800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:9800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:a800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2776:ee00:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -366,6 +363,7 @@
 2606:4700:3030::ac43:ac0c               # regiopolis.cloud
 2606:4700:3030::ac43:ce5a               # dns.240527.xyz
 2606:4700:3030::ac43:d12f               # rockwell.website
+2606:4700:3030::ac43:d1ad               # dns.silentlybren.com
 2606:4700:3030::ac43:de7e               # takhtakh.domyah.net
 2606:4700:3030::ac43:df15               # 003153.xyz
 2606:4700:3031::6815:10ad               # dns.rayanbab.com
@@ -491,7 +489,6 @@
 2606:4700:3035::ac43:afaf               # dns.baishiyuan.cn
 2606:4700:3035::ac43:b84c               # dns.kosan.moe
 2606:4700:3035::ac43:bc3e               # ahadns.net
-2606:4700:3035::ac43:d1ad               # dns.silentlybren.com
 2606:4700:3035::ac43:de8b               # dns.pari.network
 2606:4700:3036::6815:10f9               # dns.xiumu.org
 2606:4700:3036::6815:161f               # netcup.mismat.ch
@@ -948,7 +945,7 @@
 2803:f800:53::8                         # dns.cloudflare.com
 2803:f800:54::1                         # odoh.cloudflare-dns.com
 2803:f800:54::2                         # dooh.cloudflare-dns.com
-2a00:11c0:20:429::5                     # dns.nextdns.io
+2a00:11c0:20:429::5                     # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a00:11c0:21::53                        # dns.nextdns.io
 2a00:11c0:39:353::3                     # dns.nextdns.io
 2a00:5980:94::71                        # dns.circl.lu
@@ -981,7 +978,6 @@
 2a00:fbe0:1:3802::3                     # kracon.anycast.uncensoreddns.org
 2a01:111:f100:6000::4134:a07f           # dns.mzrme.cn
 2a01:238:20a:202:1160::                 # project-evoex.de
-2a01:238:4231:5200::1                   # ns3.opennameserver.org
 2a01:239:22f:800::1                     # pihole3.hoerli.net
 2a01:239:251:a800::1                    # dns.dremaxx.de
 2a01:239:2f3:de00::1                    # vps.robotboard.de
@@ -1180,8 +1176,6 @@
 2a06:98c1:52::8                         # dns.cloudflare.com
 2a06:98c1:53::1                         # odoh.cloudflare-dns.com
 2a06:98c1:53::2                         # dooh.cloudflare-dns.com
-2a06:9f44:f3e0:1::b3b4:51d              # antivirus.bebasid.com
-2a06:9f44:f3e0:b00b:beba::51d           # internetsehat.bebasid.com
 2a06:a006:d1d1::116                     # zal01.dnscry.pt
 2a07:a105:c0f:fee::20                   # dns.neeb.it
 2a07:a8c0::                             # anycast.dns.nextdns.io, dns.nextdns.io
@@ -1215,7 +1209,7 @@
 2a0a:be80::cbe:4444                     # cubedns.com
 2a0a:be80::cbe:4445                     # cubedns.com
 2a0b:4342:1a32:f:5054:ff:fe48:d17f      # dns.nextdns.io
-2a0b:4342:1a82:154:5054:ff:feef:b4de    # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a0b:4342:1a82:154:5054:ff:feef:b4de    # dns.nextdns.io
 2a0c:3d00:11:37::1                      # nsc.torgues.net
 2a0c:5700:3133:650::b                   # adg.tshost.no
 2a0c:59c0:19::3                         # nl-ams.doh.sb, ru-mow.doh.sb
@@ -1274,7 +1268,6 @@
 2a13:1001::86:54:11:212                 # child.joindns4.eu
 2a13:1001::86:54:11:213                 # noads.joindns4.eu
 2a13:9401:0:1::3d58:1                   # vno01.dnscry.pt
-2a14:7581:4940::fa:f117:111a            # dns.bebasid.com
 2c0f:e8f8:2000:233::4254:c5b2           # mru01.dnscry.pt
 2c0f:f530::d00:188                      # jnb01.dnscry.pt
 ::                                      # dns.lihj.me
