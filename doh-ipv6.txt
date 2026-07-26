@@ -121,8 +121,8 @@
 2001:df7:5300:18::64f                   # puredns.org
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:148c::10                  # dns.surobe.com
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:4000:0:4:0:53                # dns.telekom.de
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:133:1500::4                      # doh.kekew.info
@@ -258,14 +258,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:28a3:3400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:3600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:7c00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:1a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:5400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:5600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:7000:f:5c7a:55c0:93a1    # eth.link
 2600:9000:28a3:9800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:e400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:ee00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:f600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:fc00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:a000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:b000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:dc00:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -954,7 +954,7 @@
 2803:f800:54::2                         # dooh.cloudflare-dns.com
 2a00:11c0:20:429::5                     # dns.nextdns.io
 2a00:11c0:21::53                        # dns.nextdns.io
-2a00:11c0:39:353::3                     # dns.nextdns.io
+2a00:11c0:39:353::3                     # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a00:5980:94::71                        # dns.circl.lu
 2a00:6a00:ad1:806::83                   # dns.cert.ee
 2a00:6a00:ad1:806::86                   # dns.cert.ee
@@ -1058,7 +1058,7 @@
 2a01:4f9:c012:f3c4::1                   # truta.org
 2a01:4f9:c013:dc4e::1                   # juuri.hagezi.org
 2a01:4f9:c01f:74::1                     # eu1.dns.lavate.ch
-2a01:4ff:f0:ac5::1                      # dns.nextdns.io, dns2.nextdns.io
+2a01:4ff:f0:ac5::1                      # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a01:678:3:8::2                         # resolver2.absolight.net
 2a01:678:3:9::2                         # resolver1.absolight.net
 2a01:678:3:a::2                         # resolver3.absolight.net
@@ -1104,7 +1104,8 @@
 2a02:6b8::feed:ff                       # common.dot.dns.yandex.net
 2a02:6ca3:0:1::2                        # dns.levonet.sk
 2a02:6ca3:0:2::2                        # dns.levonet.sk
-2a02:6ea0:e237::1504:1                  # doh2.b-cdn.net
+2a02:6ea0:e237::1503:1                  # doh2.b-cdn.net
+2a02:6ea0:e237::1504:1                  # doh1.b-cdn.net
 2a02:88:1:e:807::101                    # dns.cert.ee
 2a02:88:1:e:807::99                     # dns.cert.ee
 2a02:958:10:2000:213:166:247:100        # dns.csaonline.de
@@ -1187,8 +1188,8 @@
 2a06:9f44:f3e0:b00b:beba::51d           # internetsehat.bebasid.com
 2a06:a006:d1d1::116                     # zal01.dnscry.pt
 2a07:a105:c0f:fee::20                   # dns.neeb.it
-2a07:a8c0::                             # anycast.dns.nextdns.io, chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
-2a07:a8c1::                             # anycast.dns.nextdns.io, chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a07:a8c0::                             # anycast.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io
+2a07:a8c1::                             # anycast.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io
 2a07:d884:100::344                      # fra02.dnscry.pt
 2a07:e03::333                           # nl.dns.privex.io
 2a07:e043:1:5d::1                       # sto01.dnscry.pt
