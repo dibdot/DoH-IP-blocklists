@@ -434,7 +434,6 @@
 20.219.170.173      # doh.technochat.in
 20.239.160.119      # dns.888654.xyz
 20.253.254.201      # adguard.aa4.co.uk
-23.82.16.53         # dns.propheci.xyz
 23.94.211.166       # dns.novali.date
 23.95.11.50         # dns.cryptomize.com
 23.128.248.2        # dns.stormycloud.org
@@ -633,6 +632,7 @@
 51.158.147.92       # dns.novg.net
 51.159.67.129       # dns.novg.net
 51.159.138.172      # dns.wargan.io
+51.161.115.44       # cleanbrowsing.org
 51.178.29.75        # dns.alloxr.info
 51.178.82.98        # dns.crystalyx.net
 51.178.136.114      # dns.hellozhao.com
@@ -655,7 +655,6 @@
 54.79.3.18          # au01.dns4me.net
 54.90.232.69        # doth.huque.com
 54.145.228.148      # dns.api.preview.globus.org
-54.166.136.104      # dns.api.globus.org
 54.169.113.231      # sg01.dns4me.net
 54.172.110.180      # us02.dns4me.net
 54.187.149.240      # us01.dns4me.net
@@ -686,7 +685,8 @@
 64.227.132.183      # squidmall.vip
 64.235.41.14        # dns.syaifullah.com
 65.21.253.73        # fi-hel-w-f-2.nashkan.net
-66.33.60.66         # arashi.net.eu.org
+66.33.60.67         # arashi.net.eu.org
+66.33.60.194        # arashi.net.eu.org
 66.55.159.186       # dnswebvsn.com
 66.154.118.103      # renardbleu.dev
 66.175.223.143      # dns.stirringphoto.com
@@ -714,7 +714,6 @@
 75.119.137.239      # dns.christian.moe, dns.imchristian.de
 76.76.2.11          # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22          # dns.controld.com
-76.76.21.98         # arashi.net.eu.org
 76.223.54.146       # dns.edgy.network, dns.faze.dev, dns.pumplex.com, dns.vip-kingstore.xyz, ikarosalpha.xyz, mikezhang.xyz
 77.68.29.63         # ahoj.email, princez.uk
 77.68.50.239        # dns.connect.fail
@@ -907,12 +906,13 @@
 96.9.215.92         # gb-cov-w-f-1.nashkan.net
 96.9.228.27         # hkg01.dnscry.pt
 96.44.178.68        # dns.foxyfy.net
-96.106.7.232        # doh.xfinity.com, doh2.gslb2.xfinity.com
+96.106.7.234        # doh.xfinity.com, doh2.gslb2.xfinity.com
 96.113.151.145      # dot.xfinity.com
 98.83.80.22         # dns.api.integration.globuscs.info
 98.89.153.17        # httpdns-push.heytapmobile.com
 99.79.182.170       # ca01.dns4me.net
 99.80.192.194       # doh.kidzonet.io
+100.24.227.235      # dns.api.globus.org
 100.48.174.231      # dns.api.test.globuscs.info
 100.48.185.1        # dns.api.sandbox.globuscs.info
 100.50.23.56        # dns.api.globus.org
@@ -1086,6 +1086,7 @@
 104.21.89.112       # lewsha.lol
 104.21.90.139       # glacius.top
 104.21.91.14        # doh.tiarap.org, jp.tiarap.org
+104.21.92.97        # ag.ssrahul96.xyz
 104.21.93.80        # bazooki-infra.dev
 104.21.93.221       # adguard.twotigers.xyz
 104.21.94.126       # dnsforfamily.com
@@ -1131,7 +1132,7 @@
 109.123.236.250     # dns.marasov.id
 109.123.253.27      # dns.huseynov.work
 109.163.225.33      # adguard.wirimij.nl
-109.173.233.156     # dns.kamilszczepanski.com
+109.173.160.28      # dns.kamilszczepanski.com
 109.205.61.98       # us-nyc-w-p-1.nashkan.net
 109.205.183.11      # adguard.bonsirven.eu
 109.223.193.147     # adguard.gambini.org
@@ -1149,6 +1150,7 @@
 112.118.79.154      # dns.853852.xyz
 112.163.234.61      # 2.dns.noridev.moe
 112.213.32.219      # syd.adfilter.net
+114.10.44.249       # gustamadh.dynv6.net
 114.33.26.67        # dns.jundev.org
 114.34.0.56         # adguard.shuting.idv.tw
 115.36.47.111       # dns.yuu-g.net
@@ -1247,7 +1249,6 @@
 138.236.128.101     # cluster-1.gac.edu
 139.59.48.222       # doh.captnemo.in
 139.59.219.245      # sg-dns1.bancuh.com
-139.99.44.3         # adblock.krctech.dev
 139.162.80.84       # dns.nodoa.me
 139.180.168.195     # gateway.fomichev.cloud
 139.199.163.65      # dns.b612.me
@@ -1287,7 +1288,6 @@
 144.76.135.223      # doh.wewitro.net
 144.76.199.177      # dns.comff.net
 144.217.242.233     # doh-ca.naftalie.net
-145.239.87.80       # dns.simplylinux.ch
 146.19.0.66         # au-syd.doh.sb
 146.56.118.112      # dns.applewebkit.dev
 146.56.137.68       # lion.dns.qwer.pw
@@ -1313,7 +1313,6 @@
 147.189.140.136     # fnt01.dnscry.pt
 149.28.70.208       # dns.nextdns.io
 149.28.101.119      # pluton.plan9-dns.com
-149.28.121.105      # cleanbrowsing.org
 149.28.144.189      # dns.mikrotikrumahan.my.id
 149.88.64.107       # dns.886886886.xyz
 149.104.186.91      # dnsenc.com
@@ -1399,7 +1398,7 @@
 160.119.253.209     # sa01.dns4me.net
 160.250.95.28       # dns.hakim.one
 160.250.227.196     # dns.bebasid.com
-160.251.64.80       # affcdn.net, alleesph.online, dns.zui.lol, dnsnl-noads.alekberg.net, dnsse-noads.alekberg.net, drs.rustsword.com, odoh-target-noads.alekberg.net, odoh-target.alekberg.net
+160.251.64.80       # alleesph.online, dnsnl-noads.alekberg.net, dnsse.alekberg.net, odoh-target-noads-se.alekberg.net, odoh-target.alekberg.net, xorbiadns.com
 161.35.136.3        # doh-primary-pool.goodbyegambling.com
 161.118.145.178     # adguard.haneulo.com
 161.129.34.134      # 5g.o0o.re
@@ -1541,6 +1540,7 @@
 172.67.188.120      # comss.one
 172.67.188.244      # loadlow.me
 172.67.189.199      # home-server.store
+172.67.191.94       # ag.ssrahul96.xyz
 172.67.193.90       # dns.npsolution.it
 172.67.193.126      # doh.ccb-net.it
 172.67.193.129      # r1bnc.com
@@ -1624,7 +1624,7 @@
 176.147.243.164     # blockerads.multimediaconcept.fr
 176.164.190.11      # dns.chadeyron.fr
 178.20.42.213       # vd.i81.ru
-178.22.122.100      # dns.shecan.ir
+178.22.122.100      # free.shecan.ir
 178.33.118.153      # dns-1.wil.cloud, dns-2.wil.cloud
 178.105.16.6        # doh.42l.fr, doh.lacontrevoie.fr
 178.128.225.109     # tri-dns.net
@@ -1658,7 +1658,7 @@
 185.47.221.200      # dns.kukal.cz
 185.49.141.38       # getdnsapi.net
 185.51.200.1        # pro.shecan.ir
-185.51.200.2        # free.shecan.ir
+185.51.200.2        # dns.shecan.ir
 185.64.79.5         # uk-lon.doh.sb
 185.69.161.122      # dns.fancyorg.at
 185.70.9.10         # dns.kuuhaku.moe
@@ -1841,6 +1841,7 @@
 212.18.3.5          # dns.mnet-online.de
 212.60.61.246       # doh.quickline.ch, dot.quickline.ch
 212.60.63.246       # doh.quickline.ch, dot.quickline.ch
+212.92.105.22       # dns.propheci.xyz
 212.109.195.93      # dns.comss.one
 212.132.117.52      # dns.peb-schmidt.de
 212.185.200.25      # dns1.conne.net
