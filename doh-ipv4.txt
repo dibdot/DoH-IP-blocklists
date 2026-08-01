@@ -513,6 +513,7 @@
 38.47.180.115       # dns.glorydns.com
 38.107.232.115      # ada.openbld.net
 38.107.237.45       # ada.openbld.net
+38.142.94.218       # doh1.b-cdn.net, doh2.b-cdn.net
 38.180.230.56       # b-ii.com
 40.76.112.230       # dohtrial.att.net
 40.83.97.172        # dns.mzrme.cn
@@ -526,7 +527,7 @@
 43.154.154.162      # dns.flymc.cc
 43.161.224.5        # blog.kimiblock.top
 43.161.254.162      # blog.kimiblock.top
-43.169.14.124       # dns.233py.com, doh.233py.com, edns.233py.com, i.233py.com, ndns.233py.com, sdns.233py.com, wdns.233py.com
+43.169.15.124       # dns.233py.com, doh.233py.com, edns.233py.com, i.233py.com, ndns.233py.com, sdns.233py.com, wdns.233py.com
 43.174.246.33       # doh.totoro.pub
 43.174.247.33       # doh.totoro.pub
 43.224.180.137      # bne01.dnscry.pt
@@ -550,7 +551,7 @@
 45.67.84.132        # lon01.dnscry.pt
 45.67.85.219        # rdd01.dnscry.pt
 45.67.219.208       # doh.la.ahadns.net, dot.la.ahadns.net
-45.76.21.53         # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+45.76.21.53         # dns.nextdns.io
 45.76.113.31        # doh-2.seby.io, doh.seby.io, dot.seby.io
 45.77.25.253        # doh003.280blocker.net
 45.77.31.67         # at.pzhg.me
@@ -700,7 +701,7 @@
 64.227.132.183      # squidmall.vip
 64.235.41.14        # dns.syaifullah.com
 65.21.253.73        # fi-hel-w-f-2.nashkan.net
-65.108.54.17        # dns.anon.no
+66.33.60.194        # arashi.net.eu.org
 66.55.159.186       # dnswebvsn.com
 66.154.118.103      # renardbleu.dev
 66.175.223.143      # dns.stirringphoto.com
@@ -729,8 +730,7 @@
 75.119.137.239      # dns.christian.moe, dns.imchristian.de
 76.76.2.11          # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22          # dns.controld.com
-76.76.21.164        # arashi.net.eu.org
-76.76.21.241        # arashi.net.eu.org
+76.76.21.142        # arashi.net.eu.org
 76.223.54.146       # dns.edgy.network, dns.faze.dev, dns.pumplex.com, dns.vip-kingstore.xyz, ikarosalpha.xyz, mikezhang.xyz
 77.68.29.63         # ahoj.email, princez.uk
 77.68.50.239        # dns.connect.fail
@@ -809,6 +809,7 @@
 84.67.177.128       # home.enjoymylife.net
 84.104.237.102      # dns.melvin2204.nl
 84.183.57.251       # echoe1yidzu4ioo5.myfritz.net
+85.11.167.8         # dnsguard.pub
 85.90.207.199       # evn01.dnscry.pt
 85.195.238.32       # dns.momou.ch
 85.195.238.88       # dns.momou.ch
@@ -922,7 +923,7 @@
 96.9.215.92         # gb-cov-w-f-1.nashkan.net
 96.9.228.27         # hkg01.dnscry.pt
 96.44.178.68        # dns.foxyfy.net
-96.106.7.234        # doh.xfinity.com, doh2.gslb2.xfinity.com
+96.106.7.232        # doh.xfinity.com, doh2.gslb2.xfinity.com
 96.113.151.145      # dot.xfinity.com
 98.83.80.22         # dns.api.integration.globuscs.info
 98.89.153.17        # httpdns-push.heytapmobile.com
@@ -1262,7 +1263,7 @@
 138.236.128.101     # cluster-1.gac.edu
 139.59.48.222       # doh.captnemo.in
 139.59.219.245      # sg-dns1.bancuh.com
-139.64.133.38       # dns.nextdns.io
+139.64.133.38       # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 139.99.44.3         # adblock.krctech.dev
 139.162.80.84       # dns.nodoa.me
 139.180.168.195     # gateway.fomichev.cloud
@@ -1414,7 +1415,7 @@
 160.119.253.209     # sa01.dns4me.net
 160.250.95.28       # dns.hakim.one
 160.250.227.196     # dns.bebasid.com
-160.251.64.80       # adfiltro.fun, adg.rueiliu.space, dns.futuredns.me, dns.labnekotest.site, dnsse.alekberg.net, drs.rustsword.com, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, tk31z.com
+160.251.64.80       # adfiltro.fun, dns.futuredns.me, dnsnl.alekberg.net, drs.rustsword.com, tk31z.com, wantaquddin.com, yuvelirtut.website
 161.35.136.3        # doh-primary-pool.goodbyegambling.com
 161.118.145.178     # adguard.haneulo.com
 161.129.34.134      # 5g.o0o.re
@@ -1430,7 +1431,7 @@
 162.220.221.25      # dns.nextdns.io
 162.220.222.155     # dns.nextdns.io
 162.221.218.241     # dns.zemows.industries
-162.250.6.163       # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+162.250.6.163       # dns.nextdns.io
 162.254.86.13       # vno01.dnscry.pt
 163.172.131.116     # stratus.bugz.fr
 163.181.246.188     # iterator.lazada.com
@@ -1468,10 +1469,9 @@
 168.138.199.16      # jp1.f7b6h9.tk
 168.235.111.72      # dns.sev.monster
 169.48.27.179       # ca02.dns4me.net
-169.150.236.100     # doh1.b-cdn.net
 169.239.128.124     # jnb01.dnscry.pt
 170.39.224.134      # dns.nextdns.io
-170.39.225.135      # dns.nextdns.io
+170.39.225.135      # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 170.39.227.247      # dns.nextdns.io
 170.249.237.154     # atl01.dnscry.pt
 172.64.41.3         # chrome.cloudflare-dns.com
@@ -1681,7 +1681,6 @@
 185.69.161.122      # dns.fancyorg.at
 185.70.9.10         # dns.kuuhaku.moe
 185.71.138.138      # wikimedia-dns.org
-185.93.1.245        # doh2.b-cdn.net
 185.95.218.42       # dns.digitale-gesellschaft.ch, dns1.digitale-gesellschaft.ch
 185.95.218.43       # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
 185.95.219.170      # resolv1.trash.net
@@ -1773,6 +1772,7 @@
 194.0.5.3           # doh.dns4all.eu
 194.26.213.15       # dub01.dnscry.pt
 194.32.107.48       # trf01.dnscry.pt
+194.32.107.93       # dns.anon.no
 194.36.144.87       # morbitzer.de, www.morbitzer.de
 194.39.205.10       # muc01.dnscry.pt
 194.50.33.11        # doh.suche.org
@@ -1851,9 +1851,9 @@
 209.209.59.227      # dns.nextdns.io
 209.250.246.198     # adguardhome.atakorah.com
 210.165.170.135     # dns.soldier.terumi.club
-212.7.209.207       # dns.propheci.xyz
 212.18.0.5          # dns.mnet-online.de
 212.18.3.5          # dns.mnet-online.de
+212.32.255.84       # dns.propheci.xyz
 212.60.61.246       # doh.quickline.ch, dot.quickline.ch
 212.60.63.246       # doh.quickline.ch, dot.quickline.ch
 212.109.195.93      # dns.comss.one
