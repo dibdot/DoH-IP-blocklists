@@ -94,7 +94,7 @@
 2001:8b0::2023                          # dns.aa.net.uk
 2001:910:800::12                        # ns0.fdn.fr
 2001:910:800::40                        # ns1.fdn.fr
-2001:9e8:4003:a955:6b4:feff:fe9b:eb1d   # area51.mywire.org
+2001:9e8:4003:c081:6b4:feff:fe9b:eb1d   # area51.mywire.org
 2001:9e8:4039:7761:21a:8cff:fe43:9654   # adguard.bitteeinbyte.de
 2001:a18:1::29                          # dnspub.restena.lu
 2001:a60::53:1                          # dns.mnet-online.de
@@ -117,7 +117,7 @@
 2001:df4:b100:3:1:1:730a:2cd2           # dns1.server.my.id
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:148c::10                  # dns.surobe.com
-2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2::4:0:53                      # dns.telekom.de
 2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
@@ -125,6 +125,7 @@
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:4052:3a00:d900:be24:11ff:fe2b:c18b # dns.soldier.terumi.club
+2400:52e0:1a04::1310:1                  # doh2.b-cdn.net
 2400:6180:0:d0::5f73:4001               # doh.tiar.app, dot.tiar.app
 2400:6180:0:d0::f7:1001                 # sg-dns1.bancuh.com
 2400:6180:100:d0::4e0:6001              # do.shimul.me
@@ -237,13 +238,13 @@
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
 2600:9000:28a3:2e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:3000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:8400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:8800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:8e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:9200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:9400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:fa00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:6000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:6800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:a600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:a800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:dc00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:e400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:ec00:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -1109,7 +1110,6 @@
 2a02:6b8::feed:ff                       # common.dot.dns.yandex.net
 2a02:6ca3:0:1::2                        # dns.levonet.sk
 2a02:6ca3:0:2::2                        # dns.levonet.sk
-2a02:6ea0:e237::1504:1                  # doh2.b-cdn.net
 2a02:88:1:e:807::101                    # dns.cert.ee
 2a02:88:1:e:807::99                     # dns.cert.ee
 2a02:958:10:2000:213:166:247:100        # dns.csaonline.de
