@@ -440,7 +440,7 @@
 20.239.160.119      # dns.888654.xyz
 20.253.254.201      # adguard.aa4.co.uk
 23.22.124.132       # httpdns-push.heytapmobile.com
-23.82.16.55         # dns.propheci.xyz
+23.82.16.57         # dns.propheci.xyz
 23.94.211.166       # dns.novali.date
 23.95.11.50         # dns.cryptomize.com
 23.128.248.2        # dns.stormycloud.org
@@ -691,7 +691,7 @@
 64.176.188.144      # dns.7vpn.com
 64.235.41.14        # dns.syaifullah.com
 65.21.253.73        # fi-hel-w-f-2.nashkan.net
-66.33.60.194        # arashi.net.eu.org
+66.33.60.34         # arashi.net.eu.org
 66.55.159.186       # dnswebvsn.com
 66.63.177.126       # dns.stevenz.net, doh.sz-dns.com
 66.154.118.103      # renardbleu.dev
@@ -721,7 +721,7 @@
 75.119.137.239      # dns.christian.moe, dns.imchristian.de
 76.76.2.11          # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22          # dns.controld.com
-76.76.21.123        # arashi.net.eu.org
+76.76.21.22         # arashi.net.eu.org
 76.223.54.146       # dns.edgy.network, dns.faze.dev, dns.pumplex.com, dns.vip-kingstore.xyz, ikarosalpha.xyz, mikezhang.xyz
 77.68.29.63         # ahoj.email, princez.uk
 77.68.50.239        # dns.connect.fail
@@ -910,7 +910,7 @@
 96.9.215.92         # gb-cov-w-f-1.nashkan.net
 96.9.228.27         # hkg01.dnscry.pt
 96.44.178.68        # dns.foxyfy.net
-96.106.7.234        # doh.xfinity.com, doh2.gslb2.xfinity.com
+96.106.7.232        # doh.xfinity.com, doh2.gslb2.xfinity.com
 96.113.151.145      # dot.xfinity.com
 98.94.113.22        # dns.api.staging.globuscs.info
 99.79.182.170       # ca01.dns4me.net
@@ -1284,7 +1284,6 @@
 144.76.135.223      # doh.wewitro.net
 144.76.199.177      # dns.comff.net
 144.217.242.233     # doh-ca.naftalie.net
-145.239.87.80       # dns.simplylinux.ch
 146.19.0.66         # au-syd.doh.sb
 146.56.118.112      # dns.applewebkit.dev
 146.56.137.68       # lion.dns.qwer.pw
@@ -1392,7 +1391,7 @@
 160.119.253.209     # sa01.dns4me.net
 160.250.95.28       # dns.hakim.one
 160.250.227.196     # dns.bebasid.com
-160.251.64.80       # dns.zfsystem.tech, dnsse-noads.alekberg.net, odoh-target.alekberg.net
+160.251.64.80       # alleesph.online, dns.futuredns.me, dns.huas.me, dns.zfsystem.tech, dnsnl.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, tk31z.com, xorbiadns.com
 161.35.136.3        # doh-primary-pool.goodbyegambling.com
 161.118.145.178     # adguard.haneulo.com
 161.129.34.134      # 5g.o0o.re
@@ -1617,8 +1616,6 @@
 176.147.243.164     # blockerads.multimediaconcept.fr
 176.164.137.39      # dns.chadeyron.fr
 178.20.42.213       # vd.i81.ru
-178.22.122.100      # dns.shecan.ir
-178.22.122.101      # pro.shecan.ir
 178.33.118.153      # dns-1.wil.cloud, dns-2.wil.cloud
 178.105.16.6        # doh.42l.fr, doh.lacontrevoie.fr
 178.128.225.109     # tri-dns.net
@@ -1653,7 +1650,8 @@
 185.43.135.1        # odvr.nic.cz
 185.47.221.200      # dns.kukal.cz
 185.49.141.38       # getdnsapi.net
-185.51.200.2        # free.shecan.ir
+185.51.200.1        # pro.shecan.ir
+185.51.200.2        # dns.shecan.ir, free.shecan.ir
 185.64.79.5         # uk-lon.doh.sb
 185.69.161.122      # dns.fancyorg.at
 185.70.9.10         # dns.kuuhaku.moe
@@ -1872,7 +1870,7 @@
 217.169.20.22       # dns.aa.net.uk
 217.169.20.23       # dns.aa.net.uk
 217.197.91.153      # dns.artikel10.org
-217.255.213.166     # dns.reitmeier.me
+217.255.216.36      # dns.reitmeier.me
 218.75.4.130        # hshh.org
 220.77.190.196      # 1.dns.noridev.moe
 220.132.163.223     # dns.ares-taiwan.com
