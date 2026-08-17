@@ -430,6 +430,10 @@
 17.253.82.243       # doh.dns.apple.com
 17.253.96.119       # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 17.253.96.247       # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+18.155.173.71       # ricko.is
+18.155.173.95       # ricko.is
+18.155.173.102      # ricko.is
+18.155.173.119      # ricko.is
 18.200.70.220       # dns.bitservices.io
 18.202.82.211       # doh.kidzonet.io
 18.204.182.251      # dns.api.sandbox.globuscs.info
@@ -661,10 +665,6 @@
 52.199.8.149        # dns.nodoa.me
 52.203.207.55       # dns.api.staging.globuscs.info
 52.205.180.212      # dns.watch
-52.222.244.11       # ricko.is
-52.222.244.16       # ricko.is
-52.222.244.47       # ricko.is
-52.222.244.81       # ricko.is
 52.246.182.50       # dnslow.me
 54.37.137.4         # spacedns.org
 54.38.32.102        # dns.charraud.eu
@@ -702,8 +702,6 @@
 64.176.188.144      # dns.7vpn.com
 64.235.41.14        # dns.syaifullah.com
 65.21.253.73        # fi-hel-w-f-2.nashkan.net
-66.33.60.34         # arashi.net.eu.org
-66.33.60.129        # arashi.net.eu.org
 66.55.159.186       # dnswebvsn.com
 66.63.177.126       # dns.stevenz.net, doh.sz-dns.com
 66.154.118.103      # renardbleu.dev
@@ -730,6 +728,8 @@
 75.119.137.239      # dns.christian.moe, dns.imchristian.de
 76.76.2.11          # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22          # dns.controld.com
+76.76.21.22         # arashi.net.eu.org
+76.76.21.142        # arashi.net.eu.org
 76.223.54.146       # dns.edgy.network, dns.faze.dev, dns.pumplex.com, dns.vip-kingstore.xyz, ikarosalpha.xyz, mikezhang.xyz
 77.68.29.63         # ahoj.email
 77.68.50.239        # dns.connect.fail
@@ -806,6 +806,7 @@
 84.33.12.158        # tyo01.dnscry.pt
 84.104.237.102      # dns.melvin2204.nl
 84.183.57.251       # echoe1yidzu4ioo5.myfritz.net
+84.191.52.118       # dns.reitmeier.me
 85.11.167.8         # dnsguard.pub
 85.195.238.15       # dns.momou.ch
 85.195.238.32       # dns.momou.ch
@@ -919,8 +920,7 @@
 96.9.215.92         # gb-cov-w-f-1.nashkan.net
 96.9.228.27         # hkg01.dnscry.pt
 96.44.178.68        # dns.foxyfy.net
-96.106.7.232        # doh.xfinity.com
-96.106.7.234        # doh2.gslb2.xfinity.com
+96.106.7.232        # doh.xfinity.com, doh2.gslb2.xfinity.com
 96.113.151.145      # dot.xfinity.com
 98.82.238.213       # httpdns-push.heytapmobile.com
 98.88.146.102       # dns.api.staging.globuscs.info
@@ -1316,7 +1316,7 @@
 147.162.22.1        # galileo.math.unipd.it
 147.189.136.104     # yul01.dnscry.pt
 147.189.140.136     # fnt01.dnscry.pt
-149.28.70.208       # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+149.28.70.208       # dns.nextdns.io, dns2.nextdns.io
 149.28.101.119      # pluton.plan9-dns.com
 149.28.144.189      # dns.mikrotikrumahan.my.id
 149.88.64.107       # dns.886886886.xyz
@@ -1410,7 +1410,7 @@
 162.159.61.8        # dns.cloudflare.com
 162.159.62.1        # odoh.cloudflare-dns.com
 162.159.62.2        # dooh.cloudflare-dns.com
-162.220.221.25      # dns.nextdns.io, dns2.nextdns.io
+162.220.221.25      # dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 162.220.222.155     # dns.nextdns.io
 162.221.218.241     # dns.zemows.industries
 162.250.6.163       # dns.nextdns.io
@@ -1842,7 +1842,7 @@
 209.182.225.103     # sea01.dnscry.pt
 209.208.26.145      # dns.dyn1.de
 209.209.57.165      # dns.nextdns.io
-209.209.59.227      # dns.nextdns.io
+209.209.59.227      # chromium.dns.nextdns.io, dns.nextdns.io
 209.250.246.198     # adguardhome.atakorah.com
 210.165.245.188     # dns.soldier.terumi.club
 212.18.0.5          # dns.mnet-online.de
@@ -1876,8 +1876,8 @@
 216.238.80.219      # helios.plan9-dns.com
 216.245.140.20      # man01.dnscry.pt
 216.250.97.148      # hkg02.dnscry.pt
+217.0.43.2          # dns.telekom.de
 217.0.43.50         # dns.telekom.de
-217.0.43.146        # dns.telekom.de
 217.69.4.29         # nsec.arnor.org
 217.70.184.38       # dns0.eu
 217.91.179.72       # doh.kekew.info
@@ -1891,7 +1891,6 @@
 217.169.20.22       # dns.aa.net.uk
 217.169.20.23       # dns.aa.net.uk
 217.197.91.153      # dns.artikel10.org
-217.255.220.148     # dns.reitmeier.me
 218.75.4.130        # hshh.org
 220.77.190.196      # 1.dns.noridev.moe
 220.132.163.223     # dns.ares-taiwan.com
