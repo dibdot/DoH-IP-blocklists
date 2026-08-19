@@ -179,6 +179,7 @@
 2406:da14:16ca:be00:596f:3a82:90e5:3d2e # dns.nodoa.me
 2406:da1a:1b5:d610:c66d:4ace:e191:b3b1  # pihole.aws.ketan.dev
 2406:ef80:1:2173::b5f                   # hkg02.dnscry.pt
+2407:0:3006:39be::1                     # gustamadh.dynv6.net
 2407:24c0:2::154:3                      # dns.gi.co.id
 2407:3640:2205:1668::1                  # dot-sg.blahdns.com
 2407:3640:2238:5447::1                  # asia.tri-dns.net
@@ -239,14 +240,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2064:3e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:4000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:4e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:600:f:5c7a:55c0:93a1     # eth.link
-2600:9000:2064:7000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:d600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:ea00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:fc00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:5400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:7200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:8e00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:a000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:da00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:e400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:f400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:f800:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -540,7 +541,7 @@
 2606:6680:35:1::506d:8ce2               # sjc01.dnscry.pt
 2606:6680:45:1::e859:6f4e               # yul01.dnscry.pt
 2606:6680:53:1::846a:bd79               # tsm01.dnscry.pt
-2606:6680:6:1::852a:cba4                # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2606:6680:6:1::852a:cba4                # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2606:a8c0:3:202::a                      # geg01.dnscry.pt
 2606:fc40:4003:f::a                     # sin03.dnscry.pt
 2607:5300:205:200::4b24                 # dns.asysec.com
@@ -977,7 +978,7 @@
 2803:f800:54::2                         # dooh.cloudflare-dns.com
 2a00:11c0:18:554::3                     # dns.nextdns.io
 2a00:11c0:20:429::5                     # dns.nextdns.io
-2a00:11c0:21::53                        # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a00:11c0:21::53                        # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a00:11c0:39:353::3                     # dns.nextdns.io
 2a00:5980:94::71                        # dns.circl.lu
 2a00:6a00:ad1:806::83                   # dns.cert.ee
@@ -1076,6 +1077,7 @@
 2a01:4f9:3100:3b2b:0:a:0:21             # dns.envs.net
 2a01:4f9:c010:2b9f::2                   # fuchur.pentament.de
 2a01:4f9:c010:9863::1                   # resolver-eu.haringstad.com
+2a01:4f9:c010:d7f4::1                   # dns.anon.no
 2a01:4f9:c010:e00e::2                   # dns.vaioswolke.xyz
 2a01:4f9:c011:aa31::1                   # kids.ns.nwps.fi
 2a01:4f9:c011:addc::1                   # dns.braene.com
@@ -1255,7 +1257,6 @@
 2a0b:4342:1a82:154:5054:ff:feef:b4de    # dns.nextdns.io
 2a0c:3d00:11:21::59:37                  # nsc.torgues.net
 2a0c:5700:3133:650::b                   # adg.tshost.no
-2a0c:5700:3133:650:ba68:95ff:fe53:3d16  # dns.anon.no
 2a0c:59c0:19::3                         # nl-ams.doh.sb, ru-mow.doh.sb
 2a0c:82c0::1                            # doh.suche.org
 2a0c:8fc0:1749:66:18::16                # muc01.dnscry.pt
