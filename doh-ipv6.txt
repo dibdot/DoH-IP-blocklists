@@ -107,8 +107,6 @@
 2001:bc8:255e:100::1                    # dns.novg.net
 2001:bc8:255e:200::1                    # dns.novg.net
 2001:bc8:710:1efa:dc00:ff:fe34:a339     # fr-dns1.bancuh.com
-2001:de2::                              # dns.nic.in
-2001:de2::1                             # dns.nic.in
 2001:de4::101                           # dns.twnic.tw
 2001:de4::102                           # dns.twnic.tw
 2001:df1:801:a022::c4:a                 # hkg01.dnscry.pt
@@ -118,8 +116,8 @@
 2001:df4:b100:3:1:1:730a:2cd2           # dns1.server.my.id
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:1ce4::10                  # dns.surobe.com
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:36f:4f00::1                      # dns.faked.org
@@ -127,6 +125,7 @@
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:4052:3a00:d900:be24:11ff:fe2b:c18b # dns.soldier.terumi.club
+2400:52e0:1a04::925:1                   # doh1.b-cdn.net, doh2.b-cdn.net
 2400:6180:0:d0::5f73:4001               # doh.tiar.app, dot.tiar.app
 2400:6180:0:d0::f7:1001                 # sg-dns1.bancuh.com
 2400:6180:100:d0::4e0:6001              # do.shimul.me
@@ -179,6 +178,7 @@
 2406:da14:16ca:be00:596f:3a82:90e5:3d2e # dns.nodoa.me
 2406:da1a:1b5:d610:c66d:4ace:e191:b3b1  # pihole.aws.ketan.dev
 2406:ef80:1:2173::b5f                   # hkg02.dnscry.pt
+2407:0:3006:39be::1                     # gustamadh.dynv6.net
 2407:24c0:2::154:3                      # dns.gi.co.id
 2407:3640:2205:1668::1                  # dot-sg.blahdns.com
 2407:3640:2238:5447::1                  # asia.tri-dns.net
@@ -186,8 +186,6 @@
 2407:6ac0:3:5:1234:4321:89:1            # jkt01.dnscry.pt
 2408:4003:10b8:9ae9:5ef8:7292:9141:6f67 # dns.ikataruto.com
 2408:400a:779:a00::aaaa                 # dns.imaicool.com
-2409::                                  # dns.nic.in
-2409::1                                 # dns.nic.in
 240d:c000:2010:1e00:6:52dc:f6a:9874     # dns.weixin.qq.com.cn
 240d:c000:2010:1e00:6:52dc:fa7:17a4     # dns.weixin.qq.com.cn
 240d:c000:f000:9300:ad0:a594:4272:0     # cloud.198.games
@@ -239,14 +237,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:28a3:3600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:3800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:7200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:7600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:9000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:b200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:b400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:c600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:3000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:400:f:5c7a:55c0:93a1     # eth.link
+2600:9000:28a3:5200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:be00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:c000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:c200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:e200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:ec00:f:5c7a:55c0:93a1    # eth.link
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
 2602:f7f8:6:a::a                        # mia01.dnscry.pt
 2602:f7f8:7:d::a                        # lax01.dnscry.pt
@@ -1182,8 +1180,6 @@
 2a02:6b8::feed:ff                       # common.dot.dns.yandex.net
 2a02:6ca3:0:1::2                        # dns.levonet.sk
 2a02:6ca3:0:2::2                        # dns.levonet.sk
-2a02:6ea0:e237::1503:1                  # doh1.b-cdn.net
-2a02:6ea0:e237::1504:1                  # doh2.b-cdn.net
 2a02:88:1:e:807::101                    # dns.cert.ee
 2a02:88:1:e:807::99                     # dns.cert.ee
 2a02:958:10:2000:213:166:247:100        # dns.csaonline.de
