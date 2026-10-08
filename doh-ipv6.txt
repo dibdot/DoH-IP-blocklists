@@ -58,7 +58,7 @@
 2001:4ba0:cafe:745::19                  # dns.expert
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
-2001:558:fd00:ca::5                     # doh.xfinity.com, doh2.gslb2.xfinity.com
+2001:558:fd00:ca::a                     # doh.xfinity.com, doh2.gslb2.xfinity.com
 2001:558:fe21:6b:96:113:151:145         # dot.xfinity.com
 2001:578:3f::30                         # doh.cox.net, dot.cox.net
 2001:620:0:ff::2                        # dns.switch.ch
@@ -102,7 +102,7 @@
 2001:a60::53:2                          # dns.mnet-online.de
 2001:b000:168::1                        # dns.hinet.net
 2001:b000:168::2                        # dns.hinet.net
-2001:b011:d000:104b:211:32ff:fe79:26cd  # ihctw.synology.me
+2001:b011:d000:1516:211:32ff:fe79:26cd  # ihctw.synology.me
 2001:b030:1416:ff01::bb                 # dns.tipsy.coffee
 2001:ba0:249:6700::1                    # dns.mateo.ovh
 2001:bc8:255e:100::1                    # dns.novg.net
@@ -120,7 +120,7 @@
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:152b::10                  # dns.surobe.com
 2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:b000:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:36f:4f00::1                      # dns.faked.org
@@ -128,6 +128,7 @@
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2400:4052:3a00:d900:be24:11ff:fe2b:c18b # dns.soldier.terumi.club
+2400:52e0:1a04::925:1                   # doh2.b-cdn.net
 2400:6180:0:d0::5f73:4001               # doh.tiar.app, dot.tiar.app
 2400:6180:0:d0::f7:1001                 # sg-dns1.bancuh.com
 2400:6180:100:d0::4e0:6001              # do.shimul.me
@@ -159,7 +160,7 @@
 2403:3a00:101:21:49:212:235:44          # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
 2403:3a00:107:29:133:167:212:21         # adfiltro.fun, alleesph.online, doh.cnetwork.cloud
 2403:3a00:107:29:133:167:212:22         # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, greatideasforlife.lol, kavkaz.monster, najiakeji.top, nanopi.cybergroove.net, polisitogel.beauty, polisitogel.hair, qqmcfw.tech, xbcpb668.com
-2403:3a00:107:29:133:167:212:25         # bestwon203.com, dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com
+2403:3a00:107:29:133:167:212:25         # dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com
 2403:3a00:201:17:112:78:125:221         # himedns.com, sg.yepdns.com
 2403:3a00:201:1c:49:212:198:36          # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
 2403:3a00:201:1c:49:212:198:51          # catchen121299.top, dns.daarrk.tech, johneldenring.lol, kx-97795-tr.xyz, las-vegas.privacy-dns.pw, lesuo.top, luxembourg.privacy-dns.pw, maqgie.xyz, romania.privacy-dns.pw, switzerland.privacy-dns.pw, tujenasnaszato.xyz, united-arab-emirates.privacy-dns.pw
@@ -242,13 +243,13 @@
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
 2600:9000:28a3:1000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:9200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:9a00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:b800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:be00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:d200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:28a3:e00:f:5c7a:55c0:93a1     # eth.link
-2600:9000:28a3:ee00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:3c00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:5000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:7a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:9000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:ca00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:cc00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:28a3:d000:f:5c7a:55c0:93a1    # eth.link
 2602:f3ff:83::83                        # dns.yunzheng.space
 2602:f3ff:83::84                        # filter.dns.yunzheng.space
 2602:f7f8:2:c::a                        # nyc01.dnscry.pt
@@ -1206,7 +1207,6 @@
 2a02:6ca3:0:1::2                        # dns.levonet.sk
 2a02:6ca3:0:2::2                        # dns.levonet.sk
 2a02:6ea0:e237::1503:1                  # doh1.b-cdn.net
-2a02:6ea0:e237::1504:1                  # doh2.b-cdn.net
 2a02:88:1:e:807::101                    # dns.cert.ee
 2a02:88:1:e:807::99                     # dns.cert.ee
 2a02:958:10:2000:213:166:247:100        # dns.csaonline.de
