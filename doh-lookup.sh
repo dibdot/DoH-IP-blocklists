@@ -57,55 +57,55 @@ for domain in ${cache_domains}; do
 	# IPv4 cache check
 	#
 	: >"./ipv4_cache_${domain}.tmp"
-	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" > "./cache_ips.tmp"
+	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" >"./cache_ips.tmp"
 	while read -r ip; do
 		[ -z "${ip}" ] && continue
 		(
 			if "${nc_tool}" -4 -w 3 -z "${ip}" 443 >/dev/null 2>&1; then
-				printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache_${domain}.tmp"
+				printf "%-20s# %s\n" "${ip}" "${domain}" >>"./ipv4_cache_${domain}.tmp"
 			fi
 		) &
 		cnt="$((cnt + 1))"
 		hold="$((cnt % 50))"
 		[ "${hold}" = "0" ] && wait
-	done < "./cache_ips.tmp"
+	done <"./cache_ips.tmp"
 	wait
 	if [ ! -s "./ipv4_cache_${domain}.tmp" ]; then
 		printf "%s\n" "::: IPv4: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
-		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" | \
-		while read -r ip; do
-			[ -z "${ip}" ] && continue
-			printf "%-20s# %s\n" "${ip}" "${domain}" >> "./ipv4_cache_${domain}.tmp"
-		done
+		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv4.txt" |
+			while read -r ip; do
+				[ -z "${ip}" ] && continue
+				printf "%-20s# %s\n" "${ip}" "${domain}" >>"./ipv4_cache_${domain}.tmp"
+			done
 	fi
 
 	# IPv6 cache check
 	#
 	: >"./ipv6_cache_${domain}.tmp"
-	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" > "./cache_ips.tmp"
+	"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" >"./cache_ips.tmp"
 	while read -r ip; do
 		[ -z "${ip}" ] && continue
 		(
 			if "${nc_tool}" -6 -w 3 -z "${ip}" 443 >/dev/null 2>&1; then
-				printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache_${domain}.tmp"
+				printf "%-40s# %s\n" "${ip}" "${domain}" >>"./ipv6_cache_${domain}.tmp"
 			fi
 		) &
 		cnt="$((cnt + 1))"
 		hold="$((cnt % 50))"
 		[ "${hold}" = "0" ] && wait
-	done < "./cache_ips.tmp"
+	done <"./cache_ips.tmp"
 	wait
 	if [ ! -s "./ipv6_cache_${domain}.tmp" ]; then
 		printf "%s\n" "::: IPv6: no reachable IPs for ${domain} in cache, fallback to raw cache entries"
-		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" | \
-		while read -r ip; do
-			[ -z "${ip}" ] && continue
-			printf "%-40s# %s\n" "${ip}" "${domain}" >> "./ipv6_cache_${domain}.tmp"
-		done
+		"${awk_tool}" -v dom="${domain}" '$0~dom{print $1}' "./doh-ipv6.txt" |
+			while read -r ip; do
+				[ -z "${ip}" ] && continue
+				printf "%-40s# %s\n" "${ip}" "${domain}" >>"./ipv6_cache_${domain}.tmp"
+			done
 	fi
 done
-"${cat_tool}" ipv4_cache_*.tmp > ipv4_cache.tmp
-"${cat_tool}" ipv6_cache_*.tmp > ipv6_cache.tmp
+"${cat_tool}" ipv4_cache_*.tmp >ipv4_cache.tmp
+"${cat_tool}" ipv6_cache_*.tmp >ipv6_cache.tmp
 
 # domain processing
 #
@@ -122,21 +122,18 @@ while IFS= read -r domain; do
 			ips="$(printf "%s" "${out}" | "${awk_tool}" '{printf "%s ",$NF}')"
 			if [ -n "${ips}" ]; then
 				for ip in ${ips}; do
-					case "${ip}" in
-						10.*|192.168.*|172.1[6-9].*|172.2[0-9].*|172.3[0-1].*|127.*|0.*)
-							continue
-							;;
-						fc*|fd*|fe80:*|::1)
-							continue
-							;;
+					case "$(ipcalc-ng -s --addrspace "${ip}" 2>/dev/null)" in
+					"ADDRSPACE=Internet" | 'ADDRSPACE="Global Unicast"') ;;
+
+					*)
+						continue
+						;;
 					esac
-					if ipcalc-ng -s --addrspace "${ip}" | grep -qv "Private"; then
-						domain_ok="true"
-						if [ "${ip##*:}" = "${ip}" ]; then
-							printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
-						else
-							printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
-						fi
+					domain_ok="true"
+					if [ "${ip##*:}" = "${ip}" ]; then
+						printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
+					else
+						printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
 					fi
 				done
 			fi
@@ -170,7 +167,7 @@ fi
 # final sort/merge step (IPv4 + IPv6 with domain aggregation)
 # IPv4
 #
-"${srt_tool}" -b -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" > "./doh-ipv4.raw"
+"${srt_tool}" -b -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.raw"
 "${awk_tool}" '
 {
 	match($0, /^([0-9\.]+)[[:space:]]+/, m)
@@ -186,11 +183,11 @@ END {
 	for (ip in map)
 		printf "%-20s# %s\n", ip, map[ip]
 }
-' "./doh-ipv4.raw" | "${srt_tool}" -t. -k1,1n -k2,2n -k3,3n -k4,4n > "./doh-ipv4.txt"
+' "./doh-ipv4.raw" | "${srt_tool}" -t. -k1,1n -k2,2n -k3,3n -k4,4n >"./doh-ipv4.txt"
 
 # IPv6
 #
-"${srt_tool}" -b -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" > "./doh-ipv6.raw"
+"${srt_tool}" -b -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.raw"
 "${awk_tool}" '
 {
 	match($0, /^([0-9a-fA-F:]+)[[:space:]]+/, m)
@@ -206,16 +203,16 @@ END {
 	for (ip in map)
 		printf "%-40s# %s\n", ip, map[ip]
 }
-' "./doh-ipv6.raw" | "${srt_tool}" -k1,1 > "./doh-ipv6.txt"
-"${srt_tool}" -b -u "./domains.tmp" > "./doh-domains.txt"
-"${srt_tool}" -b -u "./domains_abandoned.tmp" > "./doh-domains_abandoned.txt"
+' "./doh-ipv6.raw" | "${srt_tool}" -k1,1 >"./doh-ipv6.txt"
+"${srt_tool}" -b -u "./domains.tmp" >"./doh-domains.txt"
+"${srt_tool}" -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
 
 # prepare additional json output
 #
-"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-ipv4.txt > ./doh-ipv4.json
-"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-ipv6.txt > ./doh-ipv6.json
-"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-domains.txt > ./doh-domains.json
-"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-domains_abandoned.txt > ./doh-domains_abandoned.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-ipv4.txt >./doh-ipv4.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-ipv6.txt >./doh-ipv6.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-domains.txt >./doh-domains.json
+"${awk_tool}" 'BEGIN{print "["} {printf "%s\"%s\"", (NR>1?",\n":""), $1} END{print "\n]"}' ./doh-domains_abandoned.txt >./doh-domains_abandoned.json
 
 # final stats output
 #
