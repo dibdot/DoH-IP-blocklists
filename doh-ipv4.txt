@@ -16,6 +16,7 @@
 3.33.242.199        # dns.lobbygod.com
 3.34.32.82          # kr-sel.doh.sb
 3.75.122.89         # yovbak.com
+3.91.139.235        # dns.api.staging.globuscs.info
 3.211.196.64        # dns.api.staging.globuscs.info
 3.212.112.209       # dns.watch
 3.212.128.70        # dns.api.sandbox.globuscs.info
@@ -38,7 +39,6 @@
 5.160.117.105       # doh.abraservice.xyz
 5.161.43.197        # dns.nextdns.io
 5.161.191.104       # dns.smartguard.io
-5.161.194.22        # adguard.ihatemy.live
 5.175.180.171       # dus01.dnscry.pt
 5.180.59.37         # nsc.torgues.net
 5.196.74.76         # dns.mh4ckt3mh4ckt1c4s.xyz
@@ -532,8 +532,8 @@
 34.159.232.134      # fra-dns.bitdefender.net
 34.171.234.178      # dns.akbxr.com
 34.193.114.68       # dns.watch
-34.198.23.253       # httpdns-push.heytapmobile.com
 34.200.209.215      # httpdns-push.heytapmobile.com
+34.224.136.87       # httpdns-push.heytapmobile.com
 34.227.213.114      # dns.api.sandbox.globuscs.info
 35.190.14.201       # use-application-dns.net
 35.192.98.208       # iow-dns.bitdefender.net
@@ -571,6 +571,7 @@
 42.51.13.218        # doh.18bit.cn
 42.51.37.18         # doh.18bit.cn
 42.51.41.217        # doh.18bit.cn
+42.236.82.245       # doh-pure.onedns.net
 43.129.183.116      # dns.mbrjun.cn
 43.130.30.237       # dns.weixin.qq.com.cn
 43.130.30.240       # dns.weixin.qq.com.cn
@@ -706,7 +707,6 @@
 52.80.248.44        # doh.onedns.net
 52.154.75.179       # dns.sarilouis.com
 52.199.8.149        # dns.nodoa.me
-52.206.34.81        # httpdns-push.heytapmobile.com
 52.246.182.50       # dnslow.me
 54.37.137.4         # spacedns.org
 54.38.32.102        # dns.charraud.eu
@@ -725,11 +725,10 @@
 54.192.55.73        # ricko.is
 54.192.55.95        # ricko.is
 54.197.229.7        # dns.api.test.globuscs.info
-54.204.37.214       # httpdns-push.heytapmobile.com
 54.204.98.143       # dns.api.test.globuscs.info
-54.223.159.81       # doh-pure.onedns.net
 54.224.16.96        # dns.pumpkinvrar.com
 54.226.249.132      # dns.watch
+54.243.77.253       # httpdns-push.heytapmobile.com
 54.243.117.197      # dns.flightspace.net, dns.scapetical.com
 57.128.237.78       # dns.panszelescik.pl
 57.130.48.7         # dns2.saferbfc.org
@@ -782,8 +781,8 @@
 75.119.137.239      # dns.christian.moe, dns.imchristian.de
 76.76.2.11          # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22          # dns.controld.com
-76.76.21.142        # arashi.net.eu.org
-76.76.21.241        # arashi.net.eu.org
+76.76.21.22         # arashi.net.eu.org
+76.76.21.61         # arashi.net.eu.org
 76.223.54.146       # dns.faze.dev, dns.pumplex.com, dns.vip-kingstore.xyz, ikarosalpha.xyz
 77.68.29.63         # ahoj.email
 77.68.50.239        # dns.connect.fail
@@ -815,7 +814,6 @@
 79.143.240.79       # resolver1.absolight.net
 79.143.240.81       # resolver3.absolight.net
 79.184.12.31        # adguard.piekacz.pl
-79.229.132.12       # ueni.dyndns.org
 79.250.64.97        # dnsblock.grisumedia.de
 80.67.169.12        # ns0.fdn.fr
 80.67.169.40        # ns1.fdn.fr
@@ -853,7 +851,7 @@
 82.158.225.136      # dns.hshoe.cn
 82.180.145.196      # dns.albony.xyz
 82.221.134.26       # skydragoness.com
-83.32.192.90        # dns.molinero.dev
+83.32.194.217       # dns.molinero.dev
 83.110.6.204        # inpssh.online, www.inpssh.online
 83.138.55.186       # vie01.dnscry.pt
 83.229.70.182       # dns.yatima.tv
@@ -934,6 +932,7 @@
 93.66.239.145       # adguard.depieri.net
 93.95.115.21        # eyg01.dnscry.pt
 93.190.126.69       # doh.immerda.ch
+93.200.26.253       # ueni.dyndns.org
 94.16.111.86        # dns.immanuelschaffer.de
 94.16.116.146       # dns.scarx.net
 94.16.117.107       # ns2.4netguides.org
@@ -970,7 +969,8 @@
 96.9.215.92         # gb-cov-w-f-1.nashkan.net
 96.9.228.27         # hkg01.dnscry.pt
 96.44.178.68        # dns.foxyfy.net
-96.106.7.232        # doh.xfinity.com, doh2.gslb2.xfinity.com
+96.106.7.232        # doh2.gslb2.xfinity.com
+96.106.7.234        # doh.xfinity.com
 96.113.151.145      # dot.xfinity.com
 98.83.61.35         # dns.api.preview.globus.org
 98.86.122.243       # dns.api.test.globuscs.info
@@ -979,7 +979,6 @@
 99.79.182.170       # ca01.dns4me.net
 99.80.192.194       # doh.kidzonet.io
 100.28.198.165      # dns.api.sandbox.globuscs.info
-100.60.114.52       # dns.api.staging.globuscs.info
 100.61.210.220      # dns.api.globus.org
 100.62.214.3        # dns.watch
 101.6.6.6           # dns.tuna.tsinghua.edu.cn
@@ -1168,6 +1167,7 @@
 104.248.104.66      # ca.doh.cloudveil.org
 106.55.44.79        # dns.b612.me
 106.55.91.174       # sm2.doh.pub
+107.22.45.213       # httpdns-push.heytapmobile.com
 107.172.8.5         # us-sj.foxyfy.net
 107.173.187.132     # dns.girino.org
 108.61.82.9         # adguard1.jsanagustin.net
@@ -1184,7 +1184,7 @@
 109.230.224.150     # doh.defaultroutes.de
 109.236.119.2       # dns.levonet.sk
 109.236.120.2       # dns.levonet.sk
-109.250.196.247     # adguard.bitteeinbyte.de
+109.250.197.92      # adguard.bitteeinbyte.de
 109.250.204.118     # area51.mywire.org
 111.20.254.35       # opencdn.jomodns.com
 111.89.85.144       # dns.soldier.terumi.club
@@ -1286,7 +1286,7 @@
 138.236.128.101     # cluster-1.gac.edu
 139.59.48.222       # doh.captnemo.in
 139.59.219.245      # sg-dns1.bancuh.com
-139.64.133.38       # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+139.64.133.38       # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 139.99.44.3         # adblock.krctech.dev
 139.162.80.84       # dns.nodoa.me
 139.199.163.65      # dns.b612.me
@@ -1440,7 +1440,7 @@
 160.119.253.209     # sa01.dns4me.net
 160.202.238.204     # dns.23-4.cn
 160.250.95.28       # dns.hakim.one
-160.251.64.80       # tuskythehusky.tech
+160.251.64.80       # dns.pernika.net
 161.35.136.3        # doh-primary-pool.goodbyegambling.com
 161.118.145.178     # adguard.haneulo.com
 161.129.34.134      # 5g.o0o.re
@@ -1489,7 +1489,7 @@
 169.128.191.202     # mia01.dnscry.pt
 169.239.128.124     # jnb01.dnscry.pt
 170.39.224.134      # dns.nextdns.io
-170.39.225.135      # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+170.39.225.135      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 170.39.227.247      # dns.nextdns.io
 170.249.237.154     # atl01.dnscry.pt
 171.240.251.81      # shield.afixer.app
@@ -1687,10 +1687,11 @@
 176.111.223.167     # sjc01.dnscry.pt
 176.123.10.105      # kiv01.dnscry.pt
 176.123.163.193     # dns.petqa.ru
+176.135.140.182     # dns.chadeyron.fr
 177.177.83.83       # dns.yunzheng.space
 177.177.83.84       # filter.dns.yunzheng.space
 178.20.42.213       # vd.i81.ru
-178.22.122.100      # free.shecan.ir
+178.22.122.100      # dns.shecan.ir, free.shecan.ir
 178.33.118.153      # dns-1.wil.cloud, dns-2.wil.cloud
 178.105.16.6        # doh.42l.fr, doh.lacontrevoie.fr
 178.128.225.109     # tri-dns.net
@@ -1715,8 +1716,8 @@
 182.16.68.115       # tk31z.com
 183.171.200.162     # punono.duckdns.org
 184.193.139.38      # dns.api.globus.org
-184.193.180.158     # httpdns-push.heytapmobile.com
-184.194.107.188     # httpdns-push.heytapmobile.com
+184.194.209.141     # httpdns-push.heytapmobile.com
+184.195.142.190     # httpdns-push.heytapmobile.com
 185.16.60.194       # doh.webnmail.de
 185.37.252.146      # ee-tll.doh.sb
 185.37.252.147      # ee-tll.doh.sb
@@ -1730,7 +1731,6 @@
 185.47.221.200      # dns.kukal.cz
 185.49.141.38       # getdnsapi.net
 185.51.200.1        # pro.shecan.ir
-185.51.200.2        # dns.shecan.ir
 185.64.79.5         # uk-lon.doh.sb
 185.69.161.122      # dns.fancyorg.at
 185.70.9.10         # dns.kuuhaku.moe
@@ -1762,6 +1762,7 @@
 185.181.61.24       # ns4.opennameserver.org
 185.183.159.34      # abel.waringer-atg.de
 185.184.223.150     # dns.foxyfy.net
+185.187.152.2       # adguard.ihatemy.live
 185.194.53.22       # tll01.dnscry.pt
 185.194.94.71       # dns.circl.lu
 185.195.69.126      # dns.l337.site
@@ -1915,7 +1916,6 @@
 212.109.221.20      # dns.comss.one
 212.132.117.52      # dns.peb-schmidt.de
 212.185.200.25      # dns1.conne.net
-212.195.5.109       # dns.chadeyron.fr
 212.227.88.232      # dns.fehlsprache.de
 213.32.25.25        # dns.szpadel.ovh
 213.136.13.36       # doh.kooman.org
@@ -1939,8 +1939,8 @@
 216.238.80.219      # helios.plan9-dns.com
 216.245.140.20      # man01.dnscry.pt
 216.250.97.148      # hkg02.dnscry.pt
-217.0.43.50         # dns.telekom.de
-217.0.43.146        # dns.telekom.de
+217.0.43.114        # dns.telekom.de
+217.0.43.162        # dns.telekom.de
 217.69.4.29         # nsec.arnor.org
 217.91.179.72       # doh.kekew.info
 217.154.99.101      # dns.mateo.ovh
