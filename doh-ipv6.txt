@@ -6,7 +6,7 @@
 2001:19f0:5:6d5c:5400:2ff:feed:db51     # adguard1.jsanagustin.net
 2001:19f0:5c00:1819:ae1f:6bff:fef5:ff3a # dns.nextdns.io
 2001:19f0:6001:3f43:3eec:efff:feb9:8704 # dns.nextdns.io
-2001:19f0:6401:b0b:5400:5ff:feb5:b25d   # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2001:19f0:6401:b0b:5400:5ff:feb5:b25d   # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2001:19f0:7002:cf2:5400:4ff:fe4a:f0f0   # dns.fullaccesstointernet.jp.eu.org
 2001:19f0:8001:1e9d:5400:2ff:fec8:70cf  # dns.nextdns.io
 2001:19f0:9002:de4:5400:4ff:fe08:7de3   # pluton.plan9-dns.com
@@ -123,8 +123,8 @@
 2001:df4:b100:3:1:1:730a:2cd2           # dns1.server.my.id
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:8e7f::10                  # dns.surobe.com
+2003:180:2:1000:0:4:0:53                # dns.telekom.de
 2003:180:2:4000:0:4:0:53                # dns.telekom.de
-2003:180:2:7000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:36f:4f00::1                      # dns.faked.org
@@ -250,14 +250,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2064:2800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:2a00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:5800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:9000:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:bc00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:c800:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:ce00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:e400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:3a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:6200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:800:f:5c7a:55c0:93a1     # eth.link
+2600:9000:2064:8800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:a400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:a600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:ac00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:2064:ec00:f:5c7a:55c0:93a1    # eth.link
 2602:2b7:d01:c295::b:18                 # mci01.dnscry.pt
 2602:f3ff:83::64                        # dns64.dns.yunzheng.space
 2602:f3ff:83::83                        # dns.yunzheng.space
@@ -326,7 +326,7 @@
 2605:380:55:450::7                      # dns.nextdns.io
 2605:380:56:6::1                        # dns.nextdns.io
 2605:380:57:613::5                      # dns.nextdns.io
-2605:380:58:554::1                      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2605:380:58:554::1                      # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2605:3a40:3::17e                        # us-nyc.doh.sb
 2605:3b80:cad:ec89::1                   # dns.nextdns.io
 2605:7980:0:6412::1                     # dns.nextdns.io
@@ -451,6 +451,7 @@
 2606:4700:3034::6815:3dd                # chuncheon.dnsovertor.cc, japan.dnsovertor.cc, seoul.dnsovertor.cc
 2606:4700:3034::6815:3e07               # blitz-setup.ahadns.com
 2606:4700:3034::6815:4663               # takhtakh.domyah.net
+2606:4700:3034::6815:4d1c               # jkdns.me
 2606:4700:3034::6815:524d               # dns.xuming.studio
 2606:4700:3034::6815:56b2               # pm7051-br.xyz
 2606:4700:3034::6815:5970               # lewsha.lol
@@ -527,6 +528,7 @@
 2606:4700:3037::ac43:bdc7               # home-server.store
 2606:4700:3037::ac43:c5f2               # adguard.kasbot.net
 2606:4700:3037::ac43:cb9c               # dns.jstockley.com
+2606:4700:3037::ac43:cbe2               # jkdns.me
 2606:4700:3037::ac43:d956               # dns.xiumu.org
 2606:4700:3108::ac42:2859               # ns.mtsoln.com
 2606:4700:3108::ac42:2ba7               # ns.mtsoln.com
@@ -916,6 +918,7 @@
 2620:149:a42:280::2d                    # mask-api.icloud.com
 2620:149:a42:280::35                    # mask-api.icloud.com
 2620:149:a42:280::3d                    # mask-api.icloud.com
+2620:149:a42:280::42                    # mask-h2.icloud.com, mask.icloud.com
 2620:149:a42:607::4                     # mask-h2.icloud.com, mask.icloud.com
 2620:149:a42:607::5                     # mask-h2.icloud.com, mask.icloud.com
 2620:149:a42:607::6                     # mask-h2.icloud.com, mask.icloud.com
