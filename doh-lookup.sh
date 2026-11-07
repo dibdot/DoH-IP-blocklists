@@ -259,8 +259,8 @@ END {
 #
 cnt_cache_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4_cache.tmp" 2>/dev/null)"
 cnt_cache_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6_cache.tmp" 2>/dev/null)"
-cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4.tmp" "./ipv4_ecs.tmp" 2>/dev/null)"
-cnt_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6.tmp" "./ipv6_ecs.tmp" 2>/dev/null)"
+cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4_cache.tmp" "./ipv4.tmp" "./ipv4_ecs.tmp" 2>/dev/null)"
+cnt_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6_cache.tmp" "./ipv6.tmp" "./ipv6_ecs.tmp" 2>/dev/null)"
 cnt_ecsv4="$("${awk_tool}" 'FILENAME!="./ipv4_ecs.tmp"{b[$1];next}!($1 in b)&&!s[$1]++{c++}END{printf "%d",c}' "./ipv4_cache.tmp" "./ipv4.tmp" "./ipv4_ecs.tmp" 2>/dev/null)"
 cnt_ecsv6="$("${awk_tool}" 'FILENAME!="./ipv6_ecs.tmp"{b[$1];next}!($1 in b)&&!s[$1]++{c++}END{printf "%d",c}' "./ipv6_cache.tmp" "./ipv6.tmp" "./ipv6_ecs.tmp" 2>/dev/null)"
 cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv4.txt" 2>/dev/null)"
