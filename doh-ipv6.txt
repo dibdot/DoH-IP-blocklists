@@ -51,6 +51,7 @@
 2001:470:28:287:1::                     # ns.trcnet.fi
 2001:470:28:aa2:1::                     # ns.trcnet.fi
 2001:470:36:3fc:0:feed:dad:b055         # dns.repinger.com
+2001:470:f829:8593:3::7                 # doh.max.net.id
 2001:4860:4860::64                      # dns64.dns.google
 2001:4860:4860::6464                    # dns64.dns.google
 2001:4860:4860::8844                    # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
@@ -127,7 +128,7 @@
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:8e7f::10                  # dns.surobe.com
 2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:8100:0:4:0:53                # dns.telekom.de
+2003:180:2:4000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:36f:4f00::1                      # dns.faked.org
@@ -168,41 +169,57 @@
 2403:300:1364:0:8::1                    # mask-api.icloud.com
 2403:300:1364::2:1                      # mask-api.icloud.com
 2403:300:1364::2:2                      # mask-api.icloud.com
+2403:300:1364::2:3                      # mask-api.icloud.com
 2403:300:1366:0:11::1                   # mask-api.icloud.com
 2403:300:1366:0:19::1                   # mask-api.icloud.com
+2403:300:1366:3::b                      # mask-h2.icloud.com
 2403:300:1366:3::c                      # mask-h2.icloud.com, mask.icloud.com
 2403:300:1366:3::d                      # mask-h2.icloud.com, mask.icloud.com
+2403:300:1366:3::e                      # mask.icloud.com
 2403:300:1366:8::10                     # mask-h2.icloud.com
+2403:300:1366:8::11                     # mask-h2.icloud.com
 2403:300:1366:8::13                     # mask.icloud.com
-2403:300:1366:8::6                      # mask-h2.icloud.com
+2403:300:1366:8::4                      # mask.icloud.com
+2403:300:1366:8::6                      # mask-h2.icloud.com, mask.icloud.com
 2403:300:1366:8::7                      # mask-h2.icloud.com
+2403:300:1366:8::8                      # mask-h2.icloud.com
 2403:300:1366:8::9                      # mask.icloud.com
 2403:300:1366:8::a                      # mask-h2.icloud.com
 2403:300:1366:8::b                      # mask-h2.icloud.com
 2403:300:1366:8::d                      # mask.icloud.com
 2403:300:1366:8::e                      # mask.icloud.com
+2403:300:1366:9::11                     # mask.icloud.com
 2403:300:1366:9::13                     # mask.icloud.com
-2403:300:1366:9::4                      # mask-h2.icloud.com
+2403:300:1366:9::4                      # mask-h2.icloud.com, mask.icloud.com
+2403:300:1366:9::7                      # mask.icloud.com
 2403:300:1366:9::c                      # mask.icloud.com
+2403:300:1366:9::f                      # mask.icloud.com
 2403:300:1366::2:3                      # mask-api.icloud.com
 2403:300:1366::2:4                      # mask-api.icloud.com
 2403:300:136c:1:13::1                   # mask-api.icloud.com
-2403:300:9c0:1500::11                   # doh.dns.apple.com.v.aaplimg.com
+2403:300:136c:1:b::1                    # mask-api.icloud.com
+2403:300:9c0:1500::11                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:9c0:1500::12                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-2403:300:9c0:1500::13                   # doh.dns.apple.com
+2403:300:9c0:1500::13                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:9c0:1500::14                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:9c4::11                        # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:9c4::14                        # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:9c4::15                        # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-2403:300:a04:4000::211                  # doh.dns.apple.com.v.aaplimg.com
+2403:300:a04:3000::231                  # doh.dns.apple.com.v.aaplimg.com
+2403:300:a04:4000::211                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:a04:4000::221                  # doh.dns.apple.com
+2403:300:a0c:3000::192                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:a0c:3000::1a2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:a0c:3000::1b2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:a0c:4000::192                  # doh.dns.apple.com
-2403:300:a0c:4000::1a2                  # doh.dns.apple.com.v.aaplimg.com
+2403:300:a0c:4000::1a2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2403:300:a0c:4000::1b2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-2403:300:a33:3000::41                   # doh.dns.apple.com.v.aaplimg.com
-2403:300:a33:4000::41                   # doh.dns.apple.com
+2403:300:a33:3000::41                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2403:300:a33:4000::41                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2403:300:a41:80::1d                     # mask-api.icloud.com
+2403:300:a41:80::25                     # mask-api.icloud.com
+2403:300:a41:80::2:3                    # mask-api.icloud.com
+2403:300:a41:80::2:4                    # mask-api.icloud.com
 2403:3a00:101:21:49:212:235:34          # dns.auapi.fun, moamao.shop, paradise-human.shop, v2.xx3210766.live
 2403:3a00:101:21:49:212:235:44          # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
 2403:3a00:107:29:133:167:212:21         # adfiltro.fun, alleesph.online, doh.cnetwork.cloud
@@ -293,14 +310,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:21d4:1e00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:21d4:8600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:21d4:9a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:1a00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:2c00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:3000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:6800:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:b000:f:5c7a:55c0:93a1    # eth.link
 2600:9000:21d4:b200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:21d4:c600:f:5c7a:55c0:93a1    # eth.link
-2600:9000:21d4:ca00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:21d4:d200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:21d4:e600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:c000:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:dc00:f:5c7a:55c0:93a1    # eth.link
 2602:2b7:d01:c295::b:18                 # mci01.dnscry.pt
 2602:f3ff:83::64                        # dns64.dns.yunzheng.space
 2602:f3ff:83::83                        # dns.yunzheng.space
@@ -605,7 +622,7 @@
 2606:6080:2001:10c5::a                  # pidoh.mapledns.net
 2606:65c0:10:20e:1621:d963:131c:bd4c    # las01.dnscry.pt
 2606:65c0:40:4:5f3:54c4:8d10:9b98       # dtw01.dnscry.pt
-2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2606:6680:29:1::5859:a37b               # fnt01.dnscry.pt
 2606:6680:35:1::506d:8ce2               # sjc01.dnscry.pt
 2606:6680:37:1::c984:4ba3               # bei01.dnscry.pt
@@ -888,15 +905,16 @@
 2620:149:a41:512::4                     # mask.icloud.com
 2620:149:a41:512::5                     # mask-h2.icloud.com
 2620:149:a41:512::6                     # mask-h2.icloud.com
+2620:149:a41:512::7                     # mask-h2.icloud.com
 2620:149:a41:512::9                     # mask.icloud.com
 2620:149:a41:513::4                     # mask-h2.icloud.com
 2620:149:a41:513::5                     # mask.icloud.com
 2620:149:a41:513::6                     # mask.icloud.com
-2620:149:a41:513::9                     # mask.icloud.com
+2620:149:a41:513::9                     # mask-h2.icloud.com, mask.icloud.com
 2620:149:a41:513::a                     # mask.icloud.com
 2620:149:a41:514::4                     # mask-h2.icloud.com
-2620:149:a41:514::5                     # mask.icloud.com
-2620:149:a41:514::6                     # mask.icloud.com
+2620:149:a41:514::5                     # mask-h2.icloud.com, mask.icloud.com
+2620:149:a41:514::6                     # mask-h2.icloud.com, mask.icloud.com
 2620:149:a41:580:16::1                  # mask-api.icloud.com
 2620:149:a41:580::2:1                   # mask-api.icloud.com
 2620:149:a41:580::2:2                   # mask-api.icloud.com
@@ -1229,7 +1247,6 @@
 2a01:4f8:c17:2cbd::2                    # ns.data.haus
 2a01:4f8:c17:4fbc::2                    # clean.dnsforge.de
 2a01:4f8:c17:739a::2                    # fdns2.dismail.de
-2a01:4f8:c17:7aa5::249                  # blank.dnsforge.de
 2a01:4f8:c17:de8b::1                    # dns.deadsec.net
 2a01:4f8:c17:ec67::1                    # dot-de.blahdns.com
 2a01:4f8:c17:f85c::1                    # dns.nick-slowinski.de
@@ -1257,53 +1274,76 @@
 2a01:9e00::55                           # rdns.faelix.net
 2a01:9e01::54                           # rdns.faelix.net
 2a01:9e01::55                           # rdns.faelix.net
+2a01:b740:1361:101::2:4                 # mask-api.icloud.com
+2a01:b740:1361:101::2:7                 # mask-api.icloud.com
+2a01:b740:1361:101::c                   # mask-api.icloud.com
+2a01:b740:1365:7::10                    # mask-h2.icloud.com
 2a01:b740:1367:3::11                    # mask.icloud.com
-2a01:b740:1367:3::12                    # mask-h2.icloud.com
+2a01:b740:1367:3::12                    # mask-h2.icloud.com, mask.icloud.com
+2a01:b740:1367:3::13                    # mask.icloud.com
 2a01:b740:1367:3::15                    # mask.icloud.com
 2a01:b740:1367:3::16                    # mask-h2.icloud.com, mask.icloud.com
 2a01:b740:1367:3::17                    # mask-h2.icloud.com, mask.icloud.com
 2a01:b740:1367:3::4                     # mask-h2.icloud.com, mask.icloud.com
+2a01:b740:1367:3::6                     # mask.icloud.com
 2a01:b740:1367:3::7                     # mask-h2.icloud.com, mask.icloud.com
 2a01:b740:1367:3::8                     # mask-h2.icloud.com
 2a01:b740:1367:3::9                     # mask.icloud.com
+2a01:b740:1367:3::a                     # mask.icloud.com
 2a01:b740:1367:3::b                     # mask-h2.icloud.com
 2a01:b740:1367:3::c                     # mask.icloud.com
+2a01:b740:1367:3::d                     # mask.icloud.com
 2a01:b740:1367:3::e                     # mask-h2.icloud.com
+2a01:b740:1367:3::f                     # mask.icloud.com
 2a01:b740:9c2:1200::11                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:9c2:1200::12                  # doh.dns.apple.com
 2a01:b740:9c2:1200::14                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:9c2:1200::15                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-2a01:b740:9c2:1200::18                  # doh.dns.apple.com.v.aaplimg.com
+2a01:b740:9c2:1200::17                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2a01:b740:9c2:1200::18                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a10:3000::191                 # doh.dns.apple.com
-2a01:b740:a10:3000::1a1                 # doh.dns.apple.com
-2a01:b740:a10:3000::1b1                 # doh.dns.apple.com.v.aaplimg.com
-2a01:b740:a10:4000::191                 # doh.dns.apple.com.v.aaplimg.com
+2a01:b740:a10:3000::1a1                 # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2a01:b740:a10:3000::1b1                 # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2a01:b740:a10:4000::191                 # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a10:4000::1a1                 # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a10:4000::1b1                 # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a14:3000::a2                  # doh.dns.apple.com
 2a01:b740:a14:3000::b2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a14:3000::c2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a14:4000::a2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-2a01:b740:a14:4000::c2                  # doh.dns.apple.com.v.aaplimg.com
+2a01:b740:a14:4000::b2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2a01:b740:a14:4000::c2                  # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2a01:b740:a41:212::10                   # mask.icloud.com
 2a01:b740:a41:212::4                    # mask-h2.icloud.com, mask.icloud.com
 2a01:b740:a41:212::6                    # mask-h2.icloud.com
 2a01:b740:a41:212::7                    # mask-h2.icloud.com
+2a01:b740:a41:212::8                    # mask-h2.icloud.com
+2a01:b740:a41:212::9                    # mask-h2.icloud.com
 2a01:b740:a41:212::a                    # mask-h2.icloud.com
 2a01:b740:a41:212::b                    # mask.icloud.com
-2a01:b740:a41:212::d                    # mask.icloud.com
+2a01:b740:a41:212::d                    # mask-h2.icloud.com, mask.icloud.com
 2a01:b740:a41:212::e                    # mask.icloud.com
 2a01:b740:a41:212::f                    # mask-h2.icloud.com
 2a01:b740:a41:213::10                   # mask-h2.icloud.com
 2a01:b740:a41:213::5                    # mask-h2.icloud.com
 2a01:b740:a41:213::6                    # mask-h2.icloud.com, mask.icloud.com
-2a01:b740:a41:213::9                    # mask.icloud.com
+2a01:b740:a41:213::7                    # mask-h2.icloud.com
+2a01:b740:a41:213::8                    # mask-h2.icloud.com
+2a01:b740:a41:213::9                    # mask-h2.icloud.com, mask.icloud.com
 2a01:b740:a41:213::d                    # mask.icloud.com
+2a01:b740:a41:280::10                   # mask-api.icloud.com
 2a01:b740:a41:280::23                   # mask-api.icloud.com
 2a01:b740:a41:280::2:2                  # mask-api.icloud.com
 2a01:b740:a41:280::2b                   # mask-api.icloud.com
 2a01:b740:a41:280::33                   # mask-api.icloud.com
 2a01:b740:a41:280::3b                   # mask-api.icloud.com
+2a01:b740:a41:e00::4                    # mask-h2.icloud.com
+2a01:b740:a41:e00::7                    # mask-h2.icloud.com
+2a01:b740:a41:e00::8                    # mask-h2.icloud.com
+2a01:b740:a41:e00::a                    # mask-h2.icloud.com
+2a01:b740:a41:e04::6                    # mask-h2.icloud.com
+2a01:b740:a41:e04::8                    # mask-h2.icloud.com
+2a01:b740:a41:e04::9                    # mask-h2.icloud.com
 2a01:e0a:bf3:a440::ba89:636             # dns.maitrekuc.fr
 2a01:e0a:dde:7c30:baac:6fff:feaa:6e7d   # cloud.tezoi.com
 2a01:e0a:f30:9100:6e2b:59ff:fee8:7a13   # dns.kebree.fr
@@ -1330,15 +1370,20 @@
 2a02:26f7:144:1:ace0:ac4b::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:144:1:ace0:ac4c::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:144:1:ace0:ac4d::             # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:14b:0:ace0:b303::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:14b:0:ace0:b304::             # mask-h2.icloud.com
-2a02:26f7:14b:0:ace0:b306::             # mask-h2.icloud.com
-2a02:26f7:14b:0:ace0:b307::             # mask-h2.icloud.com
+2a02:26f7:14b:0:ace0:b305::             # mask.icloud.com
+2a02:26f7:14b:0:ace0:b306::             # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:14b:0:ace0:b307::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:14b:0:ace0:b308::             # mask-h2.icloud.com
+2a02:26f7:14b:0:ace0:b309::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:14b:0:ace0:b30b::             # mask-h2.icloud.com
 2a02:26f7:14b:0:ace0:b30c::             # mask-h2.icloud.com
+2a02:26f7:14b:0:ace0:b30d::             # mask-h2.icloud.com
 2a02:26f7:14c:0:ace0:b403::             # mask-h2.icloud.com
-2a02:26f7:14c:0:ace0:b40a::             # mask-h2.icloud.com
+2a02:26f7:14c:0:ace0:b40a::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:14c:2:ace0:b488::             # mask-h2.icloud.com
+2a02:26f7:14c:2:ace0:b489::             # mask-h2.icloud.com
 2a02:26f7:14c:2:ace0:b48a::             # mask-h2.icloud.com
 2a02:26f7:152:1:ace0:ba03::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:152:1:ace0:ba06::             # mask-h2.icloud.com, mask.icloud.com
@@ -1348,16 +1393,25 @@
 2a02:26f7:152:4:ace0:bac4::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:152:4:ace0:bac6::             # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:152:4:ace0:bac8::             # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:160:0:ace0:ca07::             # mask.icloud.com
+2a02:26f7:160:0:ace0:ca0a::             # mask.icloud.com
+2a02:26f7:160:0:ace0:ca0b::             # mask.icloud.com
+2a02:26f7:161:0:ace0:cb0b::             # mask.icloud.com
 2a02:26f7:1e:0:ace0:1e03::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:1e:0:ace0:1e04::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:1e:0:ace0:1e06::              # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:1e:0:ace0:1e07::              # mask-h2.icloud.com
 2a02:26f7:1e:0:ace0:1e08::              # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:1e:0:ace0:1e09::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:1e:0:ace0:1e0a::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:1e:2:ace0:1ec3::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:1e:2:ace0:1ec4::              # mask.icloud.com
 2a02:26f7:1e:2:ace0:1ec5::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:1e:2:ace0:1ec6::              # mask-h2.icloud.com
+2a02:26f7:4:0:ace0:1205::               # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:4:0:ace0:1206::               # mask.icloud.com
 2a02:26f7:4:0:ace0:1207::               # mask-h2.icloud.com
+2a02:26f7:4:0:ace0:1208::               # mask.icloud.com
 2a02:26f7:4:0:ace0:1209::               # mask-h2.icloud.com
 2a02:26f7:70:2:ace0:4784::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:70:2:ace0:4785::              # mask-h2.icloud.com, mask.icloud.com
@@ -1374,9 +1428,32 @@
 2a02:26f7:98:0:ace0:5b0d::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:98:0:ace0:5b0e::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:98:0:ace0:5b0f::              # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:ba:0:ace0:5::                 # mask.icloud.com
+2a02:26f7:ba:0:ace0:7::                 # mask.icloud.com
+2a02:26f7:ba:0:ace0:9::                 # mask.icloud.com
+2a02:26f7:ba:0:ace0:e::                 # mask.icloud.com
+2a02:26f7:bc:0:ace0:107::               # mask.icloud.com
+2a02:26f7:bc:0:ace0:108::               # mask.icloud.com
+2a02:26f7:bc:0:ace0:10a::               # mask.icloud.com
+2a02:26f7:bc:2:ace0:185::               # mask.icloud.com
+2a02:26f7:bc:2:ace0:186::               # mask.icloud.com
+2a02:26f7:bc:2:ace0:187::               # mask.icloud.com
+2a02:26f7:bc:2:ace0:18a::               # mask.icloud.com
+2a02:26f7:d8:0:ace0:6e04::              # mask.icloud.com
+2a02:26f7:d8:0:ace0:6e05::              # mask-h2.icloud.com
 2a02:26f7:d8:0:ace0:6e06::              # mask-h2.icloud.com
+2a02:26f7:d8:0:ace0:6e0b::              # mask-h2.icloud.com
+2a02:26f7:d8:0:ace0:6e0c::              # mask.icloud.com
+2a02:26f7:d8:0:ace0:6e0d::              # mask.icloud.com
 2a02:26f7:d8:0:ace0:6e0f::              # mask-h2.icloud.com
+2a02:26f7:d8:0:ace0:6e10::              # mask.icloud.com
+2a02:26f7:d8:0:ace0:6e11::              # mask-h2.icloud.com
+2a02:26f7:da:0:ace0:6f05::              # mask-h2.icloud.com
+2a02:26f7:da:0:ace0:6f09::              # mask.icloud.com
 2a02:26f7:da:0:ace0:6f0b::              # mask-h2.icloud.com
+2a02:26f7:da:0:ace0:6f0c::              # mask-h2.icloud.com
+2a02:26f7:da:0:ace0:6f0d::              # mask-h2.icloud.com, mask.icloud.com
+2a02:26f7:da:0:ace0:6f0e::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:da:0:ace0:6f10::              # mask-h2.icloud.com
 2a02:26f7:f9:2:ace0:9183::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:f9:2:ace0:9184::              # mask-h2.icloud.com, mask.icloud.com
@@ -1438,7 +1515,6 @@
 2a03:94e0:1804::1                       # ns4.opennameserver.org
 2a03:94e0:271f::5b1                     # trf01.dnscry.pt
 2a03:94e3:222b::1032                    # ams01.dnscry.pt
-2a03:94e3:2317::                        # dns.anon.no
 2a03:b0c0:1:d0::ebe:d001                # doh.dnscrypt.uk
 2a03:b0c0:3:d0::2b46:d001               # c.cicitt.ch
 2a03:c7c0:52:2641:180::13               # mad01.dnscry.pt
@@ -1533,6 +1609,7 @@
 2a0c:4ac1:29::2                         # dns.dnsguard.pub
 2a0c:4ac1:29::3                         # dns.dnsguard.pub
 2a0c:5700:3133:650:96d5:99ff:fe8b:74f4  # sto02.dnscry.pt
+2a0c:5700:3133:650:ba68:95ff:fe53:3d16  # dns.anon.no
 2a0c:59c0:19::3                         # nl-ams.doh.sb, ru-mow.doh.sb
 2a0c:82c0::1                            # doh.suche.org
 2a0c:8fc0:1749:66:18::16                # muc01.dnscry.pt
@@ -1555,7 +1632,7 @@
 2a0d:d900:110::                         # dus03.dnscry.pt
 2a0d:f302:110:6517::1                   # vie01.dnscry.pt
 2a0e:6901:201:6:5054:ff:fe21:a3b5       # dns.nextdns.io
-2a0e:6901:301:a:5054:ff:fe14:4256       # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a0e:6901:301:a:5054:ff:fe14:4256       # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a0e:6901:410:25:5054:ff:fe1c:7c81      # dns.nextdns.io
 2a0e:6901:504:988:26a3:f0ff:fe4a:a9c7   # dns.nextdns.io
 2a0e:6902:2002:12b:5054:ff:fed7:6b78    # dns.nextdns.io
