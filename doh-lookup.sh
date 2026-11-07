@@ -14,7 +14,9 @@ export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="./doh-domains_overall.txt"
 check_domains="google.com heise.de openwrt.org"
-cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud.com mask-h2.icloud.com mask.icloud.com dns.nextdns.io"
+cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud.com mask-h2.icloud.com mask.icloud.com dns.nextdns.io dns.cloudflare.com"
+ecs_domains="alidns.com aaplimg.com apple.com icloud.com nextdns.io openbld.net"
+ecs_views="8.8.8.8,73.0.0.0/24 8.8.8.8,79.192.0.0/24 8.8.8.8,95.24.0.0/24 8.8.8.8,49.36.0.0/24 8.8.8.8,123.112.0.0/24 8.8.8.8,126.0.0.0/24 8.8.8.8,1.120.0.0/24"
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
 srt_tool="$(command -v sort)"
@@ -22,10 +24,14 @@ cat_tool="$(command -v cat)"
 nc_tool="$(command -v nc)"
 : >"./ipv4.tmp"
 : >"./ipv6.tmp"
+: >"./ipv4_ecs.tmp"
+: >"./ipv6_ecs.tmp"
 : >"./ipv4_cache.tmp"
 : >"./ipv6_cache.tmp"
 : >"./domains.tmp"
 : >"./domains_abandoned.tmp"
+[ -f "./doh-ipv4.txt" ] || : >"./doh-ipv4.txt"
+[ -f "./doh-ipv6.txt" ] || : >"./doh-ipv6.txt"
 
 # sanity pre-checks
 #
@@ -47,6 +53,22 @@ for domain in ${check_domains}; do
 		fi
 	fi
 done
+
+# ECS pre-check, keep only views where the resolver really forwards the client subnet
+#
+ecs_ok=""
+for view in ${ecs_views}; do
+	out="$("${dig_tool}" +short +time=2 +tries=3 +subnet="${view#*,}" @"${view%%,*}" o-o.myaddr.l.google.com TXT 2>/dev/null)"
+	case "${out}" in
+	*"edns0-client-subnet ${view#*,}"*)
+		ecs_ok="${ecs_ok} ${view}"
+		;;
+	*)
+		printf "%s\n" "::: ECS view ${view} not usable, skipped (response: $(printf "%s" "${out:-none}" | tr '\n' ' '))"
+		;;
+	esac
+done
+printf "%s\n" "::: Active ECS views:${ecs_ok:- none}"
 
 # pre-fill cache domains (only reachable IPs or fallback to raw cache entries)
 #
@@ -119,9 +141,28 @@ while IFS= read -r domain; do
 		domain_ok="false"
 		out="$("${dig_tool}" +noall +answer +time=2 +tries=3 "${domain}" A "${domain}" AAAA 2>/dev/null)"
 		if [ -n "${out}" ]; then
-			ips="$(printf "%s" "${out}" | "${awk_tool}" '{printf "%s ",$NF}')"
+			ecs_out=""
+			ecs_list=""
+			for sfx in ${ecs_domains}; do
+				case "${domain}" in
+				"${sfx}" | *."${sfx}")
+					ecs_list="${ecs_ok}"
+					break
+					;;
+				esac
+			done
+			for view in ${ecs_list}; do
+				ecs_out="${ecs_out}
+$("${dig_tool}" +noall +answer +time=2 +tries=2 +subnet="${view#*,}" @"${view%%,*}" "${domain}" A "${domain}" AAAA 2>/dev/null)"
+			done
+			ips="$(printf "%s\n#ECS#\n%s\n" "${out}" "${ecs_out}" | "${awk_tool}" '$0=="#ECS#"{ecs=1;next}($4=="A"||$4=="AAAA")&&!seen[$5]++{printf "%s%s ",(ecs?"e:":""),$5}')"
 			if [ -n "${ips}" ]; then
 				for ip in ${ips}; do
+					sfx=""
+					if [ "${ip#e:}" != "${ip}" ]; then
+						ip="${ip#e:}"
+						sfx="_ecs"
+					fi
 					case "$(ipcalc-ng -s --addrspace "${ip}" 2>/dev/null)" in
 					"ADDRSPACE=Internet" | 'ADDRSPACE="Global Unicast"') ;;
 
@@ -131,9 +172,9 @@ while IFS= read -r domain; do
 					esac
 					domain_ok="true"
 					if [ "${ip##*:}" = "${ip}" ]; then
-						printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
+						printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4${sfx}.tmp"
 					else
-						printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
+						printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6${sfx}.tmp"
 					fi
 				done
 			fi
@@ -167,7 +208,7 @@ fi
 # final sort/merge step (IPv4 + IPv6 with domain aggregation)
 # IPv4
 #
-"${srt_tool}" -b -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.raw"
+"${srt_tool}" -b -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" "./ipv4_ecs.tmp" >"./doh-ipv4.raw"
 "${awk_tool}" '
 {
 	match($0, /^([0-9\.]+)[[:space:]]+/, m)
@@ -187,7 +228,7 @@ END {
 
 # IPv6
 #
-"${srt_tool}" -b -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.raw"
+"${srt_tool}" -b -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" "./ipv6_ecs.tmp" >"./doh-ipv6.raw"
 "${awk_tool}" '
 {
 	match($0, /^([0-9a-fA-F:]+)[[:space:]]+/, m)
@@ -218,10 +259,12 @@ END {
 #
 cnt_cache_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4_cache.tmp" 2>/dev/null)"
 cnt_cache_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6_cache.tmp" 2>/dev/null)"
-cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4.tmp" 2>/dev/null)"
-cnt_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6.tmp" 2>/dev/null)"
+cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4.tmp" "./ipv4_ecs.tmp" 2>/dev/null)"
+cnt_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6.tmp" "./ipv6_ecs.tmp" 2>/dev/null)"
+cnt_ecsv4="$("${awk_tool}" 'FILENAME!="./ipv4_ecs.tmp"{b[$1];next}!($1 in b)&&!s[$1]++{c++}END{printf "%d",c}' "./ipv4_cache.tmp" "./ipv4.tmp" "./ipv4_ecs.tmp" 2>/dev/null)"
+cnt_ecsv6="$("${awk_tool}" 'FILENAME!="./ipv6_ecs.tmp"{b[$1];next}!($1 in b)&&!s[$1]++{c++}END{printf "%d",c}' "./ipv6_cache.tmp" "./ipv6.tmp" "./ipv6_ecs.tmp" 2>/dev/null)"
 cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv4.txt" 2>/dev/null)"
 cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv6.txt" 2>/dev/null)"
 doh_end="$(date "+%s")"
 doh_duration="$(((doh_end - doh_start) / 60))m $(((doh_end - doh_start) % 60))s"
-printf "%s\n" "::: Finished DOH-processing, duration: ${doh_duration}, cachev4/cachev6: ${cnt_cache_tmpv4}/${cnt_cache_tmpv6}, all/unique IPv4: ${cnt_tmpv4}/${cnt_ipv4}, all/unique IPv6: ${cnt_tmpv6}/${cnt_ipv6}"
+printf "%s\n" "::: Finished DOH-processing, duration: ${doh_duration}, cachev4/cachev6: ${cnt_cache_tmpv4}/${cnt_cache_tmpv6}, all/unique IPv4: ${cnt_tmpv4}/${cnt_ipv4}, all/unique IPv6: ${cnt_tmpv6}/${cnt_ipv6}, ECS-only IPv4/IPv6: ${cnt_ecsv4}/${cnt_ecsv6}"
