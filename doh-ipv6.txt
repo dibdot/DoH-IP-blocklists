@@ -63,6 +63,7 @@
 2001:4ba0:cafe:745::19                  # dns.expert
 2001:4ca0:200:3:200:5efe:8d54:4502      # esel.stusta.mhn.de
 2001:4ca0:200:3:200:5efe:8d54:451d      # muli.stusta.mhn.de
+2001:550:2:dc::5e:2                     # doh1.b-cdn.net, doh2.b-cdn.net
 2001:558:fd00:ca::5                     # doh.xfinity.com, doh2.gslb2.xfinity.com
 2001:558:fe21:6b:96:113:151:145         # dot.xfinity.com
 2001:578:3f::30                         # doh.cox.net, dot.cox.net
@@ -126,8 +127,8 @@
 2001:df4:b100:3:1:1:730a:2cd2           # dns1.server.my.id
 2001:e68:5040:a7da:d8e7:f548:508b:6346  # fwgw.orangepipc.mywire.org
 2001:e68:5414:794::10                   # dns.surobe.com
-2003:180:2:1000:0:4:0:53                # dns.telekom.de
-2003:180:2:4000:0:4:0:53                # dns.telekom.de
+2003:180:2:7000:0:4:0:53                # dns.telekom.de
+2003:180:2:b000:0:4:0:53                # dns.telekom.de
 2003:4:e0b0:102:0:4:0:53                # dns.t53.de
 2003:5f:c010:1:212:185:200:25           # dns1.conne.net
 2003:a:36f:4f00::1                      # dns.faked.org
@@ -312,9 +313,9 @@
 2600:1f28:60:800:e4d4:cfd6:e5eb:80bf    # dns.api.sandbox.globuscs.info
 2600:1f28:60:801:4f63:bf87:fd73:5bb2    # dns.api.staging.globuscs.info
 2600:1f28:60:801:5287:766c:1777:31ea    # dns.api.sandbox.globuscs.info
-2600:1f28:60:801:a8f8:b99a:92dc:d7e4    # dns.api.preview.globus.org
 2600:1f28:60:801:ad82:5e00:9f21:4ad8    # dns.api.integration.globuscs.info
 2600:1f28:60:801:d87f:9eb6:fd45:a987    # dns.api.test.globuscs.info
+2600:1f28:60:801:e0b7:51c8:73d2:57f8    # dns.api.preview.globus.org
 2600:1f28:60:802:4904:fb15:e30e:dc56    # dns.api.integration.globuscs.info
 2600:1f28:60:802:8bfc:7059:a92e:b945    # dns.api.sandbox.globuscs.info
 2600:1f28:60:802:978a:6b20:745:b0d4     # dns.api.staging.globuscs.info
@@ -337,14 +338,14 @@
 2600:4c00:80:8::a                       # atl01.dnscry.pt
 2600:6c7f:f000:202::7                   # doh-01.spectrum.com
 2600:6c7f:f000:202::8                   # doh-02.spectrum.com
-2600:9000:2064:1200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:3400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:600:f:5c7a:55c0:93a1     # eth.link
-2600:9000:2064:6a00:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:a00:f:5c7a:55c0:93a1     # eth.link
-2600:9000:2064:a200:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:a400:f:5c7a:55c0:93a1    # eth.link
-2600:9000:2064:e600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:3200:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:6600:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:7400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:8e00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:a400:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:ac00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:ba00:f:5c7a:55c0:93a1    # eth.link
+2600:9000:21d4:f800:f:5c7a:55c0:93a1    # eth.link
 2602:2b7:d01:c295::b:18                 # mci01.dnscry.pt
 2602:f3ff:83::64                        # dns64.dns.yunzheng.space
 2602:f3ff:83::83                        # dns.yunzheng.space
@@ -376,6 +377,7 @@
 2602:ffbb:100:4::2                      # doh.dns.sb, us-chi.doh.sb
 2603:1040:a03:3::90                     # doh.technochat.in
 2603:c020:4000:3d34:6160:20db:353b:24d3 # o.rsaikat.com
+2603:c020:4002:be00:780d:ac99:b43f:299a # dns.stevenz.net, doh.sz-dns.com
 2603:c020:4023:6701:0:bd8:1e0b:6001     # dns.listo.click
 2603:c020:5:3566:beef:beef:beef:beef    # dns.ofdoom.net
 2603:c020:800b:ac01:848b:d155:8652:cd03 # dns.almir1904.eu
@@ -409,13 +411,13 @@
 2604:a880:400:d1::b7a:c001              # doh-primary-pool.detoxifypornblocker.com
 2604:a880:800:10::1c1e:1001             # ns.00dani.me
 2604:a880:cad:d0::728b:9001             # tri-dns.net
-2604:abc0:50::12:b002                   # dns.stevenz.net, doh.sz-dns.com
 2605:380:55:450::7                      # dns.nextdns.io
 2605:380:56:6::1                        # dns.nextdns.io
 2605:380:57:613::5                      # dns.nextdns.io
 2605:380:58:554::1                      # dns.nextdns.io
 2605:3a40:3::17e                        # us-nyc.doh.sb
 2605:3b80:cad:ec89::1                   # dns.nextdns.io
+2605:6f01:2000:12c::232                 # dns.stevenz.net, doh.sz-dns.com
 2605:7980:0:6412::1                     # dns.nextdns.io
 2605:80:8:8::                           # ag.ff0x.ca
 2605:fa80:1:17::a                       # ind01.dnscry.pt
@@ -660,14 +662,14 @@
 2606:6080:2001:10c5::a                  # pidoh.mapledns.net
 2606:65c0:10:20e:1621:d963:131c:bd4c    # las01.dnscry.pt
 2606:65c0:40:4:5f3:54c4:8d10:9b98       # dtw01.dnscry.pt
-2606:6680:27:1::2fa1:9182               # dns.nextdns.io
+2606:6680:27:1::2fa1:9182               # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2606:6680:29:1::5859:a37b               # fnt01.dnscry.pt
 2606:6680:35:1::506d:8ce2               # sjc01.dnscry.pt
 2606:6680:37:1::c984:4ba3               # bei01.dnscry.pt
 2606:6680:45:1::e859:6f4e               # yul01.dnscry.pt
 2606:6680:45:1::f78c:9b0                # ymq01.dnscry.pt
 2606:6680:53:1::846a:bd79               # tsm01.dnscry.pt
-2606:6680:6:1::852a:cba4                # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2606:6680:6:1::852a:cba4                # dns.nextdns.io
 2606:a8c0:101:ee::a                     # dns.omada.cafe
 2606:a8c0:3:202::a                      # geg01.dnscry.pt
 2606:fc40:4002:d::a                     # tyo03.dnscry.pt
@@ -1204,13 +1206,13 @@
 2620:46:8000:128::100                   # cluster-0.gac.edu
 2620:46:8000:128::101                   # cluster-1.gac.edu
 2620:87:a000::39                        # blocker.thethorsens.org
-2620:fe::10                             # dns-nosec.quad9.net, dns10.quad9.net
+2620:fe::10                             # dns-nosec.quad9.net, dns10.quad9.net, doh-mullvad.quad9.net
 2620:fe::11                             # dns11.quad9.net
 2620:fe::12                             # dns12.quad9.net
 2620:fe::13                             # dns13.quad9.net
 2620:fe::9                              # dns.quad9.net, dns9.quad9.net
 2620:fe::fe                             # dns.quad9.net
-2620:fe::fe:10                          # dns10.quad9.net
+2620:fe::fe:10                          # dns10.quad9.net, doh-mullvad.quad9.net
 2620:fe::fe:11                          # dns11.quad9.net
 2620:fe::fe:12                          # dns12.quad9.net
 2620:fe::fe:13                          # dns13.quad9.net
@@ -1228,7 +1230,7 @@
 2a00:11c0:18:554::3                     # dns.nextdns.io
 2a00:11c0:1f:1::53                      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a00:11c0:20:429::5                     # dns.nextdns.io
-2a00:11c0:21::53                        # chromium.dns.nextdns.io, dns.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a00:11c0:21::53                        # dns.nextdns.io
 2a00:11c0:2c:4::3                       # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a00:11c0:39:353::3                     # dns.nextdns.io
 2a00:5980:94::71                        # dns.circl.lu
@@ -1273,6 +1275,7 @@
 2a01:4f8:13b:3407::face                 # dns.digitalsize.net
 2a01:4f8:141:1063:1::3                  # doh.niyawe.de
 2a01:4f8:141:edd:1::101                 # dns01.flm9.net
+2a01:4f8:150:74d5::333                  # de.dns.privex.io
 2a01:4f8:171:1f15::1                    # dns.coderoria.com
 2a01:4f8:173:fc02:1::a4ae               # doh.wewitro.net
 2a01:4f8:1c0c:70d1::1                   # dns.caspervk.net
@@ -1314,7 +1317,6 @@
 2a01:4f8:c17:2cbd::2                    # ns.data.haus
 2a01:4f8:c17:4fbc::2                    # clean.dnsforge.de
 2a01:4f8:c17:739a::2                    # fdns2.dismail.de
-2a01:4f8:c17:7aa5::249                  # blank.dnsforge.de
 2a01:4f8:c17:de8b::1                    # dns.deadsec.net
 2a01:4f8:c17:ec67::1                    # dot-de.blahdns.com
 2a01:4f8:c17:f85c::1                    # dns.nick-slowinski.de
@@ -1626,15 +1628,20 @@
 2a02:26f7:98:0:ace0:5b0f::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:ba:0:ace0:5::                 # mask.icloud.com
 2a02:26f7:ba:0:ace0:7::                 # mask.icloud.com
+2a02:26f7:ba:0:ace0:8::                 # mask.icloud.com
 2a02:26f7:ba:0:ace0:9::                 # mask.icloud.com
 2a02:26f7:ba:0:ace0:e::                 # mask.icloud.com
+2a02:26f7:ba:0:ace0:f::                 # mask.icloud.com
+2a02:26f7:bc:0:ace0:105::               # mask.icloud.com
 2a02:26f7:bc:0:ace0:107::               # mask.icloud.com
 2a02:26f7:bc:0:ace0:108::               # mask.icloud.com
 2a02:26f7:bc:0:ace0:10a::               # mask.icloud.com
+2a02:26f7:bc:2:ace0:184::               # mask.icloud.com
 2a02:26f7:bc:2:ace0:185::               # mask.icloud.com
 2a02:26f7:bc:2:ace0:186::               # mask.icloud.com
 2a02:26f7:bc:2:ace0:187::               # mask.icloud.com
 2a02:26f7:bc:2:ace0:18a::               # mask.icloud.com
+2a02:26f7:bc:2:ace0:18e::               # mask.icloud.com
 2a02:26f7:d8:0:ace0:6e04::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:d8:0:ace0:6e05::              # mask-h2.icloud.com, mask.icloud.com
 2a02:26f7:d8:0:ace0:6e06::              # mask-h2.icloud.com, mask.icloud.com
@@ -1688,7 +1695,6 @@
 2a02:6b8::feed:ff                       # common.dot.dns.yandex.net
 2a02:6ca3:0:1::2                        # dns.levonet.sk
 2a02:6ca3:0:2::2                        # dns.levonet.sk
-2a02:6ea0:d70d:1::919:1                 # doh1.b-cdn.net, doh2.b-cdn.net
 2a02:88:1:e:807::101                    # dns.cert.ee
 2a02:88:1:e:807::99                     # dns.cert.ee
 2a02:958:10:2000:213:166:247:100        # dns.csaonline.de
@@ -1782,6 +1788,7 @@
 2a07:a8c0::                             # anycast.dns.nextdns.io, dns.nextdns.io
 2a07:a8c1::                             # anycast.dns.nextdns.io, dns.nextdns.io
 2a07:d884:100::344                      # fra02.dnscry.pt
+2a07:e03::333                           # nl.dns.privex.io
 2a07:e043:1:5d::1                       # sto01.dnscry.pt
 2a07:e340::2                            # dns.mullvad.net, doh.mullvad.net
 2a07:e340::3                            # adblock.dns.mullvad.net, adblock.doh.mullvad.net
@@ -1842,7 +1849,7 @@
 2a0d:d900:110::                         # dus03.dnscry.pt
 2a0d:f302:110:6517::1                   # vie01.dnscry.pt
 2a0e:6901:201:6:5054:ff:fe21:a3b5       # dns.nextdns.io
-2a0e:6901:301:a:5054:ff:fe14:4256       # dns.nextdns.io
+2a0e:6901:301:a:5054:ff:fe14:4256       # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a0e:6901:410:25:5054:ff:fe1c:7c81      # dns.nextdns.io
 2a0e:6901:504:988:26a3:f0ff:fe4a:a9c7   # dns.nextdns.io
 2a0e:6902:2002:12b:5054:ff:fed7:6b78    # dns.nextdns.io
