@@ -14,8 +14,9 @@ export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="./doh-domains_overall.txt"
 check_domains="google.com heise.de openwrt.org"
-cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud.com mask-h2.icloud.com mask.icloud.com dns.nextdns.io dns.cloudflare.com"
-ecs_domains="alidns.com aaplimg.com apple.com icloud.com nextdns.io openbld.net"
+cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com dns.nextdns.io dns.cloudflare.com"
+noip_domains="mask-api.icloud.com mask-h2.icloud.com mask.icloud.com"
+ecs_domains="alidns.com aaplimg.com apple.com nextdns.io openbld.net"
 ecs_views="8.8.8.8,73.0.0.0/24 8.8.8.8,79.192.0.0/24 8.8.8.8,95.24.0.0/24 8.8.8.8,49.36.0.0/24 8.8.8.8,123.112.0.0/24 8.8.8.8,126.0.0.0/24 8.8.8.8,1.120.0.0/24"
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
@@ -139,10 +140,17 @@ while IFS= read -r domain; do
 	[ -z "${domain}" ] && continue
 	(
 		domain_ok="false"
+		noip="false"
+		case " ${noip_domains} " in
+		*" ${domain} "*)
+			noip="true"
+			;;
+		esac
 		out="$("${dig_tool}" +noall +answer +time=2 +tries=3 "${domain}" A "${domain}" AAAA 2>/dev/null)"
 		if [ -n "${out}" ]; then
 			ecs_out=""
 			ecs_list=""
+			[ "${noip}" = "true" ] && ecs_domains=""
 			for sfx in ${ecs_domains}; do
 				case "${domain}" in
 				"${sfx}" | *."${sfx}")
@@ -171,6 +179,7 @@ $("${dig_tool}" +noall +answer +time=2 +tries=2 +subnet="${view#*,}" @"${view%%,
 						;;
 					esac
 					domain_ok="true"
+					[ "${noip}" = "true" ] && break
 					if [ "${ip##*:}" = "${ip}" ]; then
 						printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4${sfx}.tmp"
 					else
